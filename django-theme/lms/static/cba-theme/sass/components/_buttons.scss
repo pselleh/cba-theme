@@ -1,0 +1,49 @@
+.btn-custom-primary {
+  @include btn-variant($cba-primary, $cba-primary, $cba-white);
+  border-radius: $radius-pill !important;
+}
+
+.btn-custom-outline {
+  background-color: transparent;
+  border: 2px solid $cba-dark;
+  color: $cba-dark;
+  border-radius: $radius-pill !important;
+  transition: $transition-base;
+  
+  &:hover {
+    background-color: $cba-dark;
+    color: $cba-white;
+  }
+}
+
+.btn-tab-action {
+  @include btn-variant($cba-secondary, $cba-secondary, $cba-white);
+  border-radius: $radius-base !important;
+}
+
+.btn-learn-more {
+  border-radius: $radius-pill !important;
+}
+
+.btn-transform {
+  @include btn-variant($cba-secondary, $cba-secondary, $cba-white);
+  border-radius: $radius-pill !important;
+  margin: 0.5rem;
+}
+
+.btn-get-started {
+  @include btn-variant($cba-primary, $cba-primary, $cba-white);
+  border-radius: $radius-pill !important;
+}
+
+.btn-outline-light {
+  border-radius: $radius-pill !important;
+  transition: $transition-base;
+  
+  &:hover {
+    background-color: $cba-white !important;
+    color: $cba-dark !important;
+    border-color: $cba-white !important;
+  }
+}
+

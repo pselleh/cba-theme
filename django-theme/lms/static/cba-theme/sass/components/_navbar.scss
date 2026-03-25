@@ -1,0 +1,64 @@
+.navbar {
+  background-color: $cba-primary !important;
+  
+  &-brand img {
+    height: 40px;
+  }
+  
+  &-collapse {
+    padding: 1rem;
+  }
+}
+
+.nav-link {
+  color: $cba-white;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: $font-size-base;
+}
+
+.custom-switch {
+  margin-left: 1rem;
+  margin-top: 0;
+  padding-left: 3rem;
+  padding-right: 0;
+  
+  .custom-control-label {
+    &::before {
+      width: 52px;
+      height: 32px;
+      border-radius: $radius-pill;
+      background-color: $cba-white;
+      transition: $transition-fast;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    &::after {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $cba-primary;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: $transition-fast;
+    }
+  }
+  
+  .custom-control-input:checked ~ .custom-control-label {
+    &::before {
+      background-color: $cba-primary;
+    }
+    
+    &::after {
+      background-color: $cba-white;
+      transform: translate(20px, -50%);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-control.custom-switch {
+    padding-left: 3rem;
+  }
+}

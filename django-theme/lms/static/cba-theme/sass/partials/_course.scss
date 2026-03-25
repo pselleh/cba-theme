@@ -1,0 +1,11 @@
+// Example LMS course page override
+.course-card {
+  border: 1px solid $brand-primary;
+  padding: 1rem;
+  border-radius: 4px;
+
+  .course-title {
+    color: $brand-primary;
+    font-weight: bold;
+  }
+}

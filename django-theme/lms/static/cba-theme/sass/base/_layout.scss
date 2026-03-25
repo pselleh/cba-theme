@@ -1,0 +1,12 @@
+.section-inner {
+  @include container;
+}
+
+.w-md-auto {
+  width: auto;
+  
+  @include responsive-breakpoint(tablet) {
+    width: 100%;
+  }
+}
+

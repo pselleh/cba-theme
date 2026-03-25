@@ -1,0 +1,262 @@
+.hero-section {
+  background-color: $cba-light;
+  min-height: 100vh;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-title {
+  color: $cba-dark;
+  font-size: $h1-size;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  
+  @include responsive-breakpoint(desktop) {
+    font-size: 42px;
+  }
+  
+  @include responsive-breakpoint(mobile) {
+    font-size: 32px;
+  }
+}
+
+.hero-subtitle {
+  color: $cba-dark;
+  font-size: $h4-size;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  
+  @include responsive-breakpoint(desktop) {
+    font-size: 20px;
+  }
+  
+  @include responsive-breakpoint(mobile) {
+    font-size: 18px;
+  }
+}
+
+.learning-tabs-section {
+  @include section-spacing;
+  background-color: $cba-white;
+}
+
+.section-badge {
+  color: $cba-secondary;
+  font-size: $font-size-base;
+  border-radius: $radius-base;
+  display: inline-block;
+  padding: 0.5rem 0;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-size: $h2-size;
+  color: $cba-dark;
+  font-weight: $font-weight-bold;
+  margin-bottom: 0.75rem;
+  
+  @include responsive-breakpoint(tablet) {
+    font-size: 36px;
+  }
+  
+  @include responsive-breakpoint(mobile) {
+    font-size: 28px;
+  }
+}
+
+.section-lead {
+  font-size: $font-size-lg;
+  color: $cba-gray;
+  max-width: 600px;
+}
+
+.accredited-section {
+  @include section-spacing;
+  background-color: $cba-light;
+}
+
+.accredited-item {
+  h6 {
+    color: $cba-dark;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-lg;
+    margin-bottom: 0.75rem;
+    
+    @include responsive-breakpoint(tablet) {
+      font-size: 18px;
+    }
+    
+    @include responsive-breakpoint(mobile) {
+      font-size: 16px;
+    }
+  }
+  
+  p {
+    color: $cba-gray;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+  }
+  
+  img {
+    max-width: 120px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.accreditation-logos {
+  @include section-spacing;
+  background-color: $cba-white;
+  
+  h2 {
+    font-size: $h3-size;
+    color: $cba-dark;
+    font-weight: $font-weight-semibold;
+    margin-bottom: 1.5rem;
+    
+    @include responsive-breakpoint(tablet) {
+      font-size: 28px;
+    }
+    
+    @include responsive-breakpoint(mobile) {
+      font-size: 24px;
+    }
+  }
+  
+  img {
+    @include responsive-breakpoint(mobile) {
+      height: auto;
+      max-width: 80px;
+    }
+  }
+}
+
+.value-prop-item {
+  h6 {
+    color: $cba-dark;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-lg;
+    margin-bottom: 0.75rem;
+  }
+  
+  p {
+    color: $cba-gray;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+  }
+  
+  img {
+    max-width: 120px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.empower-section {
+  @include section-spacing;
+  background-color: $cba-white;
+  
+  .section-title {
+    @include responsive-breakpoint(mobile) {
+      font-size: 32px;
+    }
+  }
+  
+  .lead {
+    @include responsive-breakpoint(mobile) {
+      font-size: 18px;
+    }
+  }
+  
+  .card-title {
+    @include responsive-breakpoint(mobile) {
+      font-size: 20px;
+    }
+  }
+  
+  .card-text {
+    @include responsive-breakpoint(mobile) {
+      font-size: 14px;
+    }
+  }
+}
+
+.transform-section {
+  @include section-spacing;
+  background-color: $cba-light;
+  
+  h2 {
+    font-size: $h2-size;
+    color: $cba-dark;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0.75rem;
+  }
+  
+  p {
+    font-size: $font-size-lg;
+    color: $cba-gray;
+  }
+}
+
+.next-steps-section {
+  @include section-spacing;
+  background-color: $cba-white;
+  
+  h2 {
+    font-size: $h2-size;
+    color: $cba-dark;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0.75rem;
+  }
+  
+  h3 {
+    font-size: $h3-size;
+    color: $cba-secondary;
+    font-weight: $font-weight-semibold;
+    margin-bottom: 0.75rem;
+    
+    @include responsive-breakpoint(mobile) {
+      font-size: 24px;
+    }
+  }
+  
+  img {
+    width: 400px;
+    height: 400px;
+    
+    @include responsive-breakpoint(tablet) {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+
+.join-link {
+  color: $cba-dark;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: $transition-base;
+  
+  img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) saturate(100%) invert(22%) sepia(10%) saturate(550%) hue-rotate(169deg) brightness(95%) contrast(88%);
+    transition: $transition-base;
+  }
+  
+  &:hover {
+    color: $cba-primary;
+    text-decoration: none;
+    
+    img {
+      transform: translateX(5px);
+      filter: brightness(0) saturate(100%) invert(28%) sepia(98%) saturate(1685%) hue-rotate(194deg) brightness(95%) contrast(101%);
+    }
+  }
+}
+

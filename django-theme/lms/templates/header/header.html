@@ -1,0 +1,46 @@
+<%namespace name='static' file='/static_content.html'/>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="/">
+            <img src="${static.url('images/logo.svg')}" alt="Center for Business Acceleration">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/courses">Catalog</a></li>
+                <li class="nav-item"><a class="nav-link" href="/programs">Our Programs</a></li>
+                <li class="nav-item"><a class="nav-link" href="/credentialing">Credentialing</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+            </ul>
+            
+            <div class="navbar-nav d-flex flex-column flex-lg-row align-items-center mt-3 mt-lg-0">
+                % if user.is_authenticated:
+                    <div class="d-flex flex-column flex-lg-row align-items-center mb-3 mb-lg-0">
+                        <a href="/dashboard" class="btn btn-outline-light btn-sm mb-2 mb-lg-0 mr-lg-2">Dashboard</a>
+                        <a href="/logout" class="btn btn-light btn-sm">Logout</a>
+                    </div>
+                % else:
+                    <div class="d-flex flex-column flex-lg-row align-items-center mb-3 mb-lg-0">
+                        <a href="/login" class="btn btn-outline-light btn-sm mb-2 mb-lg-0 mr-lg-2">Login</a>
+                        <a href="/register" class="btn btn-light btn-sm">Sign Up</a>
+                    </div>
+                % endif
+                
+                <div class="custom-control custom-switch d-flex align-items-center ml-lg-3 mt-lg-0 pl-md-5 pl-0">
+                    <input type="checkbox" class="custom-control-input" id="themeToggle">
+                    <label class="custom-control-label" for="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+

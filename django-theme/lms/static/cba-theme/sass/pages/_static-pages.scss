@@ -1,0 +1,172 @@
+// Static Pages Styles (Privacy, Terms, etc.)
+
+.privacy-hero,
+.terms-hero {
+  background: linear-gradient(135deg, #E5EEF7 0%, #FFFFFF 100%);
+  padding: 100px 0 80px;
+  text-align: center;
+  
+  h1 {
+    color: $cba-dark;
+    font-size: $h1-size;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
+    
+    @include responsive-breakpoint(tablet) {
+      font-size: 42px;
+    }
+    
+    @include responsive-breakpoint(mobile) {
+      font-size: 32px;
+    }
+  }
+  
+  p {
+    color: $cba-gray;
+    font-size: $font-size-lg;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .badge {
+    background-color: rgba(0, 94, 184, 0.1);
+    border: 1px solid rgba(0, 94, 184, 0.2);
+    color: $cba-primary;
+    font-size: $font-size-sm;
+    padding: 0.5rem 1rem;
+    border-radius: $radius-base;
+  }
+}
+
+.privacy-content,
+.terms-content {
+  padding: 5rem 0;
+  
+  .privacy-section,
+  .terms-section {
+    margin-bottom: 3rem;
+    
+    h2 {
+      color: $cba-primary;
+      font-size: $h2-size;
+      font-weight: $font-weight-bold;
+      margin-bottom: 1.5rem;
+      
+      @include responsive-breakpoint(tablet) {
+        font-size: 36px;
+      }
+      
+      @include responsive-breakpoint(mobile) {
+        font-size: 28px;
+      }
+    }
+    
+    h3 {
+      color: $cba-dark;
+      font-size: $h3-size;
+      font-weight: $font-weight-semibold;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+    
+    p {
+      color: $cba-gray;
+      font-size: $font-size-base;
+      line-height: $line-height-base;
+      margin-bottom: 1rem;
+    }
+    
+    li {
+      color: $cba-gray;
+      font-size: $font-size-base;
+      line-height: $line-height-base;
+      margin-bottom: 0.5rem;
+      
+      strong {
+        color: $cba-dark;
+      }
+    }
+  }
+}
+
+.highlight-box {
+  background-color: rgba(32, 201, 151, 0.1);
+  border: 2px solid $cba-secondary;
+  border-radius: $radius-lg;
+  padding: 2rem;
+  margin: 2rem 0;
+  
+  p {
+    color: $cba-dark;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-medium;
+    margin: 0;
+  }
+}
+
+.table-of-contents {
+  background-color: $cba-light;
+  padding: 2rem;
+  border-radius: $radius-lg;
+  margin-bottom: 3rem;
+  
+  h3 {
+    color: $cba-primary;
+    font-size: $h4-size;
+    font-weight: $font-weight-semibold;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      margin-bottom: 0.5rem;
+      
+      a {
+        color: $cba-dark;
+        text-decoration: none;
+        font-size: $font-size-base;
+        transition: $transition-base;
+        
+        &:hover {
+          color: $cba-secondary;
+        }
+      }
+    }
+  }
+}
+
+.enrollment-agreement {
+  background-color: $cba-white;
+  border: 2px solid $cba-secondary;
+  border-radius: $radius-lg;
+  padding: 2rem;
+  margin: 2rem 0;
+  
+  h4 {
+    color: $cba-primary;
+    font-size: $h4-size;
+    font-weight: $font-weight-semibold;
+    margin-bottom: 1rem;
+  }
+  
+  .agreement-details {
+    background-color: $cba-light;
+    padding: 1.5rem;
+    border-radius: $radius-base;
+    
+    p {
+      color: $cba-gray;
+      font-size: $font-size-base;
+      line-height: $line-height-base;
+      margin-bottom: 0.5rem;
+      
+      strong {
+        color: $cba-dark;
+      }
+    }
+  }
+}

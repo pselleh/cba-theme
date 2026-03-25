@@ -1,0 +1,11 @@
+// Example CMS dashboard override
+.dashboard {
+  background-color: lighten($brand-secondary, 30%);
+  padding: 2rem;
+
+  .dashboard-title {
+    color: $brand-primary;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}

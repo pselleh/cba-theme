@@ -1,0 +1,35 @@
+.navbar-brand img {
+  height: 40px;
+}
+
+.navbar-collapse {
+  padding: 1rem;
+}
+
+.nav-link {
+  color: $cba-white !important;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: $font-size-base;
+}
+
+.btn-outline-light.btn-sm {
+  border-radius: $radius-pill !important;
+}
+
+.btn-light.btn-sm {
+  border-radius: $radius-pill !important;
+}
+
+.custom-control.custom-switch {
+  margin-left: 1rem;
+  margin-top: 0;
+  padding-left: 3rem;
+  padding-right: 0;
+}
+
+@media (min-width: 768px) {
+  .custom-control.custom-switch {
+    padding-left: 3rem;
+  }
+}

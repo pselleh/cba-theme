@@ -1,0 +1,11 @@
+@import "../../../common/static/sass/variables";
+@import "../../../common/static/sass/mixins";
+@import "../../../common/static/sass/base";
+
+@import "partials/studio";
+@import "partials/dashboard";
+
+body.cms {
+  font-family: $font-family-base;
+  background-color: $cba-white;
+}

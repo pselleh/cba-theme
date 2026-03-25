@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cba-theme"
+version = "0.1.0"
+description = "CBA comprehensive theme for Open edX (Tutor plugin)"
+requires-python = ">=3.9"
+
+[project.entry-points."tutor.plugin.v1"]
+cba-theme = "tutor_cba_theme_content.plugin"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tutor_cba_theme_content*"]
+
+[tool.setuptools.package-data]
+tutor_cba_theme_content = ["themes/**/*"]

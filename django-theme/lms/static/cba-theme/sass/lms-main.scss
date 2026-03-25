@@ -1,0 +1,27 @@
+// Step 1: Foundation
+@import "../../../common/static/sass/variables";
+@import "../../../common/static/sass/mixins";
+@import "../../../common/static/sass/base";
+@import "../../../common/static/sass/extras";
+
+// Step 2: Base Layout
+@import "base/layout";
+
+// Step 3: Global Partials
+@import "partials/header";
+@import "partials/footer";
+@import "partials/course";
+
+// Step 4: Components (Design System)
+@import "components/buttons";
+@import "components/cards";
+@import "components/tabs";
+@import "components/navbar";
+
+// Step 5: Pages
+@import "pages/homepage";
+@import "pages/contact";
+@import "pages/static-pages";
+
+// Step 6: Themes
+@import "themes/dark-mode";

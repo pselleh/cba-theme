@@ -1,0 +1,486 @@
+// Dark Mode Theme Styles
+
+[data-theme="dark"] {
+  // Background Colors
+  --cba-primary: #4A9EFF;
+  --cba-secondary: #2EE3B0;
+  --cba-accent: #FF9B5A;
+  --cba-dark: #FFFFFF;
+  --cba-light: #1A1F2E;
+  --cba-gray: #B0B8C1;
+  --cba-white: #0F1419;
+  
+  // Surfaces
+  --bg-body: #0F1419;
+  --bg-surface: #1A1F2E;
+  --bg-elevated: #242B3D;
+  --bg-hero: #1A1F2E;
+  
+  // Text Colors
+  --text-primary: #FFFFFF;
+  --text-secondary: #B0B8C1;
+  --text-muted: #8A929E;
+  
+  // Border & Dividers
+  --border-color: #2A3347;
+  --divider-color: #2A3347;
+  
+  // Component Backgrounds
+  --card-bg: #1A1F2E;
+  --navbar-bg: #1A1F2E;
+  --footer-bg: #0F1419;
+  
+  // Shadows
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-base: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  
+  // Section Badge (keep green text)
+  --badge-bg: #242B3D;
+  --badge-text: #2EE3B0;
+  
+  // Tabs
+  --tab-bg: #1A1F2E;
+  --tab-active-bg: #4A9EFF;
+  --tab-text: #B0B8C1;
+  --tab-active-text: #FFFFFF;
+  
+  // Buttons
+  --btn-outline-border: #4A9EFF;
+  --btn-outline-text: #4A9EFF;
+  --btn-outline-hover-bg: #4A9EFF;
+  --btn-outline-hover-text: #FFFFFF;
+}
+
+// Smooth transitions for theme changes
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-body, #FFFFFF);
+  color: var(--text-primary, #343A40);
+}
+
+// Apply dark mode styles to various components
+[data-theme="dark"] {
+  
+  // General elements
+  .hero-section {
+    background-color: var(--bg-hero) !important;
+  }
+  
+  .section-inner {
+    background-color: transparent;
+  }
+  
+  .hero-title,
+  .hero-subtitle,
+  .section-title,
+  .section-lead,
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary) !important;
+  }
+  
+  p, .lead {
+    color: var(--text-secondary) !important;
+  }
+  
+  .navbar {
+    background-color: var(--navbar-bg) !important;
+  }
+  
+  .card:not(.empower-card) {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+  }
+  
+  
+  // Tabs - dark mode styling
+  .nav-pills {
+    background-color: #242B3D !important;
+  }
+  
+  .nav-pills .nav-link {
+    background-color: #1A1F2E !important;
+    color: #B0B8C1 !important;
+    border-color: transparent !important;
+    
+    p {
+      color: #B0B8C1 !important;
+    }
+    
+    &.active {
+      background-color: #4A9EFF !important;
+      color: #FFFFFF !important;
+      border-color: #4A9EFF !important;
+      
+      p {
+        color: #FFFFFF !important;
+      }
+    }
+    
+    &:hover:not(.active) {
+      background-color: #2A3347 !important;
+      color: #FFFFFF !important;
+      
+      p {
+        color: #FFFFFF !important;
+      }
+    }
+  }
+  
+  // Tab Content
+  .tab-pane {
+    h3 {
+      color: var(--text-primary) !important;
+    }
+    
+    p {
+      color: var(--text-secondary) !important;
+    }
+  }
+  
+  .learning-tabs-section {
+    background-color: var(--bg-elevated) !important;
+  }
+  
+  .accredited-section,
+  .accreditation-logos {
+    background-color: var(--bg-surface) !important;
+  }
+  
+  .accredited-item {
+    h6 {
+      color: var(--text-primary) !important;
+    }
+    
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+  
+  .value-prop-item {
+    h6 {
+      color: var(--text-primary) !important;
+    }
+    
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+  
+  // Join link - dark mode
+  .join-link {
+    color: var(--text-primary) !important;
+    
+    img {
+      filter: brightness(0) invert(1);
+    }
+    
+    &:hover {
+      color: var(--cba-primary) !important;
+      
+      img {
+        filter: brightness(0) saturate(100%) invert(56%) sepia(73%) saturate(3441%) hue-rotate(194deg) brightness(103%) contrast(101%);
+      }
+    }
+  }
+  
+  .empower-section {
+    background-color: var(--bg-surface) !important;
+  }
+  
+  .empower-card {
+    &.empower-card-teal {
+      background-color: #20C997 !important;
+    }
+    
+    &.empower-card-blue {
+      background-color: #005EB8 !important;
+    }
+    
+    &.empower-card-orange {
+      background-color: #FD7E14 !important;
+    }
+    
+    // Keep text white in both modes for readability
+    .card-title,
+    .card-text {
+      color: #FFFFFF !important;
+    }
+  }
+  
+  .transform-section {
+    background-color: var(--bg-surface) !important;
+  }
+  
+  // Next Steps Section
+  .next-steps-section {
+    background-color: var(--bg-elevated) !important;
+  }
+  
+  // Footer
+  .footer {
+    background-color: var(--footer-bg) !important;
+    color: var(--text-secondary) !important;
+    border-top: 1px solid var(--border-color);
+    
+    a {
+      color: var(--text-secondary) !important;
+      
+      &:hover {
+        color: var(--cba-primary) !important;
+      }
+    }
+    
+    hr {
+      border-color: var(--divider-color) !important;
+    }
+  }
+  
+  // Buttons
+  .btn-custom-outline {
+    border-color: var(--btn-outline-border) !important;
+    color: var(--btn-outline-text) !important;
+    
+    &:hover {
+      background-color: var(--btn-outline-hover-bg) !important;
+      color: var(--btn-outline-hover-text) !important;
+    }
+  }
+  
+  .btn-outline-light {
+    border-color: var(--text-primary) !important;
+    color: var(--text-primary) !important;
+    
+    &:hover {
+      background-color: var(--text-primary) !important;
+      color: var(--bg-body) !important;
+      border-color: var(--text-primary) !important;
+    }
+  }
+  
+  // Empower cards specific buttons in dark mode
+  .empower-card .btn-outline-light {
+    &:hover {
+      background-color: #FFFFFF !important;
+      color: #0F1419 !important;
+      border-color: #FFFFFF !important;
+    }
+  }
+  
+  // Forms & Inputs
+  input, textarea, select {
+    background-color: var(--bg-surface) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+  }
+  
+  // Images - add slight brightness in dark mode
+  img:not([src*=".svg"]) {
+    filter: brightness(0.9);
+  }
+  
+  // Contact Page - dark mode
+  .contact-hero {
+    background: linear-gradient(135deg, #1A1F2E 0%, #0F1419 100%) !important;
+    
+    h1, p {
+      color: var(--text-primary) !important;
+    }
+    
+    .btn-custom-outline {
+      border-color: #2EE3B0 !important;
+      color: #2EE3B0 !important;
+      
+      &:hover {
+        background-color: #2EE3B0 !important;
+        border-color: #2EE3B0 !important;
+        color: #0F1419 !important;
+      }
+    }
+  }
+  
+  .contact-form {
+    background-color: var(--bg-elevated) !important;
+    
+    h3 {
+      color: var(--text-primary) !important;
+    }
+    
+    label {
+      color: var(--text-primary) !important;
+    }
+    
+    .form-control {
+      background-color: var(--bg-surface) !important;
+      border-color: var(--border-color) !important;
+      color: var(--text-primary) !important;
+      
+      &:focus {
+        border-color: var(--cba-primary) !important;
+        box-shadow: 0 0 0 0.2rem rgba(74, 158, 255, 0.25) !important;
+      }
+      
+      &::placeholder {
+        color: var(--text-muted) !important;
+      }
+    }
+  }
+  
+  .faq-section {
+    background-color: var(--bg-surface) !important;
+    
+    h2 {
+      color: var(--text-primary) !important;
+    }
+  }
+  
+  .faq-item {
+    background-color: var(--bg-elevated) !important;
+  }
+  
+  .faq-question {
+    background-color: var(--bg-elevated) !important;
+    color: var(--text-primary) !important;
+    
+    &:hover {
+      background-color: #2E3648 !important;
+    }
+    
+    &.active {
+      background-color: #1F3A3A !important;
+      color: #2EE3B0 !important;
+      
+      .faq-icon {
+        color: #2EE3B0 !important;
+      }
+    }
+  }
+  
+  .faq-icon {
+    color: var(--cba-primary) !important;
+  }
+  
+  .faq-answer {
+    color: var(--text-secondary) !important;
+    
+    h6 {
+      color: #2EE3B0 !important;
+    }
+    
+    strong {
+      color: var(--text-primary) !important;
+    }
+    
+    .text-primary {
+      color: #2EE3B0 !important;
+    }
+  }
+  
+  // Privacy & Terms Pages - dark mode
+  .privacy-hero,
+  .terms-hero {
+    background: linear-gradient(135deg, #1A1F2E 0%, #0F1419 100%) !important;
+    
+    h1, p {
+      color: var(--text-primary) !important;
+    }
+    
+    .badge {
+      background-color: rgba(74, 158, 255, 0.2) !important;
+      border-color: rgba(74, 158, 255, 0.3) !important;
+      color: var(--text-primary) !important;
+    }
+  }
+  
+  .privacy-content,
+  .terms-content {
+    .privacy-section,
+    .terms-section {
+      h2 {
+        color: var(--cba-primary) !important;
+      }
+      
+      h3 {
+        color: var(--text-primary) !important;
+      }
+      
+      p {
+        color: var(--text-secondary) !important;
+      }
+      
+      li {
+        color: var(--text-secondary) !important;
+        
+        strong {
+          color: var(--text-primary) !important;
+        }
+      }
+    }
+  }
+  
+  .highlight-box {
+    background-color: var(--bg-elevated) !important;
+    border-color: #2EE3B0 !important;
+    
+    p {
+      color: var(--text-primary) !important;
+    }
+  }
+  
+  .contact-info {
+    background-color: var(--bg-elevated) !important;
+    
+    h4 {
+      color: var(--cba-primary) !important;
+    }
+    
+    p {
+      color: var(--text-secondary) !important;
+      
+      strong {
+        color: var(--text-primary) !important;
+      }
+    }
+  }
+  
+  .table-of-contents {
+    background-color: var(--bg-elevated) !important;
+    
+    h3 {
+      color: var(--cba-primary) !important;
+    }
+    
+    a {
+      color: var(--text-primary) !important;
+      
+      &:hover {
+        color: #2EE3B0 !important;
+      }
+    }
+  }
+  
+  .enrollment-agreement {
+    background-color: var(--bg-elevated) !important;
+    border-color: #2EE3B0 !important;
+    
+    h4 {
+      color: var(--cba-primary) !important;
+    }
+    
+    .agreement-details {
+      background-color: var(--bg-surface) !important;
+      
+      p {
+        color: var(--text-secondary) !important;
+        
+        strong {
+          color: var(--text-primary) !important;
+        }
+      }
+    }
+  }
+}
+

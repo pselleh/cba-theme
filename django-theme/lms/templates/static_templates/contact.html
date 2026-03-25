@@ -1,0 +1,683 @@
+<%namespace name='static' file='../static_content.html'/>
+<%page expression_filter="h"/>
+<%! from django.utils.translation import gettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="title">Contact Us - Center for Business Acceleration</%block>
+
+<%block name="content">
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>Get in Touch</h1>
+                    <p>Ready to advance your career? Contact us today to learn more about our professional development programs and certification courses.</p>
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <a href="#contact-form" class="btn btn-custom-primary mb-3 mb-sm-0 mr-sm-3">Send Message</a>
+                        <a href="#faq" class="btn btn-custom-outline">View FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <h3 class="mb-4">Send us a Message</h3>
+                        <form id="contactForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name *</label>
+                                        <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name *</label>
+                                        <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="confirmEmail">Confirm Email *</label>
+                                        <input type="email" class="form-control" id="confirmEmail" name="confirmEmail" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="reason">Reason for Contacting *</label>
+                                        <select class="form-control" id="reason" name="reason" required>
+                                            <option value="">- Select -</option>
+                                            <option value="account_request">Account request</option>
+                                            <option value="interested_to_learn_more">Interested to Learn More</option>
+                                            <option value="curricula_request">Curricula request</option>
+                                            <option value="messages_report">Messages Report</option>
+                                            <option value="appeal">Appeal</option>
+                                            <option value="complaint">Complaint</option>
+                                            <option value="profanity_words_abuse">Profanity words abuse</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company/Organization</label>
+                                <input type="text" class="form-control" id="company" name="company">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Tell us about your training needs or questions..."></textarea>
+                            </div>
+                            
+                            <!-- reCAPTCHA -->
+                            <div class="form-group">
+                                <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                                <div id="recaptcha-error" class="text-danger mt-2" style="display: none;">
+                                    Please complete the reCAPTCHA verification.
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-custom-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-5">Maybe we have ready answers for you in the FAQ ? Find it!</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Curriculum information
+                            <i class="fas fa-plus faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our curriculums contain courselets™, knowledge checks, lab assignments, reading assignments, webinars, and calls with facilitators.</p>
+
+                            <h6 class="text-primary mb-2 mt-3">Courselet™</h6>
+                            <p>A courselet™ is a non-downloadable or downloadable small, modular courses of study in the fields of personal development, professional certification, regulatory compliance, professional and business policies and procedures, sales and marketing, and product training for educational and training purposes delivered over the Internet and through local area networks.</p>
+
+                            <h6 class="text-primary mb-2 mt-3">Knowledge Check</h6>
+                            <p>A knowledge check is a series of questions that aims to assess the learner's comprehension of learning materials. It is a form of feedback that helps test the knowledge gained and prepare learners for summative assessments (e.g. exams).</p>
+
+                            <h6 class="text-primary mb-2 mt-3">Lab Assignments</h6>
+                            <p>Lab assignments or labs are written assignments that test the learner's ability to apply the principles learned through practice. They contain questions and tasks that connect the theory with practice and are graded using grading rubrics.</p>
+
+                            <h6 class="text-primary mb-2 mt-3">Reading Assignments</h6>
+                            <p>Reading assignments are tasks for individual study that are aimed at helping learners prepare for their next courselet or webinar. Reading assignments are used to present examples or charts, provide an outline, reinforce the courselet materials, and ease the understanding of complex concepts.</p>
+
+                            <h6 class="text-primary mb-2 mt-3">Webinar</h6>
+                            <p>A webinar is an educational, informative or instructional presentation, lecture, workshop or seminar that is transmitted over the Internet using video conferencing software. Key features of a webinar are in its interactive elements and the ability to give, receive and discuss information with multiple users in different locations in real-time.</p>
+
+                            <h6 class="text-primary mb-2 mt-3">Facilitator Calls</h6>
+                            <p>Facilitator calls are scheduled curriculum calls with assigned facilitators. The goal of the calls is to enhance student learning by supporting instructional effectiveness through individual coaching. This is done through facilitation of training where gaps in knowledge are identified and agreed on or where students would like additional support in learning. Facilitator calls are also used to convey feedback on program design, learning outcomes and their achievement, as well as opportunities for improvement.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Obligations of the institution
+                            <i class="fas fa-plus faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <ul>
+                                <li>CBA constantly strives to provide world-class sales, management, marketing, and leadership programs at fair and reasonable costs.</li>
+                                
+                                <li>CBA upholds the cancellation and tuition policies as stated above.</li>
+                                
+                                <li>CBA maintains all educational and instructional materials for quality and usability, including the technological aspects of the program.</li>
+                                
+                                <li>CBA treats each student fairly and impartially, regardless of any affiliation, race, religion, creed, ethnicity or gender.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Non-discrimination Policy
+                            <i class="fas fa-plus faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The CBA does not discriminate based on race, religion, ethnicity, nationality, gender, creed, social class, or any other defining characteristics. However, the VA Accelerator Program only admits Veterans who qualify through the VR&E's Chapter 31 and referred into the program.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Student Code of Conduct
+                            <i class="fas fa-plus faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The Center for Business Acceleration is dedicated to providing its students with an excellent education, and working with students to achieve their personal best in all areas.</p>
+                            
+                            <p>In order for us to effectively achieve this goal, we have below clearly outlined the conduct expectations required to maintain a welcoming, productive, orderly learning environment.</p>
+                            
+                            <p>We request that you initial each page of this document, and sign the final page to indicate that you understand and agree to conduct yourself by the standards outlined here.</p>
+                            
+                            <h6 class="text-primary mb-2 mt-4">CBA Student Pledge</h6>
+                            <ul>
+                                <li>To communicate and treat all members of the CBA community with professionalism, civility, and dignity.</li>
+                                <li>To complete all assignments honestly, with dedication, and to the best of my ability.</li>
+                                <li>To promote, by my words and actions, the safety, acceptance, and educational success of all those around me.</li>
+                            </ul>
+                            
+                            <h6 class="text-primary mb-2 mt-4">Expectations of Conduct</h6>
+                            <p>At CBA, we encourage and expect all employees and students to model and treat others with civility, integrity, dignity, and respect. These four qualities allow all students to feel comfortable, welcomed, and secure, and form the foundation for a positive learning environment.</p>
+                            
+                            <p>Expected behaviors as outlined below will be proactively encouraged in the following ways:</p>
+                            <ul>
+                                <li>Expectations will be discussed with all students entering the program</li>
+                                <li>Every student will be presented with and asked to acknowledge this document upon enrollment</li>
+                                <li>Expectations will be discussed, clarified and reviewed as needed, both internally and with each student</li>
+                                <li>Expectations will be modelled by CBA staff at all times</li>
+                                <li>CBA staff will document and address all inappropriate conduct promptly and appropriately</li>
+                                <li>Extenuating circumstances and limitations will be taken into consideration, and each student will receive individual, personalized attention</li>
+                            </ul>
+                            
+                            <h6 class="text-primary mb-2 mt-4">Civility</h6>
+                            <p>Civility is politeness, consideration of others, and courtesy in behavior or speech.</p>
+                            
+                            <p>A primary feature of online education is that communication occurs primarily, if not exclusively, via written communication and the phone. Face-to-face communication offers many benefits that written and phone communication do not, including the ability to read facial, vocal and body cues, as well as the opportunity to clarify points immediately.</p>
+                            
+                            <p>Whether or not you are familiar with email, phone, messaging, and other forms of distance communication, please read and remember the following when you communicate online:</p>
+                            
+                            <p><strong>Tone:</strong></p>
+                            <ul>
+                                <li>Sarcasm, anger, and excitement are just a few examples of difficult-to-read tones over email.</li>
+                                <li>Please keep your communication polite, clear, and neutrally phrased for reader clarity.</li>
+                                <li>Emailed communication is frequently mis-interpreted. If you feel that you have been misunderstood, or if you are confused by an email you have received, please do not hesitate to clarify or ask clarifying questions.</li>
+                            </ul>
+                            
+                            <p><strong>Privacy:</strong></p>
+                            <ul>
+                                <li>Please do not add third parties into your email communications without requesting their permission.</li>
+                                <li>Please do not transmit sensitive information via email (Social Security Number, banking information, etc.).</li>
+                                <li>Do not forward unrelated emails or content to others without their permission.</li>
+                            </ul>
+                            
+                            <p><strong>Precision (Be clear and concise, stay on topic, title emails according to their content):</strong></p>
+                            <ul>
+                                <li>Be clear and concise in your communications. Consider that your reader does not have your starting knowledge, and may need additional explanation.</li>
+                                <li>Stay on topic. Communications should be focused on the point you are trying to make.</li>
+                                <li>Title emails according to their content. Even if you are replying to a previous email – if you are including a new topic, you should change the email's subject line.</li>
+                            </ul>
+                            
+                            <h6 class="text-primary mb-2 mt-4">Integrity</h6>
+                            <p>Integrity is the quality of honest and moral conduct.</p>
+                            
+                            <p>To maintain integrity in an educational environment, students are expected to respect and comply with all applicable laws. In addition, students are expected to put forward their best effort towards their coursework at all times.</p>
+                            
+                            <p>Some common concerns are listed below:</p>
+                            
+                            <p><strong>Plagiarism:</strong></p>
+                            <ul>
+                                <li>Defined as the use, theft, or passing of another's work as one's own.</li>
+                                <li>To avoid plagiarism, always list or cite your sources thoroughly, even if you are only paraphrasing.</li>
+                                <li>All written work submitted to the Center for Business Acceleration by a student must be fully researched and composed by the student themselves.</li>
+                            </ul>
+                            
+                            <p><strong>Cheating:</strong></p>
+                            <ul>
+                                <li>Students must complete assignments as directed, and may not use unapproved sources for any evaluation or assignment.</li>
+                                <li>Creating false records, data, or information and including those in your communications or assignments with CBA will not be tolerated.</li>
+                            </ul>
+                            
+                            <p><strong>Theft of intellectual property:</strong></p>
+                            <ul>
+                                <li>All coursework, logos, and website content are the property of the Center for Business Acceleration and may not be distributed, sold, or otherwise used outside of an approved context.</li>
+                            </ul>
+                            
+                            <h6 class="text-primary mb-2 mt-4">Dignity and Respect</h6>
+                            <p>Offering dignity and respect to others means treating them with appropriate consideration and esteem, and valuing each person with whom you interact. In addition, acting with dignity means conducting yourself in every situation according to the appropriate level of formality, gravity, or respect.</p>
+                            
+                            <p>In an academic context, this means that all CBA students will be disciplined immediately upon any evidence of discriminatory behavior against others. At all times, you are expected to respect the rights of others in your actions and words.</p>
+                            
+                            <p>Students are also encouraged to be respectful of the circumstances, experience, and knowledge of those with whom they work in this program.</p>
+                            
+                            <h6 class="text-primary mb-2 mt-4">Inappropriate Conduct</h6>
+                            <p>Though the qualities of civility, integrity, dignity, and respect should guide student behavior appropriately, CBA also expects students to explicitly refrain from the behaviors outlined in this section.</p>
+                            
+                            <p>Any of the following actions can be considered a severe offense, depending upon the circumstances. All offenses will be brought to the student's attention as well as their VA Vocational Rehabilitation Counselor. In addition, offense, severity, date/time, and consequences or action taken will be noted in the student's online CBA program record.</p>
+                            
+                            <p>All members of the CBA online and physical community are expected to refrain from the following:</p>
+                            <ul>
+                                <li>Breaking federal, provincial, or municipal laws</li>
+                                <li>Submitting plagiarized or improperly cited work</li>
+                                <li>Threatening behavior towards an individual or group</li>
+                                <li>Derogatory or hateful comments towards an individual or group</li>
+                                <li>Verbal or electronic bullying behavior that deliberately hurts another person (socially or emotionally)</li>
+                                <li>Using technology to interfere with the positive environment of the school</li>
+                                <li>Using profane, violent, or discriminatory language</li>
+                                <li>Behavior that discriminates against any of the following: Economic status, Race or color, National or ethnic origin, Language group, Religion, Gender or gender identity, Sexual orientation, Age or ability</li>
+                            </ul>
+                            
+                            <p>Any of the above will result in the enactment of disciplinary procedures against the student. For CBA's approach to breaches of conduct, please see the next section.</p>
+                            
+                            <h6 class="text-primary mb-2 mt-4">Breaches of Conduct</h6>
+                            <p>Breaches of conduct as outlined in this document will be responded to via a strategy of escalating interventions. Our first responses will always be to encourage the student in both a corrective and supportive approach.</p>
+                            
+                            <p>The CBA Team's response to inappropriate student behavior will take into consideration the severity of the behavior, the circumstances (including people, environment, outside factors, and any special considerations), the previous responses to and by this student, and the frequency with which the behavior occurs.</p>
+                            
+                            <p>Depending on the severity of the offence, CBA Staff will respond initially with one of the following:</p>
+                            <ul>
+                                <li>Verbal or written reminders of expected conduct</li>
+                                <li>Exemplifying expected behavior</li>
+                                <li>A one-on-one conference discussing the offence</li>
+                                <li>Verbal or written reminders of consequences for inappropriate conduct</li>
+                            </ul>
+                            
+                            <p>A severe offense, as determined by the review of an Education Administrator, will result in a written warning. A second severe offense will result in additional actions as outlined below. A third severe offense will result in expulsion from the program.</p>
+                            
+                            <ul>
+                                <li>For the first severe offence regarding inappropriate conduct, the student will receive a written warning.</li>
+                                <li>The second offense will result in additional measures by the CBA Team:
+                                    <ul>
+                                        <li>a) Monitored behavior. Second offenses regarding inappropriate conduct will result in additional student monitoring to ensure that the behavior has been corrected.</li>
+                                        <li>b) Mediation. Second offenses may require mediation by a third party, appointed by CBA.</li>
+                                        <li>c) A behavior management plan. Second offenses may require the student and facilitator to discuss conduct going forward, and may require a behavior management plan to be outlined so that expectations of improved conduct are clear.</li>
+                                    </ul>
+                                </li>
+                                <li>The third offense will result in expulsion from the program.</li>
+                            </ul>
+                            
+                            <p>Before expulsion, the student's offenses will be presented to the CBA Board of Directors and the student's VA Vocational Rehabilitation Counselor or other VA contact.</p>
+                            
+                            <p>Students may be offered a chance to appeal this action and be re-entered into the program.</p>
+                            
+                            <h6 class="text-primary mb-2 mt-4">Appeal Process</h6>
+                            <p>Students who have been expelled will be permitted to enter an appeal process to be re-admitted into the program. The student has 90 days from the date of expulsion to submit an Appeal Letter and begin the appeal process.</p>
+                            
+                            <p>In order to be re-entered into the program, students should fill out the Appeal Letter Form, attached to the end of this document. Upon receipt of an Appeal Letter, CBA will schedule a second hearing with the relevant parties.</p>
+                            
+                            <p>After the appeal hearing, CBA will inform the student of the final enrollment decision within one business week.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Technology Requirements
+                            <i class="fas fa-plus faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>For hardware, we recommend a dual-core CPU (Intel® Core 2 or AMD Athlon® 64 Processor; 2 GHz or faster processor) with at least 2 GB or more RAM (8 GB recommended). We recommend any operating system capable of running the latest versions of Google Chrome and Mozilla Firefox 5.x and later.</p>
+                            
+                            <p>For browser, we recommend running either Mozilla Firefox 5.x and later or Chrome. Why? Both browsers provide excellent support for web real-time communications (WebRTC). Safari 5.x and later, Internet Explorer 10.x and later, and Microsoft Edge will work as well, but Chrome and Mozilla Firefox 5.x and later will deliver better audio in lower bandwidth conditions.</p>
+                            
+                            <p>In order to be able to proceed to take the exam, the students must confirm that they can meet the minimal system requirements:</p>
+                            
+                            <ul>
+                                <li>Intel® Core 2 or AMD Athlon® 64 Processor; 2 GHz or faster processor</li>
+                                <li>Microsoft Windows 7 with Service Pack 1</li>
+                                <li>2 GB or more RAM (8 GB recommended)</li>
+                                <li>1024 x 768 display (1280 x 800 recommended) with 16-bit color and 512 MB or more of dedicated VRAM; 2 GB is recommended*</li>
+                                <li>OpenGl 2.0-capable system</li>
+                                <li>Internet connection and registration are necessary for required software activation, validation of subscriptions, and access to online</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Student Exam Requirements
+                            <i class="fas fa-plus faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>In order to take the Exam you must meet the Technical Requirements.</p>
+                            
+                            <p>In order to be eligible to take an exam, the student must follow the procedures listed below:</p>
+                            
+                            <ul>
+                                <li>A government issued ID (both sides) is uploaded after registration and prior to the exam.</li>
+                                <li>Photo in the ID must represent how the student looks at that time so there is no doubt who the person is.</li>
+                                <li>The document must be an official government issued ID that has the legal name of the student that is the same name as the one the student used to register.</li>
+                                <li>Pay the fee for taking the exam (if applicable). The first two tries are covered as tuition costs, 3rd try is at expense of the student</li>
+                                <li>Select the scheduled exam on Student's dashboard prior to exam.</li>
+                                <li>At least 15 minutes prior to the scheduled exam time, the student needs to go to the Exam tile which will take the student to the Examitor website.</li>
+                            </ul>
+                            
+                            <p><strong>In the pre-exam interface, the student must:</strong></p>
+                            
+                            <ul>
+                                <li>Accept the Terms of Service;</li>
+                                <li>Review Student Honor Code for Test Taking;</li>
+                                <li>Sign the Student Non-Disclosure and Proprietary Agreement for Test Taking;</li>
+                                <li>Confirm System Requirements;</li>
+                                <li>Draw the personal signature in the specific field;</li>
+                                <li>Wait for the proctor to verify student's identity;</li>
+                                <li>Proceed and wait for the proctor to start the exam.</li>
+                                <li>Communicate with proctor via chat in case if any help needed</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Unit Hour Determination
+                            <i class="fas fa-plus faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <h6 class="text-primary mb-2 mt-3">Introduction</h6>
+                            <p>The Center for Business Acceleration determines course value based off of the nationally recognized units known as Continuing Education Units (CEU) and Professional Development Units (PDU), which were developed by the Project Management Institute (PMI). For every ten hours of participation, the student earns one CEU, and for every one hour of participation the student earns one PDU.</p>
+                            
+                            <h6 class="text-primary mb-2 mt-3">Hour Determination</h6>
+                            <p>Individuals who have expertise within the business field develop all courses within the CBA. For each course, one qualified person develops the learning materials, while another develops the exams and labs. This ensures that multiple perspectives are included within course development. In this stage, these qualified individuals calculate the hours needed to complete each course. These course hours are divided between contact hours and lab hours, depending on the particular course material. Once total course hours are calculated, they are then translated into CEUs and PDUs.</p>
+                            
+                            <p>Contact hours consist of time spent on courselets and taking exams. The estimated hours for each courselet vary course to course, but all are calculated using a standard ratio: 10,000 words per hour. Student measurement, knowledge check, and exam times are allotted and this time is calculated into the total contact hours.</p>
+                            
+                            <p>Lab hours are alloted by the time it would take an average student to complete any given lab. These assignments are completed at the student's leisure with no hard deadlines or time constraints, but students must complete all lab materials within the estimated time.</p>
+                            
+                            <h6 class="text-primary mb-2 mt-3">Student Analysis</h6>
+                            <p>The CBA ensures that these course hour estimations match real time completion rates by tracking student login times and course progression. However, the CBA doesn't keep tabs on student attendance or submission dates, because the courses are completed at the student's own pace within the allotted Countdown Clock Hours. In addition, the CBA upholds its Honor Code in order to ensure the enrolled student completes his or her own course load. Refer to CBA Honor Code for more info.</p>
+                            
+                            <h6 class="text-primary mb-2 mt-3">Continuing Education Units</h6>
+                            <p>For certificate and certification programs that require students to complete continuing education units in order to maintain a valid certificate, guidelines are listed below:</p>
+                            
+                            <ul>
+                                <li>Continuing education units must be obtained from organizations that provide quality measurable education and follow the standards by The International Association for Continuing Education And Training (IACET).</li>
+                                <li>All organizations must be validated by About Giving.</li>
+                                <li>Request to be an approved facility can be submited by organizations through the Contact page.</li>
+                                <li>Currently, approved facilities include The Center for Business Acceleration and iLearnix.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Issued Certificates
+                            <i class="fas fa-plus faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Certificates are issued by and through the Center for Business Acceleration for the purpose of validating that the student has met the minimum attendance requirements and the minimum achievement requirements as set forth in the assesment instruments, and aligned with the program purpose, scope and learning outcomes.</p>
+                            
+                            <p>The certificate issued by the CBA may be invalidated due to one or more of the following:</p>
+                            
+                            <ul>
+                                <li>Change of curriculum requirements</li>
+                                <li>Certificate holder not meeting the requirements to maintain the valid certificate</li>
+                                <li>Violated ethics and honor code policies</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Complaint Policy
+                            <i class="fas fa-plus faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <h6 class="text-primary mb-2 mt-3">Introduction</h6>
+                            <p>This policy and procedure document stands to ensure that there are no discrepancies while filing a formal complaint. This document has been issued to all staff members and is made available to any interested party on the Center for Business Acceleration website. Complaint submission process and key information is also found on the Contact page in FAQs.</p>
+                            
+                            <h6 class="text-primary mb-2 mt-3">What is a Formal Complaint?</h6>
+                            <p>Formal Complaints consist of reliable and credible information that is set forth either by a faculty or staff member, a student or client, or any interested third party. Complaints should state how the institution, a staff member, or a student is not in compliance with one or more of the standards of CBA, as described in the policies and procedures, the code of ethics, the honor code, the privacy statement, and/or the terms of use. Formal Complaint definitions can also be taken into special consideration on a case-by-case basis.</p>
+                            
+                            <h6 class="text-primary mb-2 mt-3">Complaint Procedures</h6>
+                            
+                            <p><strong>Submission Process</strong></p>
+                            <p>In order to file a formal complaint, parties must adhere to the following steps:</p>
+                            <ul>
+                                <li>Review the Complaint Policies and Procedures document.</li>
+                                <li>Locate the "Contact" page under the CBA website.</li>
+                                <li>Provide all the requested information.</li>
+                                <li>Select "Reason for Contacting Us" → "Other" option from the drop-down menu.</li>
+                                <li>Enter brief description of complaint.</li>
+                                <li>Click the "Submit" button.</li>
+                                <li>Check your email for "Submission Receipt," from cbaadmin@cbaccel.com</li>
+                            </ul>
+                            <p>If you do not receive your submission receipt within one business day, please contact us directly.</p>
+                            
+                            <p><strong>Types of Complaints</strong></p>
+                            <ul>
+                                <li><strong>Internal complaints</strong> consist of issues regarding staff relations, unresolved work related issues, or staff professionalism and performance. This can include, but is not limited to, issues regarding harassment, discrimination, or injuries sustained during documented work hours.</li>
+                                <li><strong>External Complaints</strong> include, but are not limited to, student or client dissatisfaction with provided services, discrepancies regarding accreditation or institutional alignments, unresolved previously submitted support requests, or allegations of harassment or discrimination within the institution.</li>
+                            </ul>
+                            
+                            <h6 class="text-primary mb-2 mt-3">Complaint Review</h6>
+                            <p>The review process for complaints begins when the claimant has received their Submission Receipt. All complaints will be resolved within 3 business days of submission.</p>
+                            
+                            <p><strong>Categorization</strong></p>
+                            <p>Once the complaint has been received and determined to adhere to the Formal Complaint definition, it will be filed into one of three possible categories that address the origination of the complaint:</p>
+                            <ul>
+                                <li>Internal</li>
+                                <li>External</li>
+                                <li>Uncategorized*</li>
+                            </ul>
+                            <p>*Uncategorized complaints are submitted complaints with unclear information as to the origination. These complaints will still be addressed within the review process, and directed as deemed appropriate by management personnel.</p>
+                            
+                            <p><strong>Analysis</strong></p>
+                            <p>Once categorized, management will be able to successfully evaluate the complaints for content and genre. During this analysis, management looks for the nature of the complaint, which can include any of the following:</p>
+                            <ul>
+                                <li><strong>Technical Issues:</strong> These complaints include problems with the website, materials, or recurring issues that have not been addressed within the contact page.</li>
+                                <li><strong>Recommendations:</strong> These complaints can come in two forms:
+                                    <ul>
+                                        <li>Direct constructive criticism including suggestions about the program or company.</li>
+                                        <li>Criticism that indirectly implies the need for further assessment and possible recommendations. In these instances, the complaint will follow through the review process as usual. Although management personnel will thoroughly review all concerns raised, recurring complaints that follow trends of a similar nature will be considered of higher relevance.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Other Party Involvement:</strong> These complaints include allegations of harassment, discrimination, or strained relationships within the institution.</li>
+                            </ul>
+                            
+                            <p><strong>Notification of Involved Parties</strong></p>
+                            <p>Any specified parties included within the complaint will be notified. If no parties are specifically stated, the complaint will be directed towards appropriate management or department.</p>
+                            
+                            <p>Management personnel receiving and filing complaints holds the responsibility of maintaining the anonymity of the individual submitting the complaint. Any personal information provided during the submission process will not be disclosed to the involved parties notified during complaint review, unless deemed necessary to the resolution of the case.</p>
+                            
+                            <p><strong>Investigation</strong></p>
+                            <p>The investigation will take place over a period of 3 business days, and the claimant may need to be contacted for additional information. During the notification process, any involved parties will be consulted in order to obtain their statement on the complaint submitted. These statements will then be considered and reviewed alongside the original complaint received.</p>
+                            
+                            <p><strong>Resolution</strong></p>
+                            <p>The management personnel at CBA seek a just resolution in every case up for review. In addition, management strives towards favorable and unbiased outcomes for all parties. Once a resolution has been reached, a formal letter detailing the terms of said resolution will be emailed to the claimant and related persons.</p>
+                            
+                            <p>There may be circumstances that arise where complaint resolution may only be partially completed within the 3 business days. In these cases, the claimant will still receive a formal letter about the terms of any resolution completed thus far, and informed of the complaint's status. This letter will also include details about possible further resolutions.</p>
+                            
+                            <h6 class="text-primary mb-2 mt-3">Complaint Policies</h6>
+                            
+                            <p><strong>Complaint Timetable:</strong></p>
+                            <ul>
+                                <li>All submitted complaints must be filed within fifteen business days of the most recent incident.</li>
+                                <li>All complaints will be reviewed and resolved within 3 business days.</li>
+                                <li>If resolution hasn't happened in 3 business days, the claimant will be notified of either partial or unattainable resolution status.</li>
+                                <li>If the claimant received no notification concerning resolution, the individual should contact management personnel immediately for further information.</li>
+                            </ul>
+                            
+                            <p><strong>Partial/Unattainable Resolution:</strong></p>
+                            <ul>
+                                <li>In instances where only partial resolution of the complaint is attainable, management will notify the claimant if there is an additional timetable for further resolution or if further resolution is unattainable</li>
+                                <li>In instances where resolution is considered unattainable, the claimant will be notified as to why management could not satisfy their request and if any future resolution is possible.</li>
+                            </ul>
+                            
+                            <p><strong>Misuse of Complaint Submission Process:</strong></p>
+                            <ul>
+                                <li>CBA strives to satisfy every individual's complaints and requests. However, this system should not be misused or repeatedly exploited for personal prejudices.</li>
+                                <li>Misuse includes non-adherence to the procedural system in place or by submitting complaints that do not align with the definition of formal complaints (See "What is a Formal Complaint?").</li>
+                            </ul>
+                            
+                            <p><strong>Confidentiality:</strong> CBA recognizes the sensitive nature of filing complaints, and so the submission and review process is organized to ensure confidentiality, unless otherwise stated (See "Notification of Involved Parties").</p>
+                            
+                            <p><strong>Electronic Tracking of Submissions:</strong> CBA will track these complaints as adherent to its privacy statement and terms of use (See "Terms of Use and Privacy Policy").</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Cancellation or Refund Policy
+                            <i class="fas fa-plus faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Once a student finishes enrolling, he or she will have immediate access to all program materials. Students can complete course materials at any time and in any order before his or her program terminates. Any student who wishes to cancel their program must submit a cancellation request within the first 24 hours of signing the enrollment agreement; due to the immediate access students receive.</p>
+                            
+                            <p>If no cancellation request is received within 24 hours of enrollment, or if the cancellation is not granted, students then have 30 days to complete all requirements for the Business Accelerator program.</p>
+                            
+                            <h6 class="text-primary mb-2 mt-3">Requesting Cancellation</h6>
+                            <p>Any and all cancellations are submitted via the Contact page, located under the heading, "Contact," on the Center for Business Acceleration's website. Once on this webpage, the student filing for cancellation should fill out all requested information.</p>
+                            
+                            <p>The Center for Business Acceleration asks our students to submit cancellation requests exclusively via the Contact page in order to track for quality assurance. Everything within this page receives a stamp recording the time and date of submission. This stamp ensures that all requests are processed and filed within a timely manner, and allows for a more accurate review process.</p>
+                            
+                            <h6 class="text-primary mb-2 mt-3">Request Review</h6>
+                            <p>Once the student has submitted his or her cancellation request via the Contact page, administrative personnel will review the request. Administrative personnel determine cancellation eligibility based on student's time enrolled in the program and the cancellation request timestamp. If administrative personnel find that the student submitting the cancellation request has frequently cancelled courses with the Center for Business Acceleration in the past, the request may not be granted.</p>
+                            
+                            <p>When a cancellation request has been fully reviewed by administrative personnel, the student will receive a notification within two business days. If no notification is received within two business days, the student should submit an inquiry on the Contact page. After notification has been received, the student will be informed about refund options. (See "Refunds" below.)</p>
+                            
+                            <h6 class="text-primary mb-2 mt-3">Requesting Refunds</h6>
+                            <p>Refunds will be awarded to those students whose cancellations are approved by administrative staff. Student's who have frequently cancelled courses in the past may not eligible to receive refunds.</p>
+                            
+                            <p><strong>Eligibility</strong></p>
+                            <p>Upon registration, students receive immediate access to any and all materials within the course. Due to our program's accessibility, refunds will only be awarded to individuals who submit a cancellation request within 24 hours of enrollment.</p>
+                            
+                            <p><strong>Reimbursement</strong></p>
+                            <p>Within the Business Accelerator, once the student has been approved for a refund, the individual student will be notified. The student will then receive any and all refunds within 30 days of the submitted cancellation request in the form of a check. If the student had chosen a payment plan, the student's bank will receive notification to end all further transactions, and the refund check will reflect any payments previously processed.</p>
+                            
+                            <p>Full reimbursement will only be awarded to individuals who submit a cancellation request within 24 hours of enrollment. A non-refundable administrative fee of $75 will be applied to any and all refunds, in order to cover the administrative costs of reviewing the cancellation request.</p>
+                            
+                            <h6 class="text-primary mb-2 mt-3">Special Considerations</h6>
+                            
+                            <p><strong>Locking Curricula</strong></p>
+                            <p>If student is experiencing any extenuating circumstance that prevents him or her from continuing in the course once enrolled, special consideration will be given during cancellation review. This can include a scenario where administrative personnel and the student agree on a set period of time for course material to be "locked.". "Locking" course material would effectively pause the student's countdown clock so that the student may attend to these extenuating circumstances without losing time within the course. During this period, the student will not be able to access course materials and will be unable to progress in the course. Once the "locking" period is up, the countdown clock will resume and students can continue the program. Due to the programs' brief duration, administrative staff will determine if the student is eligible to have their curriculum "locked" on a case-by-case basis.</p>
+                            
+                            <p><strong>Course Extensions</strong></p>
+                            <p>Special consideration will be given to students whose countdown clocks have run out, but did not complete all course requirements. In these situations, refunds will not be granted but course extensions may be granted on a case-by case basis. Administrative personnel will determine the eligibility of each student for an extension. For the Business Accelerator, extensions may not be granted past 180 days of the initial enrollment and at no additional cost to the student.</p>
+                            
+                            <h6 class="text-primary mb-2 mt-3">Record Maintenance</h6>
+                            <p>All cancellation requests submitted will be maintained and kept on file to enhance Center for Business Acceleration's improvement and progression. These electronic files are not shared with third parties and are protected by the Quality Management System. This system allows Center for Business Acceleration to also track and flag those students who may frequently cancel their enrolled courses. For more information about record systems and user privacy, see the Record Systems and Protection and Privacy Policy.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Appeal Policies and Procedures
+                            <i class="fas fa-plus faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <h6 class="text-primary mb-2 mt-3">Introduction</h6>
+                            <p>This policy and procedure document stands to ensure that there are no discrepancies while filing an appeal. This document has been issued to all staff members and is made available to any interested party on the Center for Business Acceleration website. Appeal submission process and key information is also found on the Contact page in FAQs.</p>
+                            
+                            <h6 class="text-primary mb-2 mt-3">What is an Appeal?</h6>
+                            <p>An appeal is the process in which cases are reviewed, where parties request a formal change to an official decision. Appeals function both as a process for error correction as well as a process of clarifying and interpreting rules and regulations. Appeals consist of reliable and credible information that is set forth either by a faculty or staff member, a student or client, or any interested third party. An appeal is made in cases where you feel the organization has made a substantial mistake that seriously affected the outcome of your case. Appeals should state how the institution, or staff member, has disrupted your rights to use the CBA website and resources.</p>
+                            
+                            <h6 class="text-primary mb-2 mt-3">Appeal Procedures</h6>
+                            
+                            <p><strong>Submission Process</strong></p>
+                            <p>In order to file an appeal, parties must adhere to the following steps:</p>
+                            <ul>
+                                <li>Review the Appeal Policies and Procedures document.</li>
+                                <li>Locate the "Contact" page under the CBA website.</li>
+                                <li>Provide all the requested information.</li>
+                                <li>Select "Reason for Contacting Us" → "Other" option from the drop-down menu.</li>
+                                <li>Enter brief description of appeal.</li>
+                                <li>Click the "Submit" button.</li>
+                                <li>Check your email for "Submission Receipt," from cbaadmin@cbaccel.com</li>
+                            </ul>
+                            <p>If you do not receive your submission receipt within one business day, please contact us directly.</p>
+                            
+                            <p><strong>Types of Appeals</strong></p>
+                            <ul>
+                                <li>Appeals related to (dis)enrollment that consist of issues regarding to student's enrollment in the curriculum.</li>
+                                <li>Appeals related to certificates that consist of issues related to invalidated certificates due to not meeting continuing education requirements or breaking the Honor Code and Ethics Agreement or the provisions set forth in the handbook or other CBA documents.</li>
+                            </ul>
+                            
+                            <h6 class="text-primary mb-2 mt-3">Appeal Review</h6>
+                            <p>The review process for appeals begins when the appellant has received their Submission Receipt. All appeals will be resolved within 3 business days of submission.</p>
+                            
+                            <p><strong>Categorization</strong></p>
+                            <p>Once the appeal has been received and determined to adhere to the appeal definition, it will be filed into one of two possible categories that address the origination of the appeal:</p>
+                            <ul>
+                                <li>Enrollment related appeal</li>
+                                <li>Certificate related appeal</li>
+                            </ul>
+                            
+                            <p><strong>Analysis</strong></p>
+                            <p>Once categorized, management will be able to successfully evaluate the appeals for content, nature and genre. During this analysis, management looks at all the evidence related to the incident associated with student's enrollment and/or certificate.</p>
+                            
+                            <p><strong>Notification of Involved Parties</strong></p>
+                            <p>Any specified parties included within the appeal will be notified. If no parties are specifically stated, the appeal will be directed towards appropriate management or department.</p>
+                            
+                            <p>Management personnel receiving and filing appeals holds the responsibility of maintaining the privacy of the individual submitting the appeal. Any personal information provided during the submission process will not be disclosed to the involved parties notified during appeal review, unless deemed necessary to the resolution of the case.</p>
+                            
+                            <p><strong>Investigation</strong></p>
+                            <p>The investigation will take place over a period of 3 business days, and the appellant may need to be contacted for additional information. During the notification process, any involved parties will be consulted in order to obtain their statement on the appeal submitted. These statements will then be considered and reviewed alongside the original appeal received.</p>
+                            
+                            <p><strong>Resolution</strong></p>
+                            <p>The management personnel at CBA seek a just resolution in every case up for review. In addition, management strives towards favorable and unbiased outcomes for all parties. Once a resolution has been reached, a formal letter detailing the terms of said resolution will be emailed to the appellant and related persons.</p>
+                            
+                            <p>If the appeal is found to be justified, the student will be reinstated or the certificate will be validated. If the appellant is found to be in violation of the provisions set in the CBA Honor Code and Ethics Agreement, Enrollment Agreement, handbook or other CBA documents, the initial decision will be confirmed and the penalties determined will remain.</p>
+                            
+                            <p>There may be circumstances that arise where appeal resolution may only be partially completed within the 3 business days. In these cases, the appellant will still receive a formal letter about the terms of any resolution completed thus far, and informed of the appeal's status. This letter will also include details about possible further resolutions.</p>
+                            
+                            <h6 class="text-primary mb-2 mt-3">Appeal Policies</h6>
+                            
+                            <p><strong>Appeal Timetable:</strong></p>
+                            <ul>
+                                <li>All submitted appeals must be filed within fifteen business days of the most recent incident.</li>
+                                <li>All appeals will be reviewed and resolved within 3 business days.</li>
+                                <li>If resolution hasn't happened in 3 business days, the appellant will be notified of delayed resolution and the reasons for the delay.</li>
+                                <li>If the appellant received no notification concerning resolution, the individual should contact management personnel immediately for further information.</li>
+                            </ul>
+                            
+                            <p><strong>Misuse of Appeal Submission Process:</strong></p>
+                            <ul>
+                                <li>CBA strives to satisfy every individual's appeals and requests. However, this system should not be misused or repeatedly exploited for personal prejudices.</li>
+                                <li>Misuse includes non-adherence to the procedural system in place or by submitting appeals that do not align with the definition of appeals (See "What is an Appeal?").</li>
+                            </ul>
+                            
+                            <p><strong>Confidentiality:</strong> CBA recognizes the sensitive nature of filing appeals, and so the submission and review process is organized to ensure confidentiality, unless otherwise stated (See "Notification of Involved Parties").</p>
+                            
+                            <p><strong>Electronic Tracking of Submissions:</strong> CBA will track these appeals as adherent to its privacy statement and terms of use.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Address and Phone Number
+                            <i class="fas fa-plus faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Center for Business Acceleration</strong></p>
+                            <p>6440 Sky Pointe Dr #140-550<br>
+                            Las Vegas Nevada, 89131</p>
+                            <p><strong>Phone:</strong> (240) 715-6200</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</%block>
+
+<%block name="js_extra">
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
+    <!-- FAQ and Contact Form JavaScript -->
+    <script src="${static.url('js/faq.js')}"></script>
+</%block>
