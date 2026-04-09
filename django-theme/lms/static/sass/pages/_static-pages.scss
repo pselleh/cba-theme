@@ -1,0 +1,183 @@
+// Static pages — Privacy & Terms (Palette B: slate + teal + amber, matches home)
+
+.privacy-hero,
+.terms-hero {
+  // Warm accent (amber tint) + surface — distinct from plain gray band
+  background: $cba-static-hero-bg;
+  border-bottom: 1px solid $cba-border-amber-muted;
+  padding: 3.5rem 0 3rem;
+  text-align: left;
+
+  .container {
+    max-width: $cba-home-max-width;
+  }
+
+  h1 {
+    color: $cba-slate;
+    font-size: clamp(1.75rem, 4vw, 2.35rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $cba-gray;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 40rem;
+    margin: 0 0 1.25rem;
+  }
+
+  .privacy-badges,
+  .terms-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+  }
+
+  .badge {
+    background-color: $cba-white-a95 !important;
+    color: $cba-slate !important;
+    border: 1px solid $cba-amber-a35 !important;
+    font-weight: 600;
+    font-size: $font-size-sm;
+    padding: 0.4rem 0.9rem;
+    border-radius: $radius-pill;
+  }
+}
+
+.privacy-content,
+.terms-content {
+  padding: 4rem 0 5rem;
+
+  .container {
+    max-width: $cba-home-max-width;
+  }
+
+  .privacy-section,
+  .terms-section {
+    margin-bottom: 3rem;
+
+    h2 {
+      color: $cba-slate;
+      font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+    }
+
+    h3 {
+      color: $cba-slate;
+      font-size: $h4-size;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      margin-top: 2rem;
+    }
+
+    p,
+    li {
+      color: $cba-gray;
+      font-size: $font-size-base;
+      line-height: $line-height-base;
+      margin-bottom: 0.65rem;
+    }
+
+    li strong {
+      color: $cba-slate;
+    }
+  }
+}
+
+.highlight-box {
+  background-color: $cba-teal-a08;
+  border: 1px solid $cba-teal-a45;
+  border-left-width: 4px;
+  border-left-color: $cba-teal;
+  border-radius: $radius-base;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+
+  p {
+    color: $cba-slate !important;
+    font-size: $font-size-base;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.55;
+  }
+}
+
+.table-of-contents {
+  background-color: $cba-white;
+  border: 1px solid $cba-border;
+  border-radius: $radius-base;
+  box-shadow: $shadow-sm;
+  padding: 1.75rem 2rem;
+  margin-bottom: 3rem;
+
+  h3 {
+    color: $cba-slate;
+    font-size: $h4-size;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0.45rem;
+
+      a {
+        color: $cba-teal;
+        text-decoration: none;
+        font-size: $font-size-base;
+        font-weight: 600;
+        transition: $transition-fast;
+
+        &:hover {
+          color: $cba-teal-dark;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.enrollment-agreement {
+  background-color: $cba-white;
+  border: 1px solid $cba-teal-a45;
+  border-radius: $radius-base;
+  padding: 1.75rem 2rem;
+  margin: 2rem 0;
+  box-shadow: $shadow-sm;
+
+  h4 {
+    color: $cba-slate;
+    font-size: $h4-size;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .agreement-details {
+    background-color: $cba-surface;
+    padding: 1.25rem 1.5rem;
+    border-radius: $radius-sm;
+    border: 1px solid $cba-border;
+
+    p {
+      color: $cba-gray;
+      font-size: $font-size-base;
+      line-height: $line-height-base;
+      margin-bottom: 0.45rem;
+
+      strong {
+        color: $cba-slate;
+      }
+    }
+  }
+}

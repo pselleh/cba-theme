@@ -1,40 +1,8 @@
 // Navigation JavaScript Functionality
 
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // Theme Toggle Functionality
-    const themeToggle = document.getElementById('themeToggle');
-    const body = document.body;
-    const themeIcon = themeToggle.querySelector('i');
-    
-    // Check for saved theme preference or default to light mode
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    if (currentTheme === 'dark') {
-        body.classList.add('dark-mode');
-        themeIcon.className = 'fas fa-sun';
-    } else {
-        themeIcon.className = 'fas fa-moon';
-    }
-    
-    // Theme toggle click handler
-    themeToggle.addEventListener('click', function() {
-        body.classList.toggle('dark-mode');
-        
-        if (body.classList.contains('dark-mode')) {
-            localStorage.setItem('theme', 'dark');
-            themeIcon.className = 'fas fa-sun';
-        } else {
-            localStorage.setItem('theme', 'light');
-            themeIcon.className = 'fas fa-moon';
-        }
-        
-        // Add click animation
-        this.style.transform = 'scale(0.9)';
-        setTimeout(() => {
-            this.style.transform = 'scale(1)';
-        }, 100);
-    });
-    
+    // Dark/light theme is handled inline in lms/templates/main.html (data-theme on <html>).
+
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link[href^="#"]');
     

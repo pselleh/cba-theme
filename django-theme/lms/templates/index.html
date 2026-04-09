@@ -2,365 +2,259 @@
 <%inherit file="main.html" />
 <%namespace name='static' file='static_content.html'/>
 
-<section class="hero-section d-flex align-items-center py-5">
-    <div class="section-inner">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12 mb-5 mb-lg-0">
-                <h1 class="hero-title">Can you Afford to Be Unprepared?</h1>
-                <p class="hero-subtitle">
-                    In today's complex world, disconnected systems and unmanaged risk can derail even the best organizations. 
-                    We help you master business management systems and enterprise risk management - so you can lead with confidence.
+<%block name="headextra">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</%block>
+
+<div class="cba-home">
+    <section class="cba-home__hero" aria-label="Hero">
+        <img
+            class="cba-home__hero-bg"
+            src="${static.url('images/hero-client-global-network.png')}"
+            alt="Global network and technology visualization"
+            decoding="async"
+            fetchpriority="high"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&amp;q=80';"
+        />
+        <div class="cba-home__hero-overlay" aria-hidden="true"></div>
+        <div class="cba-home__hero-inner">
+            <h1 class="cba-home__hero-title">Can you Afford to Be Unprepared?</h1>
+            <p class="cba-home__hero-lead">
+                In today’s complex world, disconnected systems and unmanaged risk can derail even the best organizations.
+                We help you master business management systems and enterprise risk management — so you can lead with confidence.
+            </p>
+            <div class="cba-home__hero-actions">
+                <a class="cba-home__btn-hero" href="/courses">Take a course</a>
+                <a class="cba-home__btn-hero-secondary" href="/programs">Enroll in a Certificate Program</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cba-home__learning" id="programs" aria-labelledby="learn-heading-home">
+        <h2 id="learn-heading-home" class="cba-home__section-heading">Accelerate your Learning</h2>
+        <p class="cba-home__section-lead">
+            Learn on your own, upskill your team, or build what’s next — pick the track that fits how you work.
+        </p>
+
+        <input class="cba-home__tab-hack" type="radio" name="paths-home" id="pb-ind" checked="checked" />
+        <input class="cba-home__tab-hack" type="radio" name="paths-home" id="pb-wp" />
+        <input class="cba-home__tab-hack" type="radio" name="paths-home" id="pb-vet" />
+
+        <div class="cba-home__tab-labels">
+            <label class="cba-home__tab-pill" for="pb-ind">Individual learning</label>
+            <label class="cba-home__tab-pill" for="pb-wp">Workplace learning</label>
+            <label class="cba-home__tab-pill" for="pb-vet">Veteran accelerator</label>
+        </div>
+
+        <div class="cba-home__tab-panels">
+            <div class="cba-home__tab-panel cba-home__tab-panel--ind">
+                <div>
+                    <h3>Take a course or earn a certificate</h3>
+                    <p>
+                        Apply international standards in real operations — complete a single course or earn a full certificate you can take anywhere.
+                    </p>
+                    <a class="cba-home__btn-tab" href="/courses">Explore individual learning</a>
+                </div>
+                <div class="cba-home__tab-panel-img-wrap">
+                    <img
+                        class="cba-home__tab-panel-img"
+                        src="${static.url('images/individual-learning.svg')}"
+                        alt=""
+                        width="420"
+                        height="280"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </div>
+            </div>
+            <div class="cba-home__tab-panel cba-home__tab-panel--wp">
+                <div>
+                    <h3>Grow as a Team</h3>
+                    <p>
+                        Support your employees’ growth with targeted, skill-based training. Whether you’re upskilling a department
+                        or onboarding new team members, our workplace programs deliver measurable results.
+                    </p>
+                    <a class="cba-home__btn-tab" href="/programs">Discover workplace learning</a>
+                </div>
+                <div class="cba-home__tab-panel-img-wrap">
+                    <img
+                        class="cba-home__tab-panel-img"
+                        src="${static.url('images/workplace-learning.svg')}"
+                        alt=""
+                        width="420"
+                        height="280"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </div>
+            </div>
+            <div class="cba-home__tab-panel cba-home__tab-panel--vet">
+                <div>
+                    <h3>Build Your Next Chapter</h3>
+                    <p>
+                        Our VA Accelerator program is designed to recognize your experience and help you move forward with confidence.
+                        Transition into a stable career or become self-employed with a clear pathway through comprehensive academics leading to a valued certificate.
+                    </p>
+                    <a class="cba-home__btn-tab" href="#va-accelerator">Explore the VA Accelerator</a>
+                </div>
+                <div class="cba-home__tab-panel-img-wrap">
+                    <img
+                        class="cba-home__tab-panel-img"
+                        src="${static.url('images/veteran-accelerator.svg')}"
+                        alt=""
+                        width="420"
+                        height="280"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cba-home__block cba-home__block--white cba-home__why-resilience" aria-labelledby="why-resilience-heading">
+        <div class="cba-home__why cba-home__why--split">
+            <div class="cba-home__why-split">
+                <div class="cba-home__why-lead">
+                    <h2 id="why-resilience-heading" class="cba-home__section-heading">Why resilience matters</h2>
+                    <div class="cba-home__why-body">
+                        <p>Unmanaged risk slows momentum. Organizations that identify threats early, build continuity, and train leaders recover faster and scale with confidence.</p>
+                        <p>This program gives your team a shared language for risk, compliance, and operational readiness — so acceleration is sustainable, not fragile.</p>
+                    </div>
+                </div>
+                <aside class="cba-home__why-outcomes" aria-labelledby="why-outcomes-heading">
+                    <h3 id="why-outcomes-heading" class="cba-home__why-subhead cba-home__why-subhead--outcomes">What you’ll achieve</h3>
+                    <ul class="cba-home__why-list">
+                        <li>Identify and assess risks early — before they become crises</li>
+                        <li>Build continuity plans that teams can actually run</li>
+                        <li>Align leadership decisions with sector-specific standards</li>
+                        <li>Demonstrate quality assurance to stakeholders &amp; partners</li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <section class="cba-home__block cba-home__block--surface cba-home__accredit" aria-labelledby="accredit-heading">
+        <h2 id="accredit-heading" class="cba-home__section-heading cba-home__section-heading--center">Standards &amp; organizations</h2>
+        <p class="cba-home__accredit-intro">
+            Our work maps to frameworks from recognized standards bodies — open each card to read more on the official site.
+        </p>
+        <div class="cba-home__accredit-grid">
+            <a class="cba-home__accredit-card" href="https://accet.org/" target="_blank" rel="noopener noreferrer">
+                <span class="cba-home__accredit-card-title">ACCET</span>
+                <span class="cba-home__accredit-card-text">U.S. accreditation for continuing education and training providers.</span>
+                <span class="cba-home__accredit-card-meta">accet.org <span aria-hidden="true">↗</span></span>
+            </a>
+            <a class="cba-home__accredit-card" href="https://www.iso.org/home.html" target="_blank" rel="noopener noreferrer">
+                <span class="cba-home__accredit-card-title">ISO</span>
+                <span class="cba-home__accredit-card-text">International standards for management systems, risk, and quality.</span>
+                <span class="cba-home__accredit-card-meta">iso.org <span aria-hidden="true">↗</span></span>
+            </a>
+            <a class="cba-home__accredit-card" href="https://webstore.ansi.org/standards/astm/astme265924" target="_blank" rel="noopener noreferrer">
+                <span class="cba-home__accredit-card-title">ANSI</span>
+                <span class="cba-home__accredit-card-text">U.S. hub for voluntary consensus and adopted standards.</span>
+                <span class="cba-home__accredit-card-meta">webstore.ansi.org <span aria-hidden="true">↗</span></span>
+            </a>
+            <a class="cba-home__accredit-card" href="https://store.astm.org/e3502-25.html" target="_blank" rel="noopener noreferrer">
+                <span class="cba-home__accredit-card-title">ASTM</span>
+                <span class="cba-home__accredit-card-text">Technical standards referenced across operations and resilience.</span>
+                <span class="cba-home__accredit-card-meta">store.astm.org <span aria-hidden="true">↗</span></span>
+            </a>
+        </div>
+    </section>
+
+    <section class="cba-home__block cba-home__block--white cba-home__org-resilience">
+        <h2 class="cba-home__section-heading cba-home__section-heading--center">Build Organizational Resilience</h2>
+        <div class="cba-home__sector-grid">
+            <article class="cba-home__sector-card">
+                <h3 class="cba-home__pillar-title">Governance &amp; Leadership</h3>
+                <p>Strategic oversight, leadership commitment, policy frameworks, and integration of resilience into culture, strategy, and decision-making.</p>
+                <a class="cba-home__sector-learn" href="/contact">Learn more →</a>
+            </article>
+            <article class="cba-home__sector-card">
+                <h3 class="cba-home__pillar-title">Risk Management</h3>
+                <p>Systematic identification, assessment, treatment, and monitoring of risks — including emerging risks — to protect and create value.</p>
+                <a class="cba-home__sector-learn" href="/contact">Learn more →</a>
+            </article>
+            <article class="cba-home__sector-card">
+                <h3 class="cba-home__pillar-title">Operational Resilience</h3>
+                <p>Business continuity, incident and emergency management, security, and facility operations to maintain performance under disruption.</p>
+                <a class="cba-home__sector-learn" href="/contact">Learn more →</a>
+            </article>
+        </div>
+    </section>
+
+    <section class="cba-home__block cba-home__block--surface cba-home__va" id="va-accelerator">
+        <h2 class="cba-home__section-heading">VA Accelerator™</h2>
+        <p class="cba-home__va-lead">The VA Accelerator is exclusive for veterans.</p>
+        <p class="cba-home__va-text">
+            Our VA Accelerator program is designed to recognize your experience and help you move forward with confidence.
+            It provides a clear pathway through our comprehensive academics, leading to a valued certificate that prepares you better for your career.
+        </p>
+        <p class="cba-home__va-highlight">
+            The <strong>VA Accelerator Tuition</strong> is solely funded through Veterans Benefits or Grants.
+        </p>
+
+        <div class="cba-home__va-subsections">
+            <div class="cba-home__va-sub">
+                <h3 class="cba-home__va-subtitle">Certificate Programs</h3>
+                <p>
+                    Our certificate programs are designed to equip you with in-demand skills and practical knowledge to advance your career or explore a new field.
+                    Whether you’re upskilling or reskilling, our flexible, expert-led courses will help you reach your goals.
                 </p>
-                <div class="d-flex flex-column flex-sm-row gap-3">
-                    <a href="#programs" class="btn btn-custom-primary btn-lg px-4 py-2 rounded mb-3 mb-sm-0 mr-sm-3">
-                        Take a Course
-                    </a>
-                    <a href="#contact" class="btn btn-custom-outline btn-lg px-4 py-2 rounded">
-                        Enroll in a Certificate Program
-                    </a>
-                </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-                <div class="text-center">
-                    <img src="${static.url('images/hero.svg')}" alt="Business Acceleration Hero" class="img-fluid">
-                </div>
+            <div class="cba-home__va-sub">
+                <h3 class="cba-home__va-subtitle">Personal Certifications</h3>
+                <p>
+                    Invest in yourself! Our personal certification programs make it easy to build confidence, sharpen your skills, and achieve your goals on your schedule.
+                    Whether you’re aiming for a promotion, a new job, or personal growth, we’re here to help you succeed.
+                </p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="py-5 learning-tabs-section">
-    <div class="section-inner">
-        <div class="text-left mb-5">
-            <span class="section-badge">The Plan</span>
-            <h2 class="section-title">Accelerate your Learning</h2>
-            <p class="section-lead">
-                Find the right path — whether you're learning solo, with your team, or starting fresh.
-            </p>
-        </div>
+    <p class="cba-home__quote cba-home__quote--prominent">
+        “Participants gain the clarity to lead decisively and accelerate organizational performance.”
+    </p>
 
-        <div class="row">
-            <div class="col-12">
-                <div class="text-left mb-4">
-                    <div class="nav nav-pills flex-row" id="learningTabs" role="tablist" aria-orientation="horizontal">
-                        <a class="nav-link learning-tab active rounded" id="individual-tab" data-toggle="pill" 
-                           href="#individual" role="tab" aria-controls="individual" aria-selected="true">
-                            <p>Individual Learning</p>
-                        </a>
-                        <a class="nav-link learning-tab mx-2 rounded" id="workplace-tab" data-toggle="pill" 
-                           href="#workplace" role="tab" aria-controls="workplace" aria-selected="false">
-                            <p>Workplace Learning</p>
-                        </a>
-                        <a class="nav-link learning-tab rounded" id="veteran-tab" data-toggle="pill" 
-                           href="#veteran" role="tab" aria-controls="veteran" aria-selected="false">
-                            <p>Veteran Accelerator</p>
-                        </a>
-                    </div>
-
-                    <div class="tab-content" id="learningTabsContent">
-                        <div class="tab-pane fade show active" id="individual" role="tabpanel" aria-labelledby="individual-tab">
-                            <div class="row justify-content-between align-items-start">
-                                <div class="col-md-7">
-                                    <h3>Take a Single Course or Certificate Program</h3>
-                                    <p>
-                                        Learn to apply critical International Standards to your business operations. 
-                                        Take a single course to explore a topic or dive into a certificate program to gain a skill.
-                                    </p>
-                                    <a href="#individual-courses" class="btn btn-tab-action btn-lg px-4 py-2 rounded">
-                                        Explore Individual Learning
-                                    </a>
-                                </div>
-                                <div class="col-md-5">
-                                    <img src="${static.url('images/Individual Learning.svg')}" alt="Individual Learning" class="img-fluid rounded">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="workplace" role="tabpanel" aria-labelledby="workplace-tab">
-                            <div class="row justify-content-between align-items-start">
-                                <div class="col-md-7">
-                                    <h3>Grow as a Team</h3>
-                                    <p>
-                                        Support your employees' growth with targeted, skill-based training. Whether you're upskilling a department 
-                                        or onboarding new team members, our workplace programs deliver measurable results.
-                                    </p>
-                                    <a href="#workplace-training" class="btn btn-tab-action px-4 py-2 rounded btn-lg">
-                                        Discover Workplace Solutions
-                                    </a>
-                                </div>
-                                <div class="col-md-5">
-                                    <img src="${static.url('images/Workplace Learning.svg')}" alt="Workplace Learning" class="img-fluid rounded">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="veteran" role="tabpanel" aria-labelledby="veteran-tab">
-                            <div class="row justify-content-between align-items-start">
-                                <div class="col-md-7">
-                                    <h3>Build Your Next Chapter</h3>
-                                    <p>
-                                        Transition into a stable tech career or become self-employed. Our veteran-friendly programs 
-                                        are designed to recognize your experience and help you move forward with confidence.
-                                    </p>
-                                    <a href="#veteran-programs" class="btn btn-tab-action px-4 py-2 rounded btn-lg">
-                                        Explore Veteran Programs
-                                    </a>
-                                </div>
-                                <div class="col-md-5">
-                                    <img src="${static.url('images/Veteran Accelerator.svg')}" alt="Veteran Accelerator" class="img-fluid rounded">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section class="cba-home__block cba-home__block--white cba-home__acceleration">
+        <h2 class="cba-home__section-heading cba-home__section-heading--acceleration">The Acceleration You Gain</h2>
+        <div class="cba-home__icons-row cba-home__icons-row--heroic">
+            <div class="cba-home__icon-item">
+                <svg class="cba-home__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <h4>Anticipate risks early</h4>
+            </div>
+            <div class="cba-home__icon-item">
+                <svg class="cba-home__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+                <h4>Respond with clarity</h4>
+            </div>
+            <div class="cba-home__icon-item">
+                <svg class="cba-home__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                </svg>
+                <h4>Recover faster</h4>
+            </div>
+            <div class="cba-home__icon-item">
+                <svg class="cba-home__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 17V5"/><path d="M3 17l5-5 4 4 8-8"/><path d="M14 8h7v7"/>
+                </svg>
+                <h4>Sustain performance</h4>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="py-5 accredited-section">
-    <div class="section-inner">
-        <div class="text-left mb-5">
-            <span class="section-badge">Accredited</span>
-            <h2 class="section-title">Frustrated with training that doesn't deliver?</h2>
-            <p class="section-lead">
-                Our courses meet international accreditation standards, ensuring quality and recognition. 
-                Elevate your career with programs that employers trust.
-            </p>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 mb-4 mb-md-0">
-                <div class="text-center text-md-left accredited-item">
-                    <div class="mb-4">
-                        <img src="${static.url('images/Accreditation Standards.svg')}" alt="Accreditation Standards" class="img-fluid">
-                    </div>
-                    <h6>Accreditation Standards</h6>
-                    <p>We adhere to ACCET, ISO, ANSI, and ASTM standards for quality education.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="text-center text-md-left accredited-item">
-                    <div class="mb-4">
-                        <img src="${static.url('images/Benefits Offered.svg')}" alt="Benefits Offered" class="img-fluid">
-                    </div>
-                    <h6>Benefits Offered</h6>
-                    <p class="mb-4">
-                        Gain skills recognized worldwide, enhancing your employability and career advancement.
-                    </p>
-                </div>
-            </div>
-
-            <div class="ml-3 w-100 d-flex justify-content-md-start justify-content-center">
-                <a href="#learn-more" class="btn btn-custom-outline btn-learn-more btn-lg px-4 py-2 rounded">
-                    Learn More
-                </a>
+    <section class="cba-home__cta-band">
+        <div class="cba-home__cta-band-inner">
+            <h2>Don’t let unmanaged risk slow your momentum.</h2>
+            <div class="cba-home__cta-buttons">
+                <a class="cba-home__btn-solid" href="/courses">Explore programs &amp; enroll →</a>
+                <a class="cba-home__btn-ghost" href="/contact">Request guidance</a>
             </div>
         </div>
-    </div>
-</section>
-
-<section class="py-5 accreditation-logos">
-    <div class="section-inner">
-        <div class="text-center mb-5">
-            <h2 class="mb-4">All programs follow globally recognized accreditation standards.</h2>
-        </div>
-
-        <div class="row justify-content-center align-items-center">
-            <div class="col-md-3 col-6 mb-4 text-center">
-                <img src="${static.url('images/ASTM logo.svg')}" alt="ASTM Logo" class="img-fluid">
-            </div>
-            <div class="col-md-3 col-6 mb-4 text-center">
-                <img src="${static.url('images/ANSI logo.svg')}" alt="ANSI Logo" class="img-fluid">
-            </div>
-            <div class="col-md-3 col-6 mb-4 text-center">
-                <img src="${static.url('images/ISO logo.svg')}" alt="ISO Logo" class="img-fluid">
-            </div>
-            <div class="col-md-3 col-6 mb-4 text-center">
-                <img src="${static.url('images/ACCET logo.svg')}" alt="ACCET Logo" class="img-fluid">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="py-5 accredited-section">
-    <div class="section-inner">
-        <div class="text-left mb-5">
-            <span class="section-badge">Value Proposition</span>
-            <h2 class="section-title">Courses & Certificate Programs Equip You To</h2>
-        </div>
-
-        <div class="row text-center text-md-left">
-            <div class="col-md-4 mb-4">
-                <div class="value-prop-item">
-                    <div class="mb-4">
-                        <img src="${static.url('images/level up.svg')}" alt="Level Up" class="img-fluid">
-                    </div>
-                    <h6>Level Up Your Skills</h6>
-                    <p>
-                        Take a single course to gain knowledge, take a certificate program to gain a skill, 
-                        or prepare for a certification exam.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="value-prop-item">
-                    <div class="mb-4">
-                        <img src="${static.url('images/gain edge.svg')}" alt="Gain Edge" class="img-fluid">
-                    </div>
-                    <h6>Gain A Competitive Edge</h6>
-                    <p>
-                        Get in-depth training through a certificate program in specific areas that will be 
-                        recognized wherever you're employed.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="value-prop-item">
-                    <div class="mb-4">
-                        <img src="${static.url('images/level up icon.svg')}" alt="Lead with Confidence" class="img-fluid">
-                    </div>
-                    <h6>Lead with Confidence</h6>
-                    <p>
-                        Be confident that the investment you're making follows you throughout your career 
-                        with a personal credential.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-4 text-center text-md-left">
-            <a href="#learn-more" class="btn btn-custom-outline btn-learn-more btn-lg px-4 py-2 rounded">
-                Learn More
-            </a>
-            <a href="#learn-more" class="join-link">
-                Join
-                <img src="${static.url('images/chevron_right.svg')}" alt="arrow right" class="img-fluid">
-            </a>
-        </div>
-    </div>
-</section>
-
-<section class="py-5 empower-section">
-    <div class="section-inner">
-        <div class="text-left mb-5">
-            <span class="section-badge">Empower</span>
-            <h2 class="section-title">Are you ready to help your company upskill your team?</h2>
-            <p class="section-lead">
-                Create a personalized professional development path for yourself or your employees that will give you 
-                the portable personal credentials and skillset to drive your future!
-            </p>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 border-0 shadow-lg empower-card empower-card-teal">
-                    <div class="card-body text-left text-white">
-                        <div class="mb-4">
-                            <div class="d-inline-flex align-items-center justify-content-center icon-container">
-                                <img src="${static.url('images/team.svg')}" alt="Team Icon">
-                            </div>
-                        </div>
-                        <h3 class="card-title">For Your Team</h3>
-                        <p class="card-text">
-                            Upskill your staff and align your organization's strategy with our workplace training.
-                        </p>
-                        <a href="#team-training" class="btn btn-outline-light btn-lg px-4 py-2 text-white">
-                            Learn more
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 border-0 shadow-lg empower-card empower-card-blue">
-                    <div class="card-body text-white">
-                        <div class="mb-4">
-                            <div class="d-inline-flex align-items-center justify-content-center icon-container">
-                                <img src="${static.url('images/career.svg')}" alt="Career Icon">
-                            </div>
-                        </div>
-                        <h3 class="card-title">For Your Career</h3>
-                        <p class="card-text">
-                            Gain credentials employers trust and advance your career with our accredited programs.
-                        </p>
-                        <a href="#career-programs" class="btn btn-outline-light btn-lg px-4 py-2 text-white">
-                            Learn more
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 border-0 shadow-lg empower-card empower-card-orange">
-                    <div class="card-body text-left text-white">
-                        <div class="mb-4">
-                            <div class="d-inline-flex align-items-center justify-content-center icon-container">
-                                <img src="${static.url('images/future.svg')}" alt="Future Icon">
-                            </div>
-                        </div>
-                        <h3 class="card-title">For Your Future</h3>
-                        <p class="card-text">
-                            Find a stable tech career or become self-employed with our veteran-friendly programs.
-                        </p>
-                        <a href="#future-programs" class="btn btn-outline-light btn-lg px-4 py-2 text-white">
-                            Learn more
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="py-5 transform-section">
-    <div class="section-inner">
-        <div class="text-center mb-5">
-            <h2 class="mb-3">Transform Your Learning Experience Today</h2>
-            <p class="lead">
-                Are you frustrated with courses that yield little to no results? It's time to invest in education 
-                that truly enhances your skills and career trajectory.
-            </p>
-        </div>
-        
-        <div class="row justify-content-center">
-            <div class="col-12 text-center">
-                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
-                    <a href="#get-started" class="btn btn-transform btn-lg px-4 py-2">Take a Course</a>
-                    <a href="#explore-courses" class="btn btn-transform btn-lg px-4 py-2">Enroll in a Certificate Program</a>
-                    <a href="#contact-us" class="btn btn-transform btn-lg px-4 py-2">Get a Personal Certification</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="py-5 next-steps-section">
-    <div class="section-inner">
-        <div class="text-center mb-5">
-            <h2 class="mb-3">Ready to take the next step?</h2>
-        </div>
-
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12 mb-5 mb-lg-0">
-                <div class="text-center">
-                    <img src="${static.url('images/next-steps.svg')}" alt="Next Steps Illustration" class="img-fluid">
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-12">
-                <div class="text-center text-md-left">
-                    <div class="mb-4">
-                        <h3 class="mb-3">Gain skills.</h3>
-                        <h3 class="mb-3">Lead confidently.</h3>
-                        <h3 class="mb-4">Transform your career.</h3>
-                    </div>
-                    <a href="#next-steps" class="btn btn-get-started btn-lg px-4 py-2">Get Started</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+</div>

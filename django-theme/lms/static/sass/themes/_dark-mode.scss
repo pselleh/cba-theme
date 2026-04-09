@@ -1,0 +1,533 @@
+// Dark Mode Theme Styles — Palette B (tokens from static/sass/_variables.scss)
+
+[data-theme="dark"] {
+  --cba-primary: #{$cba-dm-primary};
+  --cba-secondary: #{$cba-dm-secondary};
+  --cba-accent: #{$cba-dm-accent};
+  --cba-dark: #{$cba-dm-dark};
+  --cba-light: #{$cba-dm-light};
+  --cba-gray: #{$cba-dm-gray};
+
+  --bg-body: #{$cba-dm-bg-body};
+  --cba-white: var(--bg-body);
+  --bg-surface: var(--bg-body);
+  --bg-elevated: var(--bg-body);
+  --bg-hero: var(--bg-body);
+
+  --text-primary: #{$cba-dm-text-primary};
+  --text-secondary: #{$cba-dm-text-secondary};
+  --text-muted: #{$cba-dm-text-muted};
+
+  --border-color: #{$cba-dm-border};
+  --divider-color: #{$cba-dm-border};
+
+  --card-bg: var(--bg-body);
+  --navbar-bg: var(--bg-body);
+  --footer-bg: var(--bg-body);
+
+  --shadow-sm: 0 2px 6px #{$cba-dm-black-a35};
+  --shadow-base: 0 6px 16px #{$cba-dm-black-a40};
+  --shadow-lg: 0 12px 32px #{$cba-dm-black-a45};
+
+  --badge-bg: #{$cba-dm-secondary-a12};
+  --badge-text: #{$cba-teal-bright};
+
+  --tab-bg: var(--bg-body);
+  --tab-active-bg: #{$cba-teal};
+  --tab-text: #{$cba-dm-text-secondary};
+  --tab-active-text: #{$cba-white};
+
+  --btn-outline-border: #{$cba-teal-bright};
+  --btn-outline-text: #{$cba-teal-bright};
+  --btn-outline-hover-bg: #{$cba-teal-dark};
+  --btn-outline-hover-text: #{$cba-white};
+
+  --cba-link-on-dark: #{$cba-teal-bright};
+  --cba-link-on-dark-hover: #{$cba-teal-bright-hover};
+  --cba-accent-ui: #{$cba-teal-ui};
+  --cba-on-accent-ui: #{$cba-on-teal-ui};
+  --cba-focus-ring: #{$cba-dm-focus-ring};
+}
+
+// Smooth transitions for theme changes
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-body, #{$cba-dm-body-fallback-light});
+  color: var(--text-primary, #{$cba-dm-body-fallback-dark});
+}
+
+// Beat Bootstrap / platform body resets when dark variables are on <html>
+html[data-theme="dark"] body {
+  background-color: var(--bg-body) !important;
+  color: var(--text-primary) !important;
+}
+
+// Apply dark mode styles to various components
+[data-theme="dark"] {
+  
+  // General elements
+  .section-inner {
+    background-color: transparent;
+  }
+  
+  .hero-title,
+  .hero-subtitle,
+  .section-title,
+  .section-lead,
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary) !important;
+  }
+  
+  p, .lead {
+    color: var(--text-secondary) !important;
+  }
+  
+  .navbar:not(.cba-navbar) {
+    background-color: var(--navbar-bg) !important;
+  }
+
+  .cba-nav-wrap {
+    background: var(--bg-body) !important;
+    border-bottom-color: var(--border-color) !important;
+    box-shadow: none !important;
+  }
+
+  .cba-navbar {
+    background: transparent !important;
+  }
+
+  .cba-nav__actions .cba-nav__login {
+    border-color: $cba-dm-slate-400-a55 !important;
+    color: var(--text-primary) !important;
+
+    &:hover {
+      background: $cba-dm-teal-bright-a12 !important;
+      border-color: $cba-teal-bright !important;
+      color: $cba-border !important;
+    }
+  }
+  
+  .card {
+    background-color: var(--bg-body) !important;
+    border-color: var(--border-color) !important;
+  }
+
+  // Home — flat page canvas (all section bands use --bg-body)
+  .cba-home {
+    background: var(--bg-body) !important;
+
+    // Inline links: stronger contrast on dark (buttons / cards keep their own colors)
+    a:not(.cba-home__btn-hero):not(.cba-home__btn-hero-secondary):not(.cba-home__btn-tab):not(.cba-home__btn-solid):not(.cba-home__btn-ghost):not(.cba-home__sector-learn):not(.cba-home__accredit-card) {
+      color: var(--cba-link-on-dark) !important;
+
+      &:hover {
+        color: var(--cba-link-on-dark-hover) !important;
+      }
+    }
+
+    &__icon-item h4 {
+      color: var(--text-primary) !important;
+    }
+
+    &__va-lead {
+      color: var(--cba-link-on-dark) !important;
+    }
+
+    &__hero {
+      background-color: var(--bg-body) !important;
+    }
+
+    &__hero-bg {
+      filter: brightness(0.82) saturate(1.05) !important;
+    }
+
+    &__hero-overlay {
+      background: $cba-dm-hero-overlay !important;
+    }
+
+    &__hero-title,
+    &__hero-lead {
+      color: $cba-white !important;
+    }
+
+    &__accredit-card {
+      background: var(--bg-body) !important;
+      border-color: var(--border-color) !important;
+      color: var(--text-primary) !important;
+
+      &:hover {
+        border-color: $cba-dm-secondary-a45 !important;
+        box-shadow: none !important;
+      }
+    }
+
+    &__accredit-card-title {
+      color: var(--cba-secondary) !important;
+    }
+
+    &__accredit-card-text,
+    &__accredit-card-meta {
+      color: var(--text-secondary) !important;
+    }
+
+    &__section-heading {
+      color: var(--text-primary) !important;
+    }
+
+    &__why-subhead,
+    &__pillar-title,
+    &__va-subtitle {
+      color: var(--text-primary) !important;
+    }
+
+    &__why-outcomes {
+      background: var(--bg-body) !important;
+      border-color: var(--border-color) !important;
+      box-shadow: none !important;
+    }
+
+    &__section-lead,
+    &__why-body p,
+    &__why-list,
+    &__accredit-intro,
+    &__sector-card p,
+    &__quote,
+    &__tab-panel p,
+    &__va-text,
+    &__va-sub p {
+      color: var(--text-secondary) !important;
+    }
+
+    &__va-highlight {
+      color: var(--text-primary) !important;
+      background: var(--bg-body) !important;
+      border-left-color: var(--cba-secondary) !important;
+    }
+
+    &__quote--prominent {
+      color: var(--text-primary) !important;
+    }
+
+    &__learning {
+      background: var(--bg-body) !important;
+    }
+
+    &__tab-pill {
+      background: var(--bg-body) !important;
+      border-color: var(--border-color) !important;
+      color: var(--text-secondary) !important;
+
+      &:hover {
+        border-color: $cba-teal-bright-a45 !important;
+        color: var(--text-primary) !important;
+      }
+    }
+
+    #pb-ind:checked ~ .cba-home__tab-labels label[for='pb-ind'],
+    #pb-wp:checked ~ .cba-home__tab-labels label[for='pb-wp'],
+    #pb-vet:checked ~ .cba-home__tab-labels label[for='pb-vet'] {
+      background: var(--tab-active-bg) !important;
+      border-color: var(--tab-active-bg) !important;
+      color: var(--tab-active-text) !important;
+    }
+
+    &__tab-panel h3 {
+      color: var(--text-primary) !important;
+    }
+
+    &__block--white {
+      background: var(--bg-body) !important;
+    }
+
+    &__block--surface {
+      background: var(--bg-body) !important;
+    }
+
+    &__sector-card {
+      background: var(--bg-body) !important;
+      border-color: var(--border-color) !important;
+    }
+
+    &__cta-band {
+      // Same as light: teal CTA strip vs. slate/footer (footer uses flat bg in dark)
+      background: #{$cba-teal-dark} !important;
+    }
+
+    &__tab-panel-img {
+      filter: brightness(0.97) contrast(1.02) !important;
+    }
+
+    &__icons-row--heroic .cba-home__icon-svg,
+    &__icon-item .cba-home__icon-svg,
+    &__icon-item svg:not(.cba-home__icon-svg) {
+      color: $cba-teal-bright !important;
+      filter: $cba-icon-drop-shadow-lg !important;
+    }
+  }
+
+  // Footer
+  .footer {
+    background-color: var(--bg-body) !important;
+    color: var(--text-secondary) !important;
+    border-top: 1px solid var(--border-color);
+    
+    a {
+      color: var(--text-secondary) !important;
+      
+      &:hover {
+        color: var(--cba-primary) !important;
+      }
+    }
+    
+    hr {
+      border-color: var(--divider-color) !important;
+    }
+  }
+  
+  // Buttons
+  .btn-custom-outline {
+    border-color: var(--btn-outline-border) !important;
+    color: var(--btn-outline-text) !important;
+    
+    &:hover {
+      background-color: var(--btn-outline-hover-bg) !important;
+      color: var(--btn-outline-hover-text) !important;
+    }
+  }
+  
+  .btn-outline-light {
+    border-color: var(--text-primary) !important;
+    color: var(--text-primary) !important;
+    
+    &:hover {
+      background-color: var(--text-primary) !important;
+      color: var(--bg-body) !important;
+      border-color: var(--text-primary) !important;
+    }
+  }
+  
+  // Forms & Inputs (exclude checkboxes / theme toggle — no full repaint)
+  input:not([type="checkbox"]):not([type="radio"]),
+  textarea,
+  select {
+    background-color: var(--bg-body) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+  }
+  
+  // Contact Page - dark mode
+  .contact-hero {
+    background: var(--bg-body) !important;
+    
+    h1, p {
+      color: var(--text-primary) !important;
+    }
+    
+    .btn-custom-outline {
+      border-color: var(--cba-accent-ui) !important;
+      color: var(--cba-accent-ui) !important;
+      
+      &:hover {
+        background-color: var(--cba-accent-ui) !important;
+        border-color: var(--cba-accent-ui) !important;
+        color: var(--cba-on-accent-ui) !important;
+      }
+    }
+  }
+  
+  .contact-form {
+    background-color: var(--bg-body) !important;
+    
+    h3 {
+      color: var(--text-primary) !important;
+    }
+    
+    label {
+      color: var(--text-primary) !important;
+    }
+    
+    .form-control {
+      background-color: var(--bg-body) !important;
+      border-color: var(--border-color) !important;
+      color: var(--text-primary) !important;
+      
+      &:focus {
+        border-color: var(--cba-secondary) !important;
+        box-shadow: var(--cba-focus-ring) !important;
+      }
+      
+      &::placeholder {
+        color: var(--text-muted) !important;
+      }
+    }
+  }
+  
+  .faq-section {
+    background-color: var(--bg-body) !important;
+    
+    h2 {
+      color: var(--text-primary) !important;
+    }
+  }
+  
+  .faq-item {
+    background-color: var(--bg-body) !important;
+  }
+  
+  .faq-question {
+    background-color: var(--bg-body) !important;
+    color: var(--text-primary) !important;
+    
+    &:hover {
+      background-color: var(--bg-body) !important;
+    }
+    
+    &.active {
+      background-color: var(--bg-body) !important;
+      color: var(--cba-accent-ui) !important;
+      
+      .faq-icon {
+        color: var(--cba-accent-ui) !important;
+      }
+    }
+  }
+  
+  .faq-icon {
+    color: var(--cba-primary) !important;
+  }
+  
+  .faq-answer {
+    display: none !important;
+    color: var(--text-secondary) !important;
+
+    &.active {
+      display: block !important;
+    }
+    
+    h6 {
+      color: var(--cba-accent-ui) !important;
+    }
+    
+    strong {
+      color: var(--text-primary) !important;
+    }
+    
+    .text-primary {
+      color: var(--cba-accent-ui) !important;
+    }
+  }
+  
+  // Privacy & Terms Pages - dark mode
+  .privacy-hero,
+  .terms-hero {
+    background: linear-gradient(
+      165deg,
+      $cba-amber-a14 0%,
+      var(--bg-body) 42%,
+      var(--bg-body) 100%
+    ) !important;
+    border-bottom: 1px solid $cba-amber-a22 !important;
+    
+    h1, p {
+      color: var(--text-primary) !important;
+    }
+    
+    .badge {
+      background-color: $cba-amber-a12 !important;
+      border-color: $cba-amber-a35 !important;
+      color: var(--text-primary) !important;
+    }
+  }
+  
+  .privacy-content,
+  .terms-content {
+    .privacy-section,
+    .terms-section {
+      h2 {
+        color: var(--cba-primary) !important;
+      }
+      
+      h3 {
+        color: var(--text-primary) !important;
+      }
+      
+      p {
+        color: var(--text-secondary) !important;
+      }
+      
+      li {
+        color: var(--text-secondary) !important;
+        
+        strong {
+          color: var(--text-primary) !important;
+        }
+      }
+    }
+  }
+  
+  .highlight-box {
+    background-color: var(--bg-body) !important;
+    border-color: var(--cba-accent-ui) !important;
+    
+    p {
+      color: var(--text-primary) !important;
+    }
+  }
+  
+  .contact-info {
+    background-color: var(--bg-body) !important;
+    
+    h4 {
+      color: var(--cba-primary) !important;
+    }
+    
+    p {
+      color: var(--text-secondary) !important;
+      
+      strong {
+        color: var(--text-primary) !important;
+      }
+    }
+  }
+  
+  .table-of-contents {
+    background-color: var(--bg-body) !important;
+    
+    h3 {
+      color: var(--cba-primary) !important;
+    }
+    
+    a {
+      color: var(--text-primary) !important;
+      
+      &:hover {
+        color: var(--cba-accent-ui) !important;
+      }
+    }
+  }
+  
+  .enrollment-agreement {
+    background-color: var(--bg-body) !important;
+    border-color: var(--cba-accent-ui) !important;
+    
+    h4 {
+      color: var(--cba-primary) !important;
+    }
+    
+    .agreement-details {
+      background-color: var(--bg-body) !important;
+      
+      p {
+        color: var(--text-secondary) !important;
+        
+        strong {
+          color: var(--text-primary) !important;
+        }
+      }
+    }
+  }
+}
+

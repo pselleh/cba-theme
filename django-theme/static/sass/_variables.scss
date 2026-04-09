@@ -1,23 +1,194 @@
-// Brand Colors
-$cba-primary: #005EB8;
-$cba-secondary: #20C997;
-$cba-accent: #FD7E14;
-$cba-dark: #343A40;
-$cba-light: #E5EEF7;
-$cba-gray: #6C757D;
+// LibSass-compatible (Open edX `npm run compile-sass` in Docker). Do not use
+// `@use "sass:color"` or `color.change()` — use `rgba($color, $alpha)` instead.
+
+// =============================================================================
+// Palette B — design tokens (single source). Use $cba-* in Sass, --* in CSS.
+// =============================================================================
+
+// Core
+$cba-slate: #1e293b;
+$cba-slate-light: #334155;
+$cba-slate-900: #0f172a;
+$cba-slate-300: #cbd5e1;
+$cba-teal: #0d9488;
+$cba-teal-dark: #0f766e;
+$cba-amber: #d97706;
+$cba-amber-hover: #b45309;
+$cba-surface: #f1f5f9;
+
+// Surfaces & borders (light)
+$cba-paper: #f8fafc;
+$cba-border: #e2e8f0;
+$cba-amber-tint: #fef3c7;
+
+// Nav bar
+$cba-nav-gradient-end: #151f2e;
+
+// “Bright” teal (nav / dark accents; Tailwind teal-300 family)
+$cba-teal-bright: #5eead4;
+$cba-teal-bright-hover: #99f6e4;
+
+// Contact / FAQ accent on dark backgrounds
+$cba-teal-ui: #2ee3b0;
+$cba-on-teal-ui: #0f1419;
+
+// Feedback
+$cba-danger: #dc3545;
+$cba-badge-tint: #ecfeff;
+
+// Legacy aliases
+$cba-primary: $cba-slate;
+$cba-secondary: $cba-teal;
+$cba-accent: $cba-amber;
+$cba-dark: $cba-slate;
+$cba-light: $cba-surface;
+$cba-gray: #64748b;
 $cba-white: #ffffff;
 
-// Open edX Standard Variables (map to CBA brand)
-$brand-primary: $cba-primary;
-$brand-secondary: $cba-secondary;
-$brand-success: $cba-secondary;
-$brand-info: $cba-primary;
-$brand-warning: $cba-accent;
-$brand-danger: #DC3545;
+// Muted text (light) — align with Tailwind slate-400
+$cba-text-muted: #94a3b8;
 
-// CSS Custom Properties for Light Mode (default)
+// Open edX maps
+$brand-primary: $cba-teal;
+$brand-secondary: $cba-teal;
+$brand-success: $cba-teal;
+$brand-info: $cba-teal;
+$brand-warning: $cba-amber;
+$brand-danger: $cba-danger;
+
+// -----------------------------------------------------------------------------
+// Alpha / overlay tokens (from brand colors)
+// -----------------------------------------------------------------------------
+
+$cba-white-a06: rgba($cba-white, 0.06);
+$cba-white-a07: rgba($cba-white, 0.07);
+$cba-white-a08: rgba($cba-white, 0.08);
+$cba-white-a10: rgba($cba-white, 0.1);
+$cba-white-a12: rgba($cba-white, 0.12);
+$cba-white-a35: rgba($cba-white, 0.35);
+$cba-white-a88: rgba($cba-white, 0.88);
+$cba-white-a90: rgba($cba-white, 0.9);
+$cba-white-a95: rgba($cba-white, 0.95);
+$cba-white-a96: rgba($cba-white, 0.96);
+
+$cba-slate-a15: rgba($cba-slate, 0.15);
+$cba-slate-a78: rgba($cba-slate, 0.78);
+
+$cba-teal-a06: rgba($cba-teal, 0.06);
+$cba-teal-a08: rgba($cba-teal, 0.08);
+$cba-teal-a12: rgba($cba-teal, 0.12);
+$cba-teal-a20: rgba($cba-teal, 0.2);
+$cba-teal-a25: rgba($cba-teal, 0.25);
+$cba-teal-a35: rgba($cba-teal, 0.35);
+$cba-teal-a42: rgba($cba-teal, 0.42);
+$cba-teal-a45: rgba($cba-teal, 0.45);
+
+$cba-teal-bright-a45: rgba($cba-teal-bright, 0.45);
+$cba-teal-bright-a75: rgba($cba-teal-bright, 0.75);
+$cba-teal-bright-a85: rgba($cba-teal-bright, 0.85);
+
+$cba-amber-a12: rgba($cba-amber, 0.12);
+$cba-amber-a14: rgba($cba-amber, 0.14);
+$cba-amber-a18: rgba($cba-amber, 0.18);
+$cba-amber-a22: rgba($cba-amber, 0.22);
+$cba-amber-a35: rgba($cba-amber, 0.35);
+
+$cba-amber-tint-a65: rgba($cba-amber-tint, 0.65);
+
+// Nav chrome
+$cba-nav-border-subtle: $cba-white-a07;
+$cba-nav-row-border: $cba-white-a12;
+$cba-nav-shadow: 0 4px 24px $cba-slate-a15;
+
+// Hero (home)
+$cba-hero-overlay-light: linear-gradient(125deg, $cba-slate-a78 0%, $cba-teal-a42 100%);
+
+// Static marketing heroes (Privacy / Terms)
+$cba-static-hero-bg: linear-gradient(
+  165deg,
+  $cba-amber-tint-a65 0%,
+  $cba-surface 40%,
+  $cba-paper 100%
+);
+$cba-border-amber-muted: $cba-amber-a18;
+
+// Card / elevation
+$cba-shadow-card-teal: 0 6px 22px $cba-teal-a12;
+
+$cba-icon-drop-shadow: drop-shadow(0 2px 8px $cba-teal-a25);
+$cba-icon-drop-shadow-lg: drop-shadow(0 2px 12px $cba-teal-a35);
+
+// Focus
+$cba-focus-ring-input: 0 0 0 3px $cba-teal-a20;
+$cba-focus-ring-switch: 0 0 0 0.2rem $cba-teal-a35;
+
+$cba-ring-teal-bright-75: 2px solid $cba-teal-bright-a75;
+$cba-ring-teal-bright-85: 2px solid $cba-teal-bright-a85;
+
+// -----------------------------------------------------------------------------
+// Dark theme — Sass tokens (use in themes/_dark-mode.scss via #{$var})
+// -----------------------------------------------------------------------------
+
+$cba-dm-primary: #cbd5e1;
+$cba-dm-secondary: #2dd4bf;
+$cba-dm-accent: #fbbf24;
+$cba-dm-dark: #f1f5f9;
+$cba-dm-light: #1e293b;
+$cba-dm-gray: #94a3b8;
+
+$cba-dm-bg-body: #0b0f14;
+$cba-dm-text-primary: #f1f5f9;
+$cba-dm-text-secondary: #a8b3c0;
+$cba-dm-text-muted: #7c8796;
+$cba-dm-border: #2a3544;
+
+$cba-dm-slate-900-a88: rgba($cba-slate-900, 0.88);
+$cba-dm-slate-900-a55: rgba($cba-slate-900, 0.55);
+$cba-dm-teal-dark-a38: rgba($cba-teal-dark, 0.38);
+
+$cba-dm-secondary-a12: rgba($cba-dm-secondary, 0.12);
+$cba-dm-secondary-a22: rgba($cba-dm-secondary, 0.22);
+$cba-dm-focus-ring: 0 0 0 0.2rem $cba-dm-secondary-a22;
+$cba-dm-secondary-a45: rgba($cba-dm-secondary, 0.45);
+
+$cba-dm-teal-bright-a12: rgba($cba-teal-bright, 0.12);
+$cba-dm-teal-ui-a22: rgba($cba-teal-ui, 0.22);
+
+$cba-dm-slate-400-a55: rgba(#94a3b8, 0.55);
+
+$cba-dm-black-a35: rgba(#000000, 0.35);
+$cba-dm-black-a40: rgba(#000000, 0.4);
+$cba-dm-black-a45: rgba(#000000, 0.45);
+
+$cba-dm-hero-overlay: linear-gradient(
+  125deg,
+  $cba-dm-slate-900-a88 0%,
+  $cba-dm-teal-dark-a38 55%,
+  $cba-dm-slate-900-a55 100%
+);
+
+$cba-dm-body-fallback-light: #ffffff;
+$cba-dm-body-fallback-dark: #343a40;
+
+// Shadows (Sass) — needed before :root
+$shadow-sm: 0 2px 4px rgba($cba-slate, 0.08);
+$shadow-base: 0 4px 12px rgba($cba-slate, 0.1);
+$shadow-lg: 0 8px 24px rgba($cba-slate, 0.12);
+$shadow-home: 0 8px 32px rgba($cba-slate, 0.1);
+
+// -----------------------------------------------------------------------------
+// CSS custom properties — light mode
+// -----------------------------------------------------------------------------
+
 :root {
-  // Brand Colors
+  --cba-slate: #{$cba-slate};
+  --cba-slate-light: #{$cba-slate-light};
+  --cba-teal: #{$cba-teal};
+  --cba-teal-dark: #{$cba-teal-dark};
+  --cba-amber: #{$cba-amber};
+  --cba-amber-hover: #{$cba-amber-hover};
+  --cba-surface: #{$cba-surface};
+
   --cba-primary: #{$cba-primary};
   --cba-secondary: #{$cba-secondary};
   --cba-accent: #{$cba-accent};
@@ -25,47 +196,47 @@ $brand-danger: #DC3545;
   --cba-light: #{$cba-light};
   --cba-gray: #{$cba-gray};
   --cba-white: #{$cba-white};
-  
-  // Surfaces
-  --bg-body: #FFFFFF;
-  --bg-surface: #F8F9FA;
-  --bg-elevated: #FFFFFF;
-  --bg-hero: #{$cba-light};
-  
-  // Text Colors
-  --text-primary: #{$cba-dark};
-  --text-secondary: #6C757D;
-  --text-muted: #ADB5BD;
-  
-  // Border & Dividers
-  --border-color: #DEE2E6;
-  --divider-color: #E9ECEF;
-  
-  // Component Backgrounds
-  --card-bg: #FFFFFF;
-  --navbar-bg: #{$cba-primary};
-  --footer-bg: #{$cba-dark};
-  
-  // Shadows
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --shadow-base: 0 4px 12px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
-  
-  // Section Badge
-  --badge-bg: #{$cba-light};
-  --badge-text: #{$cba-primary};
-  
-  // Tabs
-  --tab-bg: #F8F9FA;
-  --tab-active-bg: #{$cba-primary};
-  --tab-text: #{$cba-dark};
-  --tab-active-text: #FFFFFF;
-  
-  // Buttons
-  --btn-outline-border: #{$cba-dark};
-  --btn-outline-text: #{$cba-dark};
-  --btn-outline-hover-bg: #{$cba-dark};
-  --btn-outline-hover-text: #FFFFFF;
+
+  --cba-teal-bright: #{$cba-teal-bright};
+  --cba-teal-bright-hover: #{$cba-teal-bright-hover};
+  --cba-teal-ui: #{$cba-teal-ui};
+  --cba-on-teal-ui: #{$cba-on-teal-ui};
+
+  --bg-body: #{$cba-white};
+  --bg-surface: #{$cba-surface};
+  --bg-elevated: #{$cba-white};
+  --bg-hero: #{$cba-slate};
+
+  --text-primary: #{$cba-slate};
+  --text-secondary: #{$cba-gray};
+  --text-muted: #{$cba-text-muted};
+
+  --border-color: #{$cba-border};
+  --divider-color: #{$cba-border};
+
+  --card-bg: #{$cba-white};
+  --navbar-bg: #{$cba-slate};
+  --footer-bg: #{$cba-slate};
+
+  --shadow-sm: #{$shadow-sm};
+  --shadow-base: #{$shadow-base};
+  --shadow-lg: #{$shadow-lg};
+  --shadow-home: #{$shadow-home};
+
+  --badge-bg: #{$cba-badge-tint};
+  --badge-text: #{$cba-teal-dark};
+
+  --tab-bg: #{$cba-surface};
+  --tab-active-bg: #{$cba-slate};
+  --tab-text: #{$cba-slate};
+  --tab-active-text: #{$cba-white};
+
+  --btn-outline-border: #{$cba-slate};
+  --btn-outline-text: #{$cba-slate};
+  --btn-outline-hover-bg: #{$cba-slate};
+  --btn-outline-hover-text: #{$cba-white};
+
+  --radius-home: 12px;
 }
 
 // Typography
@@ -81,7 +252,6 @@ $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
-// Heading Sizes
 $h1-size: 52px;
 $h2-size: 48px;
 $h3-size: 32px;
@@ -89,7 +259,6 @@ $h4-size: 24px;
 $h5-size: 20px;
 $h6-size: 16px;
 
-// Spacing Scale
 $spacer: 1rem;
 $spacer-xs: 0.25rem;
 $spacer-sm: 0.5rem;
@@ -98,21 +267,14 @@ $spacer-lg: 2rem;
 $spacer-xl: 3rem;
 $spacer-xxl: 5rem;
 
-// Layout
 $container-max-width: 1240px;
 $container-padding: 15px;
+$cba-home-max-width: 1100px;
 
-// Border Radius
 $radius-sm: 8px;
 $radius-base: 10px;
 $radius-lg: 15px;
 $radius-pill: 50px;
 
-// Shadows
-$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-$shadow-base: 0 4px 12px rgba(0, 0, 0, 0.1);
-$shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
-
-// Transitions
 $transition-base: all 0.3s ease;
 $transition-fast: all 0.2s ease;

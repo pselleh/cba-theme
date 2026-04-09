@@ -1,4 +1,5 @@
 __pycache__/
+django-theme/node_modules/
 *.pyc
 *.pyo
 .env

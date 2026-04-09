@@ -1,0 +1,14 @@
+{
+  "name": "cba-theme",
+  "private": true,
+  "description": "CBA Open edX theme. Run `npm run build:css` to compile SCSS; `tutor images build openedx` runs that automatically via the cba-theme plugin.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build:css": "npm ci --prefix django-theme && npm run build --prefix django-theme",
+    "build": "bash django-theme/scripts/build-theme.sh",
+    "build:sync": "bash django-theme/scripts/build-theme.sh --sync-only",
+    "build:live": "bash django-theme/scripts/build-theme.sh"
+  }
+}

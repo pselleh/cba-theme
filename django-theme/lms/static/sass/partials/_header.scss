@@ -1,0 +1,8 @@
+// Primary navigation styles: components/_navbar.scss (.cba-nav-wrap)
+
+.cba-nav-wrap {
+  .btn-outline-light.btn-sm,
+  .btn-light.btn-sm {
+    border-radius: $radius-pill !important;
+  }
+}

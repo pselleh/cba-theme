@@ -1,0 +1,15 @@
+{
+  "name": "cba-django-theme",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "npm run build:lms && npm run build:cms",
+    "build:lms": "sass lms/static/sass/lms-main.scss lms/static/css/lms-main.css --style=compressed --no-source-map",
+    "build:cms": "sass cms/static/sass/cms-main.scss cms/static/css/cms-main.css --style=compressed --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}

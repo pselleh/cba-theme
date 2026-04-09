@@ -8,8 +8,28 @@
     <title><%block name="title">Center for Business Acceleration</%block></title>
     
     <link rel="icon" type="image/svg+xml" href="${static.url('images/favicon.svg')}">
-    <link rel="icon" type="image/x-icon" href="${static.url('images/favicon.ico')}">
-    <link rel="shortcut icon" type="image/x-icon" href="${static.url('images/favicon.ico')}">
+    
+    <script>
+    (function () {
+        try {
+            var k = 'cba-theme';
+            var v = localStorage.getItem(k);
+            var dark;
+            if (v === 'dark' || v === 'light') {
+                dark = v === 'dark';
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                dark = true;
+            } else {
+                dark = false;
+            }
+            if (dark) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+        } catch (e) { /* private mode / blocked storage */ }
+    })();
+    </script>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -31,7 +51,77 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
-    <script src="${static.url('js/theme-toggle.js')}"></script>
+    <script>
+    (function () {
+        'use strict';
+        var THEME_KEY = 'cba-theme';
+        function storageGet(key) {
+            try { return localStorage.getItem(key); } catch (e) { return null; }
+        }
+        function storageSet(key, value) {
+            try { localStorage.setItem(key, value); } catch (e) {}
+        }
+        function getPreferredTheme() {
+            var saved = storageGet(THEME_KEY);
+            if (saved === 'dark' || saved === 'light') {
+                return saved;
+            }
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                return 'dark';
+            }
+            return 'light';
+        }
+        function setTheme(theme) {
+            var html = document.documentElement;
+            var isDark = theme === 'dark';
+            if (isDark) {
+                html.setAttribute('data-theme', 'dark');
+            } else {
+                html.removeAttribute('data-theme');
+            }
+            var toggle = document.getElementById('themeToggle');
+            if (toggle) {
+                toggle.checked = isDark;
+            }
+            storageSet(THEME_KEY, isDark ? 'dark' : 'light');
+        }
+        function onToggleFromCheckbox(ev) {
+            var el = ev.target;
+            if (!el || el.id !== 'themeToggle') {
+                return;
+            }
+            setTheme(el.checked ? 'dark' : 'light');
+        }
+        function bindSystemPreference() {
+            if (!window.matchMedia) {
+                return;
+            }
+            var mql = window.matchMedia('(prefers-color-scheme: dark)');
+            function onChange(e) {
+                if (!storageGet(THEME_KEY)) {
+                    setTheme(e.matches ? 'dark' : 'light');
+                }
+            }
+            try {
+                if (mql.addEventListener) {
+                    mql.addEventListener('change', onChange);
+                } else if (mql.addListener) {
+                    mql.addListener(onChange);
+                }
+            } catch (e) {}
+        }
+        function init() {
+            setTheme(getPreferredTheme());
+            document.addEventListener('change', onToggleFromCheckbox);
+            bindSystemPreference();
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    })();
+    </script>
     
 <%block name="js_extra" />
     

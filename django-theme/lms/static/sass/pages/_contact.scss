@@ -1,0 +1,189 @@
+// Contact page — Palette B (matches home static sections)
+
+.contact-hero {
+  background: $cba-surface;
+  border-bottom: 1px solid $cba-border;
+  padding: 3.5rem 0 3rem;
+  text-align: left;
+
+  .container {
+    max-width: $cba-home-max-width;
+  }
+
+  h1 {
+    color: $cba-slate;
+    font-size: clamp(1.75rem, 4vw, 2.35rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $cba-gray;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 40rem;
+    margin: 0 0 1.25rem;
+  }
+}
+
+#contact-form {
+  .container {
+    max-width: $cba-home-max-width;
+  }
+}
+
+.contact-form {
+  background-color: $cba-white;
+  border: 1px solid $cba-border;
+  border-radius: $radius-base;
+  box-shadow: $shadow-sm;
+  padding: 2.5rem;
+
+  h3 {
+    color: $cba-slate;
+    font-size: $h3-size;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.75rem;
+  }
+
+  label {
+    color: $cba-slate;
+    font-weight: 600;
+    font-size: $font-size-sm;
+  }
+
+  .form-control {
+    border-radius: $radius-base;
+    border: 1px solid $cba-border;
+    padding: 0.65rem 1rem;
+    font-size: $font-size-base;
+
+    &:focus {
+      border-color: $cba-teal;
+      box-shadow: $cba-focus-ring-input;
+    }
+  }
+
+  .btn-custom-primary {
+    @include btn-variant($cba-amber, $cba-amber, $cba-white);
+    border-radius: 8px !important;
+    padding: 0.75rem 1.75rem;
+    font-weight: 700;
+  }
+}
+
+.faq-section {
+  background-color: $cba-white;
+  border-top: 1px solid $cba-border;
+  padding: 4rem 0 5rem;
+
+  .container {
+    max-width: $cba-home-max-width;
+  }
+
+  h2 {
+    color: $cba-slate;
+    font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-align: center;
+    max-width: 36rem;
+    margin: 0 auto 2.5rem;
+  }
+}
+
+.faq-item {
+  background-color: $cba-surface;
+  border: 1px solid $cba-border;
+  border-radius: $radius-base;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.faq-question {
+  background-color: transparent;
+  border: none;
+  padding: 1.25rem 1.35rem;
+  width: 100%;
+  text-align: left;
+  font-size: $font-size-base;
+  font-weight: 600;
+  color: $cba-slate;
+  cursor: pointer;
+  transition: $transition-fast;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    background-color: $cba-teal-a06;
+  }
+
+  &.active {
+    background-color: $cba-slate;
+    color: $cba-white;
+
+    .faq-icon {
+      color: $cba-white;
+    }
+  }
+}
+
+.faq-icon {
+  color: $cba-teal;
+  font-size: 1.1rem;
+  transition: $transition-fast;
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 1.35rem 1.35rem;
+  color: $cba-gray;
+  line-height: $line-height-base;
+
+  &.active {
+    display: block !important;
+  }
+
+  h6 {
+    color: $cba-teal-dark;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  strong {
+    color: $cba-slate;
+  }
+
+  .text-primary {
+    color: $cba-teal !important;
+  }
+}
+
+.contact-info {
+  background-color: $cba-white;
+  border: 1px solid $cba-border;
+  border-radius: $radius-base;
+  box-shadow: $shadow-sm;
+  padding: 2rem;
+
+  h4 {
+    color: $cba-slate;
+    font-size: $h4-size;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $cba-gray;
+    margin-bottom: 0.5rem;
+
+    strong {
+      color: $cba-slate;
+    }
+  }
+}

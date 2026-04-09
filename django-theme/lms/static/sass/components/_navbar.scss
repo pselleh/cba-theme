@@ -1,0 +1,211 @@
+// Palette B navigation — matches home-palette-b-teal-slate.html (slate bar, teal hover, amber enroll)
+
+// Match fixed nav height — avoids a tall gap before page content / hero
+body {
+  padding-top: 4.25rem;
+}
+
+.cba-nav-wrap {
+  background: linear-gradient(180deg, $cba-slate 0%, $cba-nav-gradient-end 100%);
+  border-bottom: 1px solid $cba-nav-border-subtle;
+  box-shadow: $cba-nav-shadow;
+}
+
+.cba-nav-wrap.fixed-top {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.cba-navbar {
+  background: transparent !important;
+  padding: 0.5rem 0;
+}
+
+.cba-nav__inner {
+  max-width: 1200px;
+}
+
+.cba-nav__brand {
+  flex-shrink: 0;
+  padding: 0.2rem 0;
+  border-radius: 8px;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+
+  &:hover {
+    opacity: 0.95;
+  }
+
+  &:focus-visible {
+    outline: $cba-ring-teal-bright-85;
+    outline-offset: 3px;
+  }
+}
+
+.cba-nav__brand img {
+  height: 40px;
+  width: auto;
+  // Pass through CSS min(); Sass would otherwise try to evaluate min(px, vw) and fail.
+  max-width: unquote("min(260px, 85vw)");
+  display: block;
+}
+
+.cba-nav__collapse {
+  padding: 1rem 0;
+
+  @media (min-width: 992px) {
+    padding: 0;
+  }
+}
+
+.cba-nav__row {
+  gap: 0.5rem 1rem;
+  width: 100%;
+
+  @media (min-width: 992px) {
+    width: auto;
+  }
+}
+
+.cba-nav__main {
+  flex-wrap: wrap;
+  gap: 0.15rem 0;
+
+  .nav-link:not(.cba-nav__enroll) {
+    color: $cba-white-a88 !important;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    letter-spacing: 0.01em;
+    padding: 0.45rem 0.7rem;
+    border-radius: 6px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+
+    &:hover {
+      color: $cba-teal-bright !important;
+      background-color: $cba-white-a06;
+    }
+
+    &:focus-visible {
+      outline: $cba-ring-teal-bright-75;
+      outline-offset: 2px;
+    }
+  }
+
+  .nav-item .cba-nav__enroll {
+    display: inline-block;
+    background: $cba-amber;
+    color: $cba-white !important;
+    padding: 0.65rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+
+    @media (min-width: 992px) {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 0.25rem;
+    }
+
+    &:hover {
+      background: $cba-amber-hover;
+      color: $cba-white !important;
+    }
+  }
+}
+
+.cba-nav__actions {
+  padding-top: 0.5rem;
+  border-top: 1px solid $cba-nav-row-border;
+  margin-top: 0.5rem;
+
+  @media (min-width: 992px) {
+    padding-top: 0;
+    border-top: none;
+    margin-top: 0;
+    margin-left: 0.5rem;
+  }
+
+  // Secondary control — pairs with .cba-nav__enroll (amber); same height/radius family
+  .cba-nav__login {
+    display: inline-block;
+    text-align: center;
+    border: 2px solid $cba-white-a88;
+    color: $cba-white-a96 !important;
+    background: transparent;
+    padding: 0.55rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    line-height: 1.25;
+    text-decoration: none !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background: $cba-white-a08;
+      border-color: $cba-teal-bright;
+      color: $cba-white !important;
+    }
+
+    &:focus-visible {
+      outline: $cba-ring-teal-bright-85;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.cba-nav-wrap .custom-switch {
+  margin-left: 0;
+  margin-top: 0;
+  padding-left: 3rem;
+  padding-right: 0;
+
+  .custom-control-label {
+    color: $cba-white-a90;
+
+    &::before {
+      width: 52px;
+      height: 32px;
+      border-radius: $radius-pill;
+      background-color: $cba-white-a35;
+      border-color: $cba-white-a35;
+      transition: $transition-fast;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $cba-white;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: $transition-fast;
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    &::before {
+      background-color: $cba-teal;
+      border-color: $cba-teal;
+    }
+
+    &::after {
+      background-color: $cba-white;
+      transform: translate(20px, -50%);
+    }
+  }
+
+  .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: $cba-focus-ring-switch;
+  }
+}
+
+@media (min-width: 768px) {
+  .cba-nav-wrap .custom-control.custom-switch {
+    padding-left: 3rem;
+  }
+}
