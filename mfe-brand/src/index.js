@@ -13,6 +13,9 @@ import * as admin from './pages/admin';
 import * as authoring from './pages/authoring';
 import * as ora from './pages/ora';
 import * as messaging from './pages/messaging';
+import * as catalog from './pages/catalog';
+import * as courses from './pages/courses';
+import * as programs from './pages/programs';
 
 export const pages = {
   learning,
@@ -28,4 +31,7 @@ export const pages = {
   authoring,
   ora,
   messaging,
+  catalog,
+  courses,
+  programs,
 };

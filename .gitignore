@@ -1,5 +1,8 @@
 __pycache__/
 django-theme/node_modules/
+mfe-brand/node_modules/
+frontend-app-cba-catalog/node_modules/
+frontend-app-cba-catalog/dist/
 *.pyc
 *.pyo
 .env

@@ -1,5 +1,5 @@
 export const pageConfig = {
-  name: "REPLACE_PAGE_NAME",
+  name: "authn",
   layout: "default",
 };
 

@@ -1,0 +1,65 @@
+⚠️  You are running Tutor as root. This is strongly not recommended. If you are doing this in order to access the Docker daemon, you should instead add your user to the 'docker' group. (see https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user)
+cba-theme: compiling theme CSS (npm run build:css — LMS + CMS Sass, locked deps)
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> build:css
+> npm ci --prefix django-theme && npm run build --prefix django-theme
+
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm error code FETCH_ERROR
+npm error errno FETCH_ERROR
+npm error request to https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz failed, reason: Proxy connection ended before receiving CONNECT response
+npm error A complete log of this run can be found in: /tmp/cursor-sandbox-cache/a6a9d2658d0d7486779db63e84da3add/npm/_logs/2026-04-20T15_38_38_036Z-debug-0.log
+cba-theme: could not sync theme into Tutor env (Command '['/home/tiksimon/.nvm/versions/node/v24.14.1/bin/npm', 'run', 'build:css']' returned non-zero exit status 1.). Install `rsync` or run: tutor cba-theme build --sync-only
+Error applying filter: func=<function _auto_sync_theme_before_image_build at 0x7add6e8d8d60> contexts=['plugins', 'app:cba-theme']'
+Traceback (most recent call last):
+  File "/home/tiksimon/.local/bin/tutor", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/tiksimon/.local/share/pipx/venvs/tutor-indigo/lib/python3.12/site-packages/tutor/commands/cli.py", line 27, in main
+    cli()
+  File "/home/tiksimon/.local/share/pipx/venvs/tutor-indigo/lib/python3.12/site-packages/click/core.py", line 1442, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiksimon/.local/share/pipx/venvs/tutor-indigo/lib/python3.12/site-packages/click/core.py", line 1363, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/home/tiksimon/.local/share/pipx/venvs/tutor-indigo/lib/python3.12/site-packages/click/core.py", line 1830, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiksimon/.local/share/pipx/venvs/tutor-indigo/lib/python3.12/site-packages/click/core.py", line 1830, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiksimon/.local/share/pipx/venvs/tutor-indigo/lib/python3.12/site-packages/click/core.py", line 1226, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiksimon/.local/share/pipx/venvs/tutor-indigo/lib/python3.12/site-packages/click/core.py", line 794, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiksimon/.local/share/pipx/venvs/tutor-indigo/lib/python3.12/site-packages/click/decorators.py", line 46, in new_func
+    return f(get_current_context().obj, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiksimon/.local/share/pipx/venvs/tutor-indigo/lib/python3.12/site-packages/tutor/commands/images.py", line 221, in build
+    for name, path, tag, custom_args in find_images_to_build(config, image):
+  File "/home/tiksimon/.local/share/pipx/venvs/tutor-indigo/lib/python3.12/site-packages/tutor/commands/images.py", line 309, in find_images_to_build
+    for name, path, tag, args in hooks.Filters.IMAGES_BUILD.iterate(config):
+  File "/home/tiksimon/.local/share/pipx/venvs/tutor-indigo/lib/python3.12/site-packages/tutor/core/hooks/filters.py", line 253, in iterate
+    yield from self.iterate_from_context(None, *args, **kwargs)
+  File "/home/tiksimon/.local/share/pipx/venvs/tutor-indigo/lib/python3.12/site-packages/tutor/core/hooks/filters.py", line 264, in iterate_from_context
+    yield from self.apply_from_context(context, [], *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiksimon/.local/share/pipx/venvs/tutor-indigo/lib/python3.12/site-packages/tutor/core/hooks/filters.py", line 145, in apply_from_context
+    value = callback.apply(
+            ^^^^^^^^^^^^^^^
+  File "/home/tiksimon/.local/share/pipx/venvs/tutor-indigo/lib/python3.12/site-packages/tutor/core/hooks/filters.py", line 35, in apply
+    return self.func(value, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiksimon/Desktop/cba-theme/tutor_cba_theme_content/plugin.py", line 172, in _auto_sync_theme_before_image_build
+    _sync_django_theme_into_env_build()
+  File "/home/tiksimon/Desktop/cba-theme/tutor_cba_theme_content/plugin.py", line 135, in _sync_django_theme_into_env_build
+    _compile_theme_sass()
+  File "/home/tiksimon/Desktop/cba-theme/tutor_cba_theme_content/plugin.py", line 118, in _compile_theme_sass
+    subprocess.run([npm, "run", "build:css"], cwd=_REPO_ROOT, check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/tiksimon/.nvm/versions/node/v24.14.1/bin/npm', 'run', 'build:css']' returned non-zero exit status 1.

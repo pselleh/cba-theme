@@ -1,3 +1,241 @@
+@import './catalog/catalog-pages.scss';
+
+:root {
+  --cba-primary: #0a2a66;
+  --cba-secondary: #f5a623;
+  --cba-text-on-dark: #ffffff;
+  --cba-page-bg: #ffffff;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: var(--cba-page-bg);
+}
+
+.cba-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cba-layout__content {
+  flex: 1 1 auto;
+}
+
+.cba-mfe-header {
+  background: var(--cba-primary);
+  color: var(--cba-text-on-dark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.cba-mfe-header__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.8rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cba-mfe-header__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: var(--cba-text-on-dark);
+  min-width: 0;
+}
+
+.cba-mfe-header__brand img {
+  height: 36px;
+  width: auto;
+}
+
+.cba-mfe-header__brand-text {
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.cba-mfe-header__nav {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1rem;
+  align-items: center;
+}
+
+.cba-mfe-header__nav a {
+  color: var(--cba-text-on-dark);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.cba-mfe-header__actions {
+  display: inline-flex;
+  gap: 0.65rem;
+  margin-left: 0.5rem;
+}
+
+.cba-mfe-header__enroll,
+.cba-mfe-header__login {
+  text-decoration: none;
+  font-size: 0.86rem;
+  font-weight: 700;
+  border-radius: 7px;
+  padding: 0.46rem 0.76rem;
+}
+
+.cba-mfe-header__enroll {
+  background: var(--cba-secondary);
+  color: #17233d;
+}
+
+.cba-mfe-header__login {
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  color: var(--cba-text-on-dark);
+}
+
+.cba-mfe-footer {
+  background: var(--cba-primary);
+  color: var(--cba-text-on-dark);
+  margin-top: auto;
+}
+
+.cba-mfe-footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 1.2rem;
+}
+
+.cba-mfe-footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cba-mfe-footer__brand img {
+  height: 40px;
+  width: auto;
+}
+
+.cba-mfe-footer__links,
+.cba-mfe-footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem;
+}
+
+.cba-mfe-footer__links a,
+.cba-mfe-footer__legal a {
+  color: var(--cba-text-on-dark);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.cba-mfe-footer__bottom {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.cba-mfe-footer__bottom p {
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 1024px) {
+  .cba-mfe-header__inner {
+    flex-wrap: wrap;
+  }
+
+  .cba-mfe-header__nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .cba-mfe-header__actions {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .cba-mfe-footer__top,
+  .cba-mfe-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Authn MFE (frontend-app-authn): Logistration uses #main-content.main-content, not .login-page */
+#main-content.main-content {
+  background: #f8fafc;
+  min-height: calc(100vh - 180px);
+  padding: 2rem 1rem 3rem;
+  box-sizing: border-box;
+}
+
+#main-content.main-content > h3 {
+  text-align: center;
+  color: #1e293b;
+  font-size: 1.65rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+}
+
+/* Form column (login/register + floating labels) */
+#main-content .mw-xs {
+  width: min(100%, 460px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main-content form#sign-in-form,
+#main-content form[name="sign-in-form"],
+#main-content form#forget-password-form,
+#main-content form[name="forget-password-form"],
+#main-content form#registration-form,
+#main-content form[name="registration-form"],
+#main-content form#set-reset-password-form,
+#main-content form[name="set-reset-password-form"] {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(30, 41, 59, 0.08);
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+#main-content .form-control,
+#main-content input.form-control {
+  border-radius: 10px;
+  min-height: 44px;
+}
+
+/* Paragon primary / StatefulButton variant="brand" */
+#main-content .btn-brand,
+#main-content button.btn-brand {
+  width: 100%;
+  border-radius: 10px;
+  min-height: 44px;
+  font-weight: 700;
+  background: var(--cba-primary) !important;
+  border-color: var(--cba-primary) !important;
+  color: var(--cba-text-on-dark) !important;
+}
+
+#main-content .btn-brand:hover,
+#main-content button.btn-brand:hover {
+  filter: brightness(1.08);
+}
+
+#main-content .login-button-width {
+  width: 100%;
 }

@@ -1,0 +1,1431 @@
+cba-theme: compiling theme CSS (npm run build:css — LMS + CMS Sass, locked deps)
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> build:css
+> npm ci --prefix django-theme && npm run build --prefix django-theme
+
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+added 13 packages, and audited 14 packages in 3s
+
+6 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> build
+> npm run build:lms && npm run build:cms
+
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> build:lms
+> sass lms/static/sass/lms-main.scss lms/static/css/lms-main.css --style=compressed --no-source-map
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+2 │ @import "../../../static/sass/variables";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    lms/static/sass/lms-main.scss 2:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+3 │ @import "../../../static/sass/mixins";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    lms/static/sass/lms-main.scss 3:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+4 │ @import "../../../static/sass/base";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    lms/static/sass/lms-main.scss 4:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+5 │ @import "../../../static/sass/extras";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    lms/static/sass/lms-main.scss 5:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+8 │ @import "base/layout";
+  │         ^^^^^^^^^^^^^
+  ╵
+    lms/static/sass/lms-main.scss 8:9  root stylesheet
+
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+8 │     background-color: darken($bg, 8%);
+  │                       ^^^^^^^^^^^^^^^
+  ╵
+    static/sass/_mixins.scss 8:23                 btn-variant()
+    lms/static/sass/components/_buttons.scss 2:3  @import
+    lms/static/sass/lms-main.scss 16:9            root stylesheet
+
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -18.2959641256%)
+color.adjust($color, $lightness: -8%)
+
+More info: https://sass-lang.com/d/color-functions
+
+  ╷
+8 │     background-color: darken($bg, 8%);
+  │                       ^^^^^^^^^^^^^^^
+  ╵
+    static/sass/_mixins.scss 8:23                 btn-variant()
+    lms/static/sass/components/_buttons.scss 2:3  @import
+    lms/static/sass/lms-main.scss 16:9            root stylesheet
+
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+9 │     border-color: darken($border, 8%);
+  │                   ^^^^^^^^^^^^^^^^^^^
+  ╵
+    static/sass/_mixins.scss 9:19                 btn-variant()
+    lms/static/sass/components/_buttons.scss 2:3  @import
+    lms/static/sass/lms-main.scss 16:9            root stylesheet
+
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -18.2959641256%)
+color.adjust($color, $lightness: -8%)
+
+More info: https://sass-lang.com/d/color-functions
+
+  ╷
+9 │     border-color: darken($border, 8%);
+  │                   ^^^^^^^^^^^^^^^^^^^
+  ╵
+    static/sass/_mixins.scss 9:19                 btn-variant()
+    lms/static/sass/components/_buttons.scss 2:3  @import
+    lms/static/sass/lms-main.scss 16:9            root stylesheet
+
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -25.3416149068%)
+color.adjust($color, $lightness: -8%)
+
+More info: https://sass-lang.com/d/color-functions
+
+  ╷
+8 │     background-color: darken($bg, 8%);
+  │                       ^^^^^^^^^^^^^^^
+  ╵
+    static/sass/_mixins.scss 8:23                  btn-variant()
+    lms/static/sass/components/_buttons.scss 20:3  @import
+    lms/static/sass/lms-main.scss 16:9             root stylesheet
+
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -25.3416149068%)
+color.adjust($color, $lightness: -8%)
+
+More info: https://sass-lang.com/d/color-functions
+
+  ╷
+9 │     border-color: darken($border, 8%);
+  │                   ^^^^^^^^^^^^^^^^^^^
+  ╵
+    static/sass/_mixins.scss 9:19                  btn-variant()
+    lms/static/sass/components/_buttons.scss 20:3  @import
+    lms/static/sass/lms-main.scss 16:9             root stylesheet
+
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use string.unquote instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+50 │   max-width: unquote("min(260px, 85vw)");
+   │              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    lms/static/sass/components/_navbar.scss 50:14  @import
+    lms/static/sass/lms-main.scss 19:9             root stylesheet
+
+WARNING: 12 repetitive deprecation warnings omitted.
+Run in verbose mode to see all warnings.
+
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> build:cms
+> sass cms/static/sass/cms-main.scss cms/static/css/cms-main.css --style=compressed --no-source-map
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+1 │ @import "../../../static/sass/variables";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    cms/static/sass/cms-main.scss 1:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+2 │ @import "../../../static/sass/mixins";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    cms/static/sass/cms-main.scss 2:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+3 │ @import "../../../static/sass/base";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    cms/static/sass/cms-main.scss 3:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+5 │ @import "partials/studio";
+  │         ^^^^^^^^^^^^^^^^^
+  ╵
+    cms/static/sass/cms-main.scss 5:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+6 │ @import "partials/dashboard";
+  │         ^^^^^^^^^^^^^^^^^^^^
+  ╵
+    cms/static/sass/cms-main.scss 6:9  root stylesheet
+
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+3 │   background-color: lighten($brand-secondary, 30%);
+  │                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    cms/static/sass/partials/_dashboard.scss 3:21  @import
+    cms/static/sass/cms-main.scss 6:9              root stylesheet
+
+DEPRECATION WARNING [color-functions]: lighten() is deprecated. Suggestions:
+
+color.scale($color, $lightness: 43.8395415473%)
+color.adjust($color, $lightness: 30%)
+
+More info: https://sass-lang.com/d/color-functions
+
+  ╷
+3 │   background-color: lighten($brand-secondary, 30%);
+  │                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    cms/static/sass/partials/_dashboard.scss 3:21  @import
+    cms/static/sass/cms-main.scss 6:9              root stylesheet
+
+cba-theme: syncing django-theme/ -> /home/tiksimon/.local/share/tutor/env/build/openedx/themes/cba-theme (for openedx image build)
+2026-04-20 15:42:21,070 WARNING 275 [py.warnings] [user None] [ip None] warnings.py:110 - /openedx/venv/lib/python3.11/site-packages/fs/__init__.py:4: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  __import__("pkg_resources").declare_namespace(__name__)  # type: ignore
+
+2026-04-20 15:42:21,166 WARNING 275 [py.warnings] [user None] [ip None] warnings.py:110 - /openedx/venv/lib/python3.11/site-packages/fs/__init__.py:4: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('fs')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  __import__("pkg_resources").declare_namespace(__name__)  # type: ignore
+
+2026-04-20 15:42:21,173 WARNING 275 [py.warnings] [user None] [ip None] warnings.py:110 - /openedx/venv/lib/python3.11/site-packages/fs/opener/__init__.py:6: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('fs.opener')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  __import__("pkg_resources").declare_namespace(__name__)  # type: ignore
+
+2026-04-20 15:42:21,175 WARNING 275 [py.warnings] [user None] [ip None] warnings.py:110 - /openedx/venv/lib/python3.11/site-packages/pkg_resources/__init__.py:2331: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('fs')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(parent)
+
+2026-04-20 15:42:22,462 WARNING 275 [common.djangoapps.util.storage] [user None] [ip None] storage.py:63 - Key BLOCK_STRUCTURES_SETTINGS 'STORAGE_CLASS' not found in storage settings {'COURSE_PUBLISH_TASK_DELAY': 30, 'TASK_DEFAULT_RETRY_DELAY': 30, 'TASK_MAX_RETRIES': 5}.Using default storage path.
+2026-04-20 15:42:22,993 WARNING 275 [py.warnings] [user None] [ip None] warnings.py:110 - /openedx/venv/lib/python3.11/site-packages/pgpy/constants.py:5: DeprecationWarning: 'imghdr' is deprecated and slated for removal in Python 3.13
+  import imghdr
+
+2026-04-20 15:42:25,208 INFO 275 [casbin_adapter.enforcer] [user None] [ip None] enforcer.py:21 - Deferring casbin enforcer initialisation until django is ready
+2026-04-20 15:42:26,192 WARNING 275 [py.warnings] [user None] [ip None] warnings.py:110 - /openedx/venv/lib/python3.11/site-packages/django/db/models/fields/__init__.py:1148: RemovedInDjango60Warning: The default scheme will be changed from 'http' to 'https' in Django 6.0. Pass the forms.URLField.assume_scheme argument to silence this warning, or set the FORMS_URLFIELD_ASSUME_HTTPS transitional setting to True to opt into using 'https' as the new default scheme.
+  return form_class(**defaults)
+
+Found another file with the destination path 'images/spinner.gif'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'images/info-icon.png'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'images/incorrect-icon.png'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'images/correct-icon.png'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/utils/date-utils.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/utils/global-loader.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/utils/constants.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/utils/string-utils.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/utils/html-utils.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/pagination/paging-collection.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/disclosure/disclosure-view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/dropdown-menu/dropdown.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/dropdown-menu/dropdown-menu-view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/breadcrumbs/breadcrumbs-model.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/breadcrumbs/breadcrumbs.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/breadcrumbs/breadcrumbs-view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/image-modal.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/components/paging-footer.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/components/paging-header.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/components/tabpanel.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/components/paginated-view.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/components/system-feedback.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/components/tab.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/components/search-field.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/components/tabbed_view.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/discussion/templates.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/karma.common.conf.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/jasmine_stack_trace.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/jasmine.common.conf.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/utils/require-serial.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/utils/edx.utils.validate.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/ExperimentalCarousel.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/utils/view_utils.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/index.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/components/BlockBrowser/test-block-tree.json'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/components/BlockBrowser/BlockBrowser.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/components/BlockBrowser/BlockBrowserContainer.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/components/BlockBrowser/BlockBrowser.test.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/components/BlockBrowser/__snapshots__/BlockBrowser.test.jsx.snap'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/data/store.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/data/api/client.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/data/actions/courseBlocks.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/data/actions/constants.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/data/reducers/index.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/data/selectors/index.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/tabbed_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/paginated_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/list.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/feedback_alert.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/paging_footer.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/feedback.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/paging_header.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/search_field.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/feedback_notification.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/feedback_prompt.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/discussion.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/utils.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/content.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/mathjax_include.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/models/discussion_user.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/models/discussion_course_settings.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/discussion_content_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/discussion_thread_list_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/discussion_thread_show_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/discussion_inline_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/response_comment_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/discussion_thread_edit_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/thread_response_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/response_comment_show_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/discussion_thread_profile_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/response_comment_edit_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/thread_response_show_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/discussion_topic_menu_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/new_post_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/discussion_thread_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/thread_response_edit_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/xblock/core.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/xblock/runtime.v1.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/require.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/index.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/moment-timezone-with-data.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/underscore.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/jquery-migrate.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/moment-with-locales.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/backbone.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/Squire.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/hls.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/bootstrap.bundle.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/sinon.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/underscore.string.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/jquery.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/jquery.scrollTo.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/backbone.paginator.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'js/RequireJS-namespace-undefine.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/templates/enrollment.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/templates/manage_user.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/templates/certificates.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/templates/certificates_results.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/templates/enrollment-modal.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/certificates_factory.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/enrollment_factory.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/manage_user_factory.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/collections/certificate.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/collections/enrollment.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/models/certificate.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/models/enrollment.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/models/manage_user.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/views/certificates.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/views/enrollment.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/views/manage_user.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/views/enrollment_modal.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/logged_in_user.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/logged_out_user.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/file_upload.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/success.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/upload_progress.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/errors_list.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/single_support_form.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/program_enrollments/inspector.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/program_enrollments/index.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/index.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/components/EntitlementForm/container.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/components/EntitlementForm/index.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/components/Table/EntitlementSupportTable.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/components/Table/EntitlementSupportTableContainer.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/components/Main/MainContainer.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/components/Main/Main.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/components/Search/SearchContainer.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/components/Search/Search.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/store.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/api/client.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/api/endpoints.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/constants/formTypes.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/constants/actionTypes.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/actions/error.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/actions/form.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/actions/entitlement.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/reducers/index.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/reducers/error.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/reducers/entitlements.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/reducers/form.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/manage.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/edit-team-member.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/topics.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/team-profile.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/team-assignment.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/instructor-tools.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/team-profile-header-actions.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/team-country-language.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/team-membership-details.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/edit-team.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/team-actions.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/teams_tab.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/date.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/team-member.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/teams.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/teams_tab_factory.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/utils/team_analytics.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/collections/topic.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/collections/base.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/collections/my_teams.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/collections/team.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/models/topic.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/models/team_membership.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/models/team.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/team_discussion.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/team_card.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/topics.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Error: Cannot uglify2 file: /tmp/tmpseik9njd/js/student_account/logistration_factory.js. Skipping it. Error is:
+Unexpected character '`' (line: 1276, col: 36, pos: 51283)
+
+Error
+    at new JS_Parse_Error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:19710:18)
+    at js_error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:19718:11)
+    at parse_error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:19831:9)
+    at Object.next_token [as input] (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20095:9)
+    at next (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20195:25)
+    at expect_token (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20228:20)
+    at expect (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20233:36)
+    at expr_list (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20736:44)
+    at subscripts (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20875:30)
+    at subscripts (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20852:20)
+Error: Cannot uglify2 file: /tmp/tmpseik9njd/js/student_account/views/finish_auth_factory.js. Skipping it. Error is:
+Unexpected character '`' (line: 123, col: 39, pos: 5058)
+
+Error
+    at new JS_Parse_Error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:19710:18)
+    at js_error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:19718:11)
+    at parse_error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:19831:9)
+    at Object.next_token [as input] (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20095:9)
+    at next (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20195:25)
+    at maybe_assign (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20959:17)
+    at expression (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20975:20)
+    at simple_statement (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20423:55)
+    at /openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20296:19
+    at /openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20256:24
+Error: Cannot uglify2 file: /tmp/tmpseik9njd/teams/js/teams_tab_factory.js. Skipping it. Error is:
+Unexpected token operator «=», expected punc «,» (line: 2915, col: 58, pos: 111996)
+
+Error
+    at new JS_Parse_Error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:19710:18)
+    at js_error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:19718:11)
+    at croak (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20209:9)
+    at token_error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20217:9)
+    at expect_token (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20230:9)
+    at expect (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20233:36)
+    at /openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20498:52
+    at function_ (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20503:15)
+    at expr_atom (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20722:24)
+    at maybe_unary (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20892:19)
+
+course_bookmarks/js/course_bookmarks_factory.js
+----------------
+js/vendor/requirejs/text.js
+text!templates/fields/message_banner.underscore
+js/views/message_banner.js
+common/js/vendor/backbone.paginator.js
+edx-ui-toolkit/js/pagination/paging-collection.js
+course_bookmarks/js/models/bookmark.js
+course_bookmarks/js/collections/bookmarks.js
+common/js/vendor/moment-with-locales.js
+text!common/templates/components/paging-header.underscore
+common/js/components/views/paging_header.js
+text!common/templates/components/paging-footer.underscore
+common/js/components/views/paging_footer.js
+text!course_bookmarks/templates/bookmarks-list.underscore
+course_bookmarks/js/views/bookmarks_list.js
+course_bookmarks/js/course_bookmarks_factory.js
+
+course_search/js/course_search_factory.js
+----------------
+course_search/js/search_router.js
+course_search/js/views/search_form.js
+course_search/js/models/search_result.js
+course_search/js/collections/search_collection.js
+course_search/js/views/search_item_view.js
+js/vendor/requirejs/text.js
+text!course_search/templates/search_loading.underscore
+text!course_search/templates/search_error.underscore
+course_search/js/views/search_results_view.js
+text!course_search/templates/course_search_results.underscore
+text!course_search/templates/course_search_item.underscore
+course_search/js/views/course_search_results_view.js
+course_search/js/course_search_factory.js
+
+course_search/js/dashboard_search_factory.js
+----------------
+course_search/js/search_router.js
+course_search/js/views/search_form.js
+course_search/js/models/search_result.js
+course_search/js/collections/search_collection.js
+course_search/js/views/search_item_view.js
+js/vendor/requirejs/text.js
+text!course_search/templates/search_loading.underscore
+text!course_search/templates/search_error.underscore
+course_search/js/views/search_results_view.js
+text!course_search/templates/dashboard_search_results.underscore
+text!course_search/templates/dashboard_search_item.underscore
+course_search/js/views/dashboard_search_results_view.js
+course_search/js/dashboard_search_factory.js
+
+discussion/js/discussion_board_factory.js
+----------------
+common/js/discussion/content.js
+common/js/discussion/discussion.js
+common/js/discussion/utils.js
+common/js/discussion/models/discussion_course_settings.js
+common/js/discussion/models/discussion_user.js
+common/js/discussion/views/new_post_view.js
+common/js/discussion/views/discussion_thread_view.js
+discussion/js/discussion_router.js
+edx-ui-toolkit/js/utils/constants.js
+common/js/discussion/views/discussion_thread_list_view.js
+js/vendor/requirejs/text.js
+text!discussion/templates/fake-breadcrumbs.underscore
+discussion/js/views/discussion_fake_breadcrumbs.js
+text!discussion/templates/search.underscore
+discussion/js/views/discussion_search_view.js
+text!discussion/templates/discussion-home.underscore
+discussion/js/views/discussion_board_view.js
+discussion/js/discussion_board_factory.js
+
+discussion/js/discussion_profile_page_factory.js
+----------------
+common/js/discussion/content.js
+common/js/discussion/discussion.js
+common/js/discussion/utils.js
+common/js/discussion/models/discussion_user.js
+common/js/discussion/models/discussion_course_settings.js
+js/vendor/requirejs/text.js
+text!common/templates/components/system-feedback.underscore
+common/js/components/views/feedback.js
+common/js/components/views/feedback_notification.js
+common/js/components/views/feedback_prompt.js
+common/js/components/utils/view_utils.js
+common/js/discussion/views/discussion_thread_profile_view.js
+text!discussion/templates/user-profile.underscore
+common/js/discussion/views/discussion_thread_list_view.js
+discussion/js/views/discussion_user_profile_view.js
+discussion/js/discussion_profile_page_factory.js
+
+js/api_admin/catalog_preview_factory.js
+----------------
+js/vendor/requirejs/text.js
+text!templates/api_admin/catalog-results.underscore
+text!templates/api_admin/catalog-error.underscore
+js/api_admin/views/catalog_preview.js
+js/api_admin/catalog_preview_factory.js
+
+js/courseware/courseware_factory.js
+----------------
+js/courseware/courseware_factory.js
+
+js/discovery/discovery_factory.js
+----------------
+js/discovery/models/course_card.js
+js/discovery/models/facet_option.js
+js/discovery/models/course_discovery.js
+js/discovery/models/filter.js
+js/discovery/collections/filters.js
+js/discovery/models/search_state.js
+js/discovery/views/search_form.js
+common/js/vendor/moment-with-locales.js
+common/js/vendor/moment-timezone-with-data.js
+edx-ui-toolkit/js/utils/date-utils.js
+js/discovery/views/course_card.js
+js/discovery/views/courses_listing.js
+js/discovery/views/filter_label.js
+js/discovery/views/filter_bar.js
+js/discovery/views/refine_sidebar.js
+js/discovery/discovery_factory.js
+
+js/edxnotes/views/notes_visibility_factory.js
+----------------
+js/vendor/edxnotes/annotator-full.min.js
+js/edxnotes/utils/logger.js
+js/edxnotes/utils/notes_collector.js
+js/edxnotes/utils/utils.js
+js/edxnotes/views/shim.js
+js/edxnotes/plugins/scroller.js
+js/edxnotes/plugins/events.js
+edx-ui-toolkit/js/utils/constants.js
+js/edxnotes/plugins/accessibility.js
+js/edxnotes/plugins/caret_navigation.js
+js/edxnotes/plugins/store_error_handler.js
+js/edxnotes/plugins/search_override.js
+js/edxnotes/views/notes_factory.js
+js/edxnotes/views/visibility_decorator.js
+js/utils/animation.js
+js/edxnotes/views/notes_visibility_factory.js
+
+js/edxnotes/views/page_factory.js
+----------------
+common/js/vendor/backbone.paginator.js
+edx-ui-toolkit/js/pagination/paging-collection.js
+js/edxnotes/utils/utils.js
+js/edxnotes/models/note.js
+js/edxnotes/collections/notes.js
+js/edxnotes/utils/logger.js
+js/edxnotes/models/tab.js
+js/edxnotes/collections/tabs.js
+js/edxnotes/utils/template.js
+js/edxnotes/views/tab_item.js
+js/edxnotes/views/tabs_list.js
+js/edxnotes/views/note_item.js
+js/vendor/requirejs/text.js
+text!common/templates/components/paging-header.underscore
+common/js/components/views/paging_header.js
+text!common/templates/components/paging-footer.underscore
+common/js/components/views/paging_footer.js
+js/edxnotes/views/tab_panel.js
+js/edxnotes/views/tab_view.js
+js/edxnotes/views/tabs/recent_activity.js
+js/edxnotes/views/note_group.js
+js/edxnotes/views/tabs/course_structure.js
+js/edxnotes/views/search_box.js
+js/edxnotes/views/tabs/search_results.js
+js/edxnotes/views/tabs/tags.js
+js/edxnotes/views/notes_page.js
+js/edxnotes/views/page_factory.js
+
+js/financial-assistance/financial_assistance_form_factory.js
+----------------
+js/financial-assistance/models/financial_assistance_model.js
+common/js/utils/edx.utils.validate.js
+js/vendor/requirejs/text.js
+text!templates/student_account/form_errors.underscore
+js/student_account/views/FormView.js
+text!templates/financial-assistance/financial_assessment_form.underscore
+text!templates/financial-assistance/financial_assessment_submitted.underscore
+text!templates/student_account/form_field.underscore
+js/src/string_utils.js
+js/financial-assistance/views/financial_assistance_form_view.js
+js/financial-assistance/financial_assistance_form_factory.js
+
+js/groups/views/cohorts_dashboard_factory.js
+----------------
+js/groups/models/cohort.js
+js/models/notification.js
+js/views/notification.js
+js/groups/views/cohort_form.js
+js/src/string_utils.js
+js/groups/views/cohort_editor.js
+js/groups/views/course_cohort_settings_notification.js
+js/views/base_dashboard_view.js
+js/views/file_uploader.js
+js/groups/views/cohorts.js
+js/groups/collections/cohort.js
+js/groups/models/course_cohort_settings.js
+js/groups/models/content_group.js
+js/groups/views/cohorts_dashboard_factory.js
+
+js/discussions_management/views/discussions_dashboard_factory.js
+----------------
+js/models/notification.js
+js/views/notification.js
+js/discussions_management/views/divided_discussions.js
+js/vendor/jquery.qubit.js
+js/discussions_management/views/divided_discussions_inline.js
+js/discussions_management/views/divided_discussions_course_wide.js
+js/views/base_dashboard_view.js
+js/discussions_management/views/discussions.js
+js/discussions_management/models/course_discussions_detail.js
+js/discussions_management/models/course_discussions_settings.js
+js/discussions_management/views/discussions_dashboard_factory.js
+
+js/header_factory.js
+----------------
+edx-ui-toolkit/js/utils/constants.js
+js/vendor/requirejs/text.js
+text!edx-ui-toolkit/js/dropdown-menu/dropdown.underscore
+edx-ui-toolkit/js/dropdown-menu/dropdown-menu-view.js
+js/header_factory.js
+
+js/student_account/logistration_factory.js
+----------------
+js/student_account/models/LoginModel.js
+js/student_account/models/PasswordResetModel.js
+js/student_account/models/RegisterModel.js
+js/student_account/models/AccountRecoveryModel.js
+common/js/utils/edx.utils.validate.js
+js/vendor/requirejs/text.js
+text!templates/student_account/form_errors.underscore
+js/student_account/views/FormView.js
+text!templates/student_account/form_success.underscore
+text!templates/student_account/form_status.underscore
+js/student_account/views/LoginView.js
+js/student_account/views/PasswordResetView.js
+js/student_account/views/RegisterView.js
+js/student_account/views/InstitutionLoginView.js
+js/student_account/views/HintedLoginView.js
+js/student_account/utils.js
+js/student_account/multiple_enterprise.js
+js/vendor/history.js
+js/student_account/views/AccessView.js
+js/student_account/logistration_factory.js
+
+js/student_account/views/finish_auth_factory.js
+----------------
+js/student_account/emailoptin.js
+js/student_account/enrollment.js
+js/student_account/shoppingcart.js
+js/student_account/views/FinishAuthView.js
+js/student_account/views/finish_auth_factory.js
+
+js/views/message_banner.js
+----------------
+js/vendor/requirejs/text.js
+text!templates/fields/message_banner.underscore
+js/views/message_banner.js
+
+lms/js/preview/preview_factory.js
+----------------
+js/vendor/requirejs/text.js
+text!common/templates/components/system-feedback.underscore
+common/js/components/views/feedback.js
+common/js/components/views/feedback_notification.js
+common/js/components/views/feedback_prompt.js
+common/js/components/utils/view_utils.js
+lms/js/preview/preview_factory.js
+
+support/js/certificates_factory.js
+----------------
+support/js/models/certificate.js
+support/js/collections/certificate.js
+js/vendor/requirejs/text.js
+text!support/templates/certificates.underscore
+text!support/templates/certificates_results.underscore
+support/js/views/certificates.js
+support/js/certificates_factory.js
+
+support/js/enrollment_factory.js
+----------------
+common/js/vendor/moment-with-locales.js
+js/vendor/requirejs/text.js
+text!support/templates/enrollment-modal.underscore
+support/js/views/enrollment_modal.js
+support/js/models/enrollment.js
+support/js/collections/enrollment.js
+text!support/templates/enrollment.underscore
+support/js/views/enrollment.js
+support/js/enrollment_factory.js
+
+support/js/manage_user_factory.js
+----------------
+common/js/vendor/moment-with-locales.js
+support/js/models/manage_user.js
+js/vendor/requirejs/text.js
+text!support/templates/manage_user.underscore
+support/js/views/manage_user.js
+support/js/manage_user_factory.js
+
+teams/js/teams_tab_factory.js
+----------------
+js/vendor/requirejs/text.js
+text!common/templates/components/search-field.underscore
+common/js/components/views/search_field.js
+text!templates/components/header/header.underscore
+js/components/header/views/header.js
+js/components/header/models/header.js
+teams/js/models/topic.js
+common/js/vendor/backbone.paginator.js
+edx-ui-toolkit/js/pagination/paging-collection.js
+teams/js/collections/base.js
+teams/js/collections/topic.js
+teams/js/models/team.js
+teams/js/collections/team.js
+teams/js/collections/my_teams.js
+teams/js/utils/team_analytics.js
+edx-ui-toolkit/js/utils/constants.js
+text!common/templates/components/tabbed_view.underscore
+text!common/templates/components/tab.underscore
+text!common/templates/components/tabpanel.underscore
+common/js/components/views/tabbed_view.js
+teams/js/views/teams_tabbed_view.js
+text!templates/components/card/card.underscore
+js/components/card/views/card.js
+teams/js/views/topic_card.js
+teams/js/views/team_utils.js
+text!common/templates/components/paging-header.underscore
+common/js/components/views/paging_header.js
+text!common/templates/components/paging-footer.underscore
+common/js/components/views/paging_footer.js
+common/js/components/views/list.js
+text!common/templates/components/paginated-view.underscore
+common/js/components/views/paginated_view.js
+teams/js/views/topics.js
+teams/js/views/team_discussion.js
+text!common/templates/components/system-feedback.underscore
+common/js/components/views/feedback.js
+common/js/components/views/feedback_notification.js
+common/js/components/views/feedback_prompt.js
+common/js/components/utils/view_utils.js
+text!teams/templates/team-profile.underscore
+text!teams/templates/team-member.underscore
+text!teams/templates/team-assignment.underscore
+teams/js/views/team_profile.js
+common/js/vendor/moment-with-locales.js
+text!teams/templates/team-membership-details.underscore
+text!teams/templates/team-country-language.underscore
+text!teams/templates/date.underscore
+teams/js/views/team_card.js
+teams/js/views/teams.js
+teams/js/views/my_teams.js
+text!teams/templates/manage.underscore
+teams/js/views/manage.js
+text!teams/templates/team-actions.underscore
+teams/js/views/topic_teams.js
+common/js/vendor/moment-timezone-with-data.js
+edx-ui-toolkit/js/utils/date-utils.js
+text!templates/fields/field_readonly.underscore
+text!templates/fields/field_dropdown.underscore
+text!templates/fields/field_link.underscore
+text!templates/fields/field_text.underscore
+text!templates/fields/field_textarea.underscore
+js/vendor/backbone-super.js
+js/views/fields.js
+text!teams/templates/edit-team.underscore
+teams/js/views/edit_team.js
+text!teams/templates/edit-team-member.underscore
+teams/js/views/edit_team_members.js
+text!teams/templates/team-profile-header-actions.underscore
+teams/js/views/team_profile_header_actions.js
+text!teams/templates/instructor-tools.underscore
+teams/js/views/instructor_tools.js
+text!teams/templates/teams_tab.underscore
+teams/js/views/teams_tab.js
+teams/js/teams_tab_factory.js
+
+js/dateutil_factory.js
+----------------
+common/js/vendor/moment-with-locales.js
+common/js/vendor/moment-timezone-with-data.js
+edx-ui-toolkit/js/utils/date-utils.js
+js/dateutil_factory.js
+
+Found another file with the destination path 'teams/js/views/instructor_tools.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/my_teams.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/edit_team.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/team_profile_header_actions.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/edit_team_members.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/teams_tabbed_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/team_profile.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/manage.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/topic_teams.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/teams.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/team_utils.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/teams_tab.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/topic_card.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_bookmarks/templates/bookmarks-list.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_bookmarks/js/course_bookmarks_factory.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_bookmarks/js/collections/bookmarks.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_bookmarks/js/models/bookmark.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_bookmarks/js/views/bookmark_button.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_bookmarks/js/views/bookmarks_list.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_experience/images/verified-cert.png'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_experience/images/learner-quote2.png'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_experience/images/learner-quote.png'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_experience/js/currency.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/templates/search.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/templates/fake-breadcrumbs.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/templates/discussion-home.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/templates/user-profile.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/js/discussion_board_factory.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/js/discussion_router.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/js/discussion_profile_page_factory.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/js/views/discussion_search_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/js/views/discussion_board_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/js/views/discussion_fake_breadcrumbs.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/js/views/discussion_user_profile_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+
+1 static file copied to '/openedx/staticfiles', 8893 unmodified, 3921 post-processed.
+cba-theme: collectstatic finished — hashed theme CSS in the running LMS is up to date.
+Building image docker.io/overhangio/openedx-mfe:21.0.0
+docker buildx build --tag=docker.io/overhangio/openedx-mfe:21.0.0 --output=type=docker --cache-from=type=registry,ref=docker.io/overhangio/openedx-mfe:21.0.0-cache /home/tiksimon/.local/share/tutor/env/plugins/mfe/build/mfe
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 20.86kB done
+#1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+#2 DONE 1.3s
+
+#3 docker-image://docker.io/docker/dockerfile:1@sha256:2780b5c3bab67f1f76c781860de469442999ed1a0d7992a5efdf2cffc0e3d769
+#3 CACHED
+
+#4 [internal] load metadata for docker.io/library/caddy:2.7.4
+#4 DONE 0.0s
+
+#5 [internal] load metadata for docker.io/library/node:24.11.0-bullseye-slim
+#5 DONE 0.9s
+
+#6 [internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 importing cache manifest from docker.io/overhangio/openedx-mfe:21.0.0-cache
+#7 ...
+
+#8 [internal] load build context
+#8 DONE 0.0s
+
+#9 [base 1/4] FROM docker.io/library/node:24.11.0-bullseye-slim@sha256:61bfe4ca608025ed7da3575f66a11eaf76178b6f7e69607be88ca10ca0a94a22
+#9 DONE 0.0s
+
+#10 [production  1/13] FROM docker.io/library/caddy:2.7.4
+#10 DONE 0.0s
+
+#11 [discussions-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-discussions.git#release/ulmo.2 .
+#11 ...
+
+#12 [admin-console-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-admin-console.git#release/ulmo.2 .
+#12 1.700 a77878cc39f2e0dbf5279eae4eff044b27f4fea0	refs/tags/release/ulmo.2
+#12 DONE 1.7s
+
+#7 importing cache manifest from docker.io/overhangio/openedx-mfe:21.0.0-cache
+#7 inferred cache manifest type: application/vnd.oci.image.manifest.v1+json done
+#7 ...
+
+#13 [communications-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-communications.git#release/ulmo.2 .
+#13 1.982 7ddc95003e02f2a9f2d9fb2b1f0fd763c320fe6b	refs/tags/release/ulmo.2
+#13 DONE 2.0s
+
+#14 [learning-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-learning.git#release/ulmo.2 .
+#14 ...
+
+#15 [ora-grading-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-ora-grading.git#release/ulmo.2 .
+#15 2.381 508c91d4871832ae6a8b247a652b7e16597c1df0	refs/tags/release/ulmo.2
+#15 DONE 2.4s
+
+#11 [discussions-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-discussions.git#release/ulmo.2 .
+#11 2.507 16901009cb8fa45a1423557131dfebf8091ea25d	refs/tags/release/ulmo.2
+#11 DONE 2.5s
+
+#16 [gradebook-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-gradebook.git#release/ulmo.2 .
+#16 2.539 02a3bda10a572eb89204b42b54c32cccf0c79685	refs/tags/release/ulmo.2
+#16 DONE 2.5s
+
+#17 [learner-dashboard-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-learner-dashboard.git#release/ulmo.2 .
+#17 2.654 2b1c56e8500217d052bc6b60240dc669d939713c	refs/tags/release/ulmo.2
+#17 DONE 2.7s
+
+#18 [authn-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-authn.git#release/ulmo.2 .
+#18 2.728 362a2962af54b9ad9d148995ab22cb0af9047b92	refs/tags/release/ulmo.2
+#18 DONE 2.7s
+
+#19 [profile-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-profile.git#release/ulmo.2 .
+#19 2.771 e08014c656d66f9c37e18658f02f5ac75c51d013	refs/tags/release/ulmo.2
+#19 DONE 2.8s
+
+#14 [learning-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-learning.git#release/ulmo.2 .
+#14 2.827 1d5484ff1d47da354b10f334e2376cf8136344eb	refs/tags/release/ulmo.2
+#14 DONE 2.8s
+
+#20 [account-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-account.git#release/ulmo.2 .
+#20 2.905 9c78bf34ef3bac2c45b12d2d896bd7d0f2f89288	refs/tags/release/ulmo.2
+#20 DONE 2.9s
+
+#21 [authoring-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-authoring.git#release/ulmo.2 .
+#21 3.035 fedb85577e073d423e3c23b6832610dea3c6f448	refs/tags/release/ulmo.2
+#21 DONE 3.0s
+
+#7 importing cache manifest from docker.io/overhangio/openedx-mfe:21.0.0-cache
+#7 DONE 3.3s
+
+#22 [production  2/13] RUN mkdir -p /openedx/dist
+#22 CACHED
+
+#23 [base 2/4] RUN apt update   && apt install -y git     gcc libgl1 libxi6 make     autoconf libtool pkg-config zlib1g-dev     python g++     libpng-dev     libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+#23 CACHED
+
+#24 [base 4/4] WORKDIR /openedx/app
+#24 CACHED
+
+#25 [base 3/4] RUN mkdir -p /openedx/app /openedx/env
+#25 CACHED
+
+#26 [profile-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-profile.git#release/ulmo.2 .
+#26 CACHED
+
+#27 [profile-common 1/6] COPY --from=profile-src /package.json /openedx/app/package.json
+#27 CACHED
+
+#28 [profile-common 2/6] COPY --from=profile-src /package-lock.json /openedx/app/package-lock.json
+#28 CACHED
+
+#29 [profile-src 1/1] COPY --from=profile-git /openedx/app /
+#29 CACHED
+
+#8 [internal] load build context
+#8 transferring context: 36B done
+#8 DONE 0.1s
+
+#30 [profile-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#30 ...
+
+#31 [admin-console-common 1/6] COPY --from=admin-console-src /package.json /openedx/app/package.json
+#31 CACHED
+
+#32 [admin-console-common 4/6] COPY --from=admin-console-src / /openedx/app
+#32 CACHED
+
+#33 [admin-console-src 1/1] COPY --from=admin-console-git /openedx/app /
+#33 CACHED
+
+#34 [admin-console-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#34 CACHED
+
+#35 [admin-console-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-admin-console.git#release/ulmo.2 .
+#35 CACHED
+
+#36 [admin-console-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#36 CACHED
+
+#37 [admin-console-common 2/6] COPY --from=admin-console-src /package-lock.json /openedx/app/package-lock.json
+#37 CACHED
+
+#38 [admin-console-common 6/6] COPY env.config.jsx /openedx/app
+#38 CACHED
+
+#39 [authn-common 4/6] COPY --from=authn-src / /openedx/app
+#39 CACHED
+
+#40 [authn-common 1/6] COPY --from=authn-src /package.json /openedx/app/package.json
+#40 CACHED
+
+#41 [authn-common 2/6] COPY --from=authn-src /package-lock.json /openedx/app/package-lock.json
+#41 CACHED
+
+#42 [authn-src 1/1] COPY --from=authn-git /openedx/app /
+#42 CACHED
+
+#43 [authn-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#43 CACHED
+
+#44 [authn-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-authn.git#release/ulmo.2 .
+#44 CACHED
+
+#45 [authn-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#45 CACHED
+
+#46 [authn-common 6/6] COPY env.config.jsx /openedx/app
+#46 CACHED
+
+#47 [learning-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#47 CACHED
+
+#48 [learning-common 2/6] COPY --from=learning-src /package-lock.json /openedx/app/package-lock.json
+#48 CACHED
+
+#49 [learning-src 1/1] COPY --from=learning-git /openedx/app /
+#49 CACHED
+
+#50 [learning-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-learning.git#release/ulmo.2 .
+#50 CACHED
+
+#51 [learning-common 1/6] COPY --from=learning-src /package.json /openedx/app/package.json
+#51 CACHED
+
+#52 [learning-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#52 CACHED
+
+#53 [learning-common 4/6] COPY --from=learning-src / /openedx/app
+#53 CACHED
+
+#54 [learning-common 6/6] COPY env.config.jsx /openedx/app
+#54 CACHED
+
+#55 [discussions-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-discussions.git#release/ulmo.2 .
+#55 CACHED
+
+#56 [discussions-common 4/6] COPY --from=discussions-src / /openedx/app
+#56 CACHED
+
+#57 [discussions-common 1/6] COPY --from=discussions-src /package.json /openedx/app/package.json
+#57 CACHED
+
+#58 [discussions-src 1/1] COPY --from=discussions-git /openedx/app /
+#58 CACHED
+
+#59 [discussions-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#59 CACHED
+
+#60 [discussions-common 2/6] COPY --from=discussions-src /package-lock.json /openedx/app/package-lock.json
+#60 CACHED
+
+#61 [discussions-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#61 CACHED
+
+#62 [discussions-common 6/6] COPY env.config.jsx /openedx/app
+#62 CACHED
+
+#63 [ora-grading-common 4/6] COPY --from=ora-grading-src / /openedx/app
+#63 CACHED
+
+#64 [ora-grading-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#64 CACHED
+
+#65 [ora-grading-common 2/6] COPY --from=ora-grading-src /package-lock.json /openedx/app/package-lock.json
+#65 CACHED
+
+#66 [ora-grading-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#66 CACHED
+
+#67 [learner-dashboard-src 1/1] COPY --from=learner-dashboard-git /openedx/app /
+#67 CACHED
+
+#68 [learner-dashboard-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#68 CACHED
+
+#69 [ora-grading-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-ora-grading.git#release/ulmo.2 .
+#69 CACHED
+
+#70 [learner-dashboard-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#70 CACHED
+
+#71 [learner-dashboard-common 2/6] COPY --from=learner-dashboard-src /package-lock.json /openedx/app/package-lock.json
+#71 CACHED
+
+#72 [learner-dashboard-common 4/6] COPY --from=learner-dashboard-src / /openedx/app
+#72 CACHED
+
+#73 [learner-dashboard-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-learner-dashboard.git#release/ulmo.2 .
+#73 CACHED
+
+#74 [ora-grading-common 1/6] COPY --from=ora-grading-src /package.json /openedx/app/package.json
+#74 CACHED
+
+#75 [learner-dashboard-common 1/6] COPY --from=learner-dashboard-src /package.json /openedx/app/package.json
+#75 CACHED
+
+#76 [ora-grading-src 1/1] COPY --from=ora-grading-git /openedx/app /
+#76 CACHED
+
+#77 [gradebook-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#77 CACHED
+
+#78 [gradebook-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#78 CACHED
+
+#79 [gradebook-common 2/6] COPY --from=gradebook-src /package-lock.json /openedx/app/package-lock.json
+#79 CACHED
+
+#80 [gradebook-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-gradebook.git#release/ulmo.2 .
+#80 CACHED
+
+#81 [gradebook-src 1/1] COPY --from=gradebook-git /openedx/app /
+#81 CACHED
+
+#82 [gradebook-common 4/6] COPY --from=gradebook-src / /openedx/app
+#82 CACHED
+
+#83 [gradebook-common 1/6] COPY --from=gradebook-src /package.json /openedx/app/package.json
+#83 CACHED
+
+#84 [ora-grading-common 6/6] COPY env.config.jsx /openedx/app
+#84 CACHED
+
+#85 [gradebook-common 6/6] COPY env.config.jsx /openedx/app
+#85 CACHED
+
+#86 [communications-common 1/6] COPY --from=communications-src /package.json /openedx/app/package.json
+#86 CACHED
+
+#87 [communications-src 1/1] COPY --from=communications-git /openedx/app /
+#87 CACHED
+
+#88 [communications-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#88 CACHED
+
+#89 [communications-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#89 CACHED
+
+#90 [communications-common 4/6] COPY --from=communications-src / /openedx/app
+#90 CACHED
+
+#91 [communications-common 6/6] COPY env.config.jsx /openedx/app
+#91 CACHED
+
+#92 [communications-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-communications.git#release/ulmo.2 .
+#92 CACHED
+
+#93 [communications-common 2/6] COPY --from=communications-src /package-lock.json /openedx/app/package-lock.json
+#93 CACHED
+
+#94 [communications-prod 1/1] RUN npm run build
+#94 CACHED
+
+#95 [authoring-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#95 CACHED
+
+#96 [authoring-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#96 CACHED
+
+#97 [authoring-common 1/6] COPY --from=authoring-src /package.json /openedx/app/package.json
+#97 CACHED
+
+#98 [authoring-src 1/1] COPY --from=authoring-git /openedx/app /
+#98 CACHED
+
+#99 [authoring-common 4/6] COPY --from=authoring-src / /openedx/app
+#99 CACHED
+
+#100 [authoring-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-authoring.git#release/ulmo.2 .
+#100 CACHED
+
+#101 [authoring-common 2/6] COPY --from=authoring-src /package-lock.json /openedx/app/package-lock.json
+#101 CACHED
+
+#102 [learner-dashboard-common 6/6] COPY env.config.jsx /openedx/app
+#102 CACHED
+
+#103 [account-src 1/1] COPY --from=account-git /openedx/app /
+#103 CACHED
+
+#104 [account-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-account.git#release/ulmo.2 .
+#104 CACHED
+
+#105 [account-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#105 CACHED
+
+#106 [account-common 2/6] COPY --from=account-src /package-lock.json /openedx/app/package-lock.json
+#106 CACHED
+
+#107 [account-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#107 CACHED
+
+#108 [account-common 4/6] COPY --from=account-src / /openedx/app
+#108 CACHED
+
+#109 [account-common 1/6] COPY --from=account-src /package.json /openedx/app/package.json
+#109 CACHED
+
+#110 [account-common 6/6] COPY env.config.jsx /openedx/app
+#110 CACHED
+
+#111 [authoring-common 6/6] COPY env.config.jsx /openedx/app
+#111 CACHED
+
+#112 [authoring-prod 1/1] RUN npm run build
+#112 2.554 
+#112 2.554 > @edx/frontend-app-authoring@0.1.0 build
+#112 2.554 > fedx-scripts webpack
+#112 2.554 
+#112 2.677 Running with resolved config:
+#112 2.677 /openedx/app/webpack.prod.config.js
+#112 2.677 
+#112 3.980 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+#112 ...
+
+#113 [account-prod 1/1] RUN npm run build
+#113 2.663 
+#113 2.663 > @edx/frontend-app-account@1.0.0-semantically-released build
+#113 2.663 > fedx-scripts webpack
+#113 2.663 
+#113 2.839 Running with resolved config:
+#113 2.839 /openedx/app/node_modules/@openedx/frontend-build/config/webpack.prod.config.js
+#113 2.839 
+#113 4.002 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+#113 5.653 Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+#113 5.653   npx update-browserslist-db@latest
+#113 5.653   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#113 ...
+
+#112 [authoring-prod 1/1] RUN npm run build
+#112 5.867 Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+#112 5.867   npx update-browserslist-db@latest
+#112 5.867   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#112 ...
+
+#114 [authn-prod 1/1] RUN npm run build
+#114 2.574 
+#114 2.574 > @edx/frontend-app-authn@0.1.0 build
+#114 2.574 > fedx-scripts webpack
+#114 2.574 
+#114 2.707 Running with resolved config:
+#114 2.707 /openedx/app/webpack.prod.config.js
+#114 2.707 
+#114 3.960 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+#114 5.576 Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:
+#114 5.576   npx update-browserslist-db@latest
+#114 5.576   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#114 ...
+
+#115 [admin-console-prod 1/1] RUN npm run build
+#115 2.585 
+#115 2.585 > @openedx/frontend-app-admin-console@0.1.0 build
+#115 2.585 > fedx-scripts webpack
+#115 2.585 
+#115 2.747 Running with resolved config:
+#115 2.747 /openedx/app/node_modules/@openedx/frontend-build/config/webpack.prod.config.js
+#115 2.747 
+#115 3.815 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+#115 ...
+
+#116 [learner-dashboard-prod 1/1] RUN npm run build
+#116 2.551 
+#116 2.551 > @edx/frontend-app-learner-dashboard@0.0.1 build
+#116 2.551 > fedx-scripts webpack
+#116 2.551 
+#116 2.769 Running with resolved config:
+#116 2.769 /openedx/app/webpack.prod.config.js
+#116 2.769 
+#116 5.908 Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+#116 5.908   npx update-browserslist-db@latest
+#116 5.908   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#116 ...
+
+#117 [learning-prod 1/1] RUN npm run build
+#117 2.517 
+#117 2.517 > @edx/frontend-app-learning@1.0.0-semantically-released build
+#117 2.517 > fedx-scripts webpack
+#117 2.517 
+#117 2.699 Running with resolved config:
+#117 2.699 /openedx/app/webpack.prod.config.js
+#117 2.699 
+#117 5.859 Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+#117 5.859   npx update-browserslist-db@latest
+#117 5.859   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#117 ...
+
+#118 [ora-grading-prod 1/1] RUN npm run build
+#118 2.598 
+#118 2.598 > @edx/frontend-app-ora-grading@0.0.1 build
+#118 2.598 > fedx-scripts webpack
+#118 2.598 
+#118 2.722 Running with resolved config:
+#118 2.722 /openedx/app/webpack.prod.config.js
+#118 2.722 
+#118 5.686 Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+#118 5.686   npx update-browserslist-db@latest
+#118 5.686   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#118 ...
+
+#119 [discussions-prod 1/1] RUN npm run build
+#119 2.652 
+#119 2.652 > @edx/frontend-app-discussions@0.1.0 build
+#119 2.652 > fedx-scripts webpack
+#119 2.652 
+#119 2.824 Running with resolved config:
+#119 2.824 /openedx/app/node_modules/@openedx/frontend-build/config/webpack.prod.config.js
+#119 2.824 
+#119 5.723 Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:
+#119 5.723   npx update-browserslist-db@latest
+#119 5.723   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#119 ...
+
+#120 [gradebook-prod 1/1] RUN npm run build
+#120 2.586 
+#120 2.586 > @edx/frontend-app-gradebook@1.6.3 build
+#120 2.586 > fedx-scripts webpack
+#120 2.586 
+#120 2.760 Running with resolved config:
+#120 2.760 /openedx/app/webpack.prod.config.js
+#120 2.760 
+#120 5.662 Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+#120 5.662   npx update-browserslist-db@latest
+#120 5.662   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#120 ...
+
+#30 [profile-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#30 36.01 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+#30 36.70 npm warn deprecated lodash.pick@4.4.0: This package is deprecated. Use destructuring assignment syntax instead.
+#30 36.71 npm warn deprecated lodash.get@4.4.2: This package is deprecated. Use the optional chaining (?.) operator instead.
+#30 36.96 npm warn deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+#30 37.16 npm warn deprecated rimraf@2.6.2: Rimraf versions prior to v4 are no longer supported
+#30 37.20 npm warn deprecated lodash.omit@4.5.0: This package is deprecated. Use destructuring assignment syntax instead.
+#30 37.50 npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+#30 37.55 npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+#30 37.83 npm warn deprecated @humanwhocodes/config-array@0.11.14: Use @eslint/config-array instead
+#30 38.02 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+#30 38.03 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+#30 38.77 npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+#30 39.08 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 39.08 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 39.08 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 39.08 npm warn deprecated glob@8.1.0: Glob versions prior to v9 are no longer supported
+#30 39.09 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 39.09 npm warn deprecated glob@8.1.0: Glob versions prior to v9 are no longer supported
+#30 39.10 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 39.10 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 39.10 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 39.10 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 39.10 npm warn deprecated glob@8.1.0: Glob versions prior to v9 are no longer supported
+#30 39.11 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 39.12 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 39.12 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 39.72 npm warn deprecated @babel/plugin-proposal-object-rest-spread@7.20.7: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-object-rest-spread instead.
+#30 40.08 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+#30 41.05 npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead

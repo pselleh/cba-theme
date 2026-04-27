@@ -1,0 +1,7 @@
+COPY ./mfe-brand-override /openedx/mfe-brand
+RUN rm -rf /openedx/app/node_modules/@edx/brand \
+ && mkdir -p /openedx/app/node_modules/@edx \
+ && cp -a /openedx/mfe-brand /openedx/app/node_modules/@edx/brand
+COPY ./authn-override/CbaAuthnChrome.jsx /openedx/app/src/CbaAuthnChrome.jsx
+COPY ./authn-override/MainApp.jsx /openedx/app/src/MainApp.jsx
+COPY ./authn-override/index.jsx /openedx/app/src/index.jsx

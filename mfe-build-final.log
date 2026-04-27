@@ -1,0 +1,2275 @@
+cba-theme: compiling theme CSS (npm run build:css — LMS + CMS Sass, locked deps)
+
+> build:css
+> npm ci --prefix django-theme && npm run build --prefix django-theme
+
+
+added 13 packages, and audited 14 packages in 2s
+
+6 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+> build
+> npm run build:lms && npm run build:cms
+
+
+> build:lms
+> sass lms/static/sass/lms-main.scss lms/static/css/lms-main.css --style=compressed --no-source-map
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+2 │ @import "../../../static/sass/variables";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    lms/static/sass/lms-main.scss 2:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+3 │ @import "../../../static/sass/mixins";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    lms/static/sass/lms-main.scss 3:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+4 │ @import "../../../static/sass/base";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    lms/static/sass/lms-main.scss 4:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+5 │ @import "../../../static/sass/extras";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    lms/static/sass/lms-main.scss 5:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+8 │ @import "base/layout";
+  │         ^^^^^^^^^^^^^
+  ╵
+    lms/static/sass/lms-main.scss 8:9  root stylesheet
+
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+8 │     background-color: darken($bg, 8%);
+  │                       ^^^^^^^^^^^^^^^
+  ╵
+    static/sass/_mixins.scss 8:23                 btn-variant()
+    lms/static/sass/components/_buttons.scss 2:3  @import
+    lms/static/sass/lms-main.scss 16:9            root stylesheet
+
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -18.2959641256%)
+color.adjust($color, $lightness: -8%)
+
+More info: https://sass-lang.com/d/color-functions
+
+  ╷
+8 │     background-color: darken($bg, 8%);
+  │                       ^^^^^^^^^^^^^^^
+  ╵
+    static/sass/_mixins.scss 8:23                 btn-variant()
+    lms/static/sass/components/_buttons.scss 2:3  @import
+    lms/static/sass/lms-main.scss 16:9            root stylesheet
+
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+9 │     border-color: darken($border, 8%);
+  │                   ^^^^^^^^^^^^^^^^^^^
+  ╵
+    static/sass/_mixins.scss 9:19                 btn-variant()
+    lms/static/sass/components/_buttons.scss 2:3  @import
+    lms/static/sass/lms-main.scss 16:9            root stylesheet
+
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -18.2959641256%)
+color.adjust($color, $lightness: -8%)
+
+More info: https://sass-lang.com/d/color-functions
+
+  ╷
+9 │     border-color: darken($border, 8%);
+  │                   ^^^^^^^^^^^^^^^^^^^
+  ╵
+    static/sass/_mixins.scss 9:19                 btn-variant()
+    lms/static/sass/components/_buttons.scss 2:3  @import
+    lms/static/sass/lms-main.scss 16:9            root stylesheet
+
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -25.3416149068%)
+color.adjust($color, $lightness: -8%)
+
+More info: https://sass-lang.com/d/color-functions
+
+  ╷
+8 │     background-color: darken($bg, 8%);
+  │                       ^^^^^^^^^^^^^^^
+  ╵
+    static/sass/_mixins.scss 8:23                  btn-variant()
+    lms/static/sass/components/_buttons.scss 20:3  @import
+    lms/static/sass/lms-main.scss 16:9             root stylesheet
+
+DEPRECATION WARNING [color-functions]: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -25.3416149068%)
+color.adjust($color, $lightness: -8%)
+
+More info: https://sass-lang.com/d/color-functions
+
+  ╷
+9 │     border-color: darken($border, 8%);
+  │                   ^^^^^^^^^^^^^^^^^^^
+  ╵
+    static/sass/_mixins.scss 9:19                  btn-variant()
+    lms/static/sass/components/_buttons.scss 20:3  @import
+    lms/static/sass/lms-main.scss 16:9             root stylesheet
+
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use string.unquote instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+50 │   max-width: unquote("min(260px, 85vw)");
+   │              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    lms/static/sass/components/_navbar.scss 50:14  @import
+    lms/static/sass/lms-main.scss 19:9             root stylesheet
+
+WARNING: 12 repetitive deprecation warnings omitted.
+Run in verbose mode to see all warnings.
+
+
+> build:cms
+> sass cms/static/sass/cms-main.scss cms/static/css/cms-main.css --style=compressed --no-source-map
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+1 │ @import "../../../static/sass/variables";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    cms/static/sass/cms-main.scss 1:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+2 │ @import "../../../static/sass/mixins";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    cms/static/sass/cms-main.scss 2:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+3 │ @import "../../../static/sass/base";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    cms/static/sass/cms-main.scss 3:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+5 │ @import "partials/studio";
+  │         ^^^^^^^^^^^^^^^^^
+  ╵
+    cms/static/sass/cms-main.scss 5:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+6 │ @import "partials/dashboard";
+  │         ^^^^^^^^^^^^^^^^^^^^
+  ╵
+    cms/static/sass/cms-main.scss 6:9  root stylesheet
+
+DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+3 │   background-color: lighten($brand-secondary, 30%);
+  │                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    cms/static/sass/partials/_dashboard.scss 3:21  @import
+    cms/static/sass/cms-main.scss 6:9              root stylesheet
+
+DEPRECATION WARNING [color-functions]: lighten() is deprecated. Suggestions:
+
+color.scale($color, $lightness: 43.8395415473%)
+color.adjust($color, $lightness: 30%)
+
+More info: https://sass-lang.com/d/color-functions
+
+  ╷
+3 │   background-color: lighten($brand-secondary, 30%);
+  │                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    cms/static/sass/partials/_dashboard.scss 3:21  @import
+    cms/static/sass/cms-main.scss 6:9              root stylesheet
+
+cba-theme: syncing django-theme/ -> /home/tiksimon/.local/share/tutor/env/build/openedx/themes/cba-theme (for openedx image build)
+2026-04-20 16:00:39,062 WARNING 773 [py.warnings] [user None] [ip None] warnings.py:110 - /openedx/venv/lib/python3.11/site-packages/fs/__init__.py:4: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  __import__("pkg_resources").declare_namespace(__name__)  # type: ignore
+
+2026-04-20 16:00:39,153 WARNING 773 [py.warnings] [user None] [ip None] warnings.py:110 - /openedx/venv/lib/python3.11/site-packages/fs/__init__.py:4: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('fs')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  __import__("pkg_resources").declare_namespace(__name__)  # type: ignore
+
+2026-04-20 16:00:39,158 WARNING 773 [py.warnings] [user None] [ip None] warnings.py:110 - /openedx/venv/lib/python3.11/site-packages/fs/opener/__init__.py:6: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('fs.opener')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  __import__("pkg_resources").declare_namespace(__name__)  # type: ignore
+
+2026-04-20 16:00:39,160 WARNING 773 [py.warnings] [user None] [ip None] warnings.py:110 - /openedx/venv/lib/python3.11/site-packages/pkg_resources/__init__.py:2331: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('fs')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(parent)
+
+2026-04-20 16:00:40,251 WARNING 773 [common.djangoapps.util.storage] [user None] [ip None] storage.py:63 - Key BLOCK_STRUCTURES_SETTINGS 'STORAGE_CLASS' not found in storage settings {'COURSE_PUBLISH_TASK_DELAY': 30, 'TASK_DEFAULT_RETRY_DELAY': 30, 'TASK_MAX_RETRIES': 5}.Using default storage path.
+2026-04-20 16:00:40,670 WARNING 773 [py.warnings] [user None] [ip None] warnings.py:110 - /openedx/venv/lib/python3.11/site-packages/pgpy/constants.py:5: DeprecationWarning: 'imghdr' is deprecated and slated for removal in Python 3.13
+  import imghdr
+
+2026-04-20 16:00:42,541 INFO 773 [casbin_adapter.enforcer] [user None] [ip None] enforcer.py:21 - Deferring casbin enforcer initialisation until django is ready
+2026-04-20 16:00:43,337 WARNING 773 [py.warnings] [user None] [ip None] warnings.py:110 - /openedx/venv/lib/python3.11/site-packages/django/db/models/fields/__init__.py:1148: RemovedInDjango60Warning: The default scheme will be changed from 'http' to 'https' in Django 6.0. Pass the forms.URLField.assume_scheme argument to silence this warning, or set the FORMS_URLFIELD_ASSUME_HTTPS transitional setting to True to opt into using 'https' as the new default scheme.
+  return form_class(**defaults)
+
+Found another file with the destination path 'images/spinner.gif'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'images/info-icon.png'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'images/incorrect-icon.png'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'images/correct-icon.png'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/utils/date-utils.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/utils/global-loader.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/utils/constants.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/utils/string-utils.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/utils/html-utils.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/pagination/paging-collection.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/disclosure/disclosure-view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/dropdown-menu/dropdown.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/dropdown-menu/dropdown-menu-view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/breadcrumbs/breadcrumbs-model.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/breadcrumbs/breadcrumbs.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'edx-ui-toolkit/js/breadcrumbs/breadcrumbs-view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/image-modal.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/components/paging-footer.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/components/paging-header.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/components/tabpanel.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/components/paginated-view.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/components/system-feedback.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/components/tab.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/components/search-field.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/components/tabbed_view.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/templates/discussion/templates.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/karma.common.conf.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/jasmine_stack_trace.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/jasmine.common.conf.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/utils/require-serial.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/utils/edx.utils.validate.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/ExperimentalCarousel.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/utils/view_utils.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/index.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/components/BlockBrowser/test-block-tree.json'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/components/BlockBrowser/BlockBrowser.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/components/BlockBrowser/BlockBrowserContainer.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/components/BlockBrowser/BlockBrowser.test.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/components/BlockBrowser/__snapshots__/BlockBrowser.test.jsx.snap'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/data/store.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/data/api/client.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/data/actions/courseBlocks.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/data/actions/constants.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/data/reducers/index.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/BlockBrowser/data/selectors/index.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/tabbed_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/paginated_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/list.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/feedback_alert.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/paging_footer.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/feedback.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/paging_header.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/search_field.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/feedback_notification.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/components/views/feedback_prompt.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/discussion.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/utils.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/content.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/mathjax_include.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/models/discussion_user.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/models/discussion_course_settings.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/discussion_content_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/discussion_thread_list_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/discussion_thread_show_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/discussion_inline_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/response_comment_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/discussion_thread_edit_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/thread_response_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/response_comment_show_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/discussion_thread_profile_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/response_comment_edit_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/thread_response_show_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/discussion_topic_menu_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/new_post_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/discussion_thread_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/discussion/views/thread_response_edit_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/xblock/core.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/xblock/runtime.v1.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/require.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/index.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/moment-timezone-with-data.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/underscore.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/jquery-migrate.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/moment-with-locales.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/backbone.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/Squire.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/hls.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/bootstrap.bundle.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/sinon.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/underscore.string.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/jquery.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/jquery.scrollTo.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'common/js/vendor/backbone.paginator.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'js/RequireJS-namespace-undefine.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/templates/enrollment.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/templates/manage_user.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/templates/certificates.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/templates/certificates_results.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/templates/enrollment-modal.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/certificates_factory.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/enrollment_factory.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/manage_user_factory.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/collections/certificate.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/collections/enrollment.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/models/certificate.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/models/enrollment.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/models/manage_user.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/views/certificates.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/views/enrollment.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/views/manage_user.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/js/views/enrollment_modal.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/logged_in_user.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/logged_out_user.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/file_upload.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/success.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/upload_progress.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/errors_list.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/single_support_form.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/program_enrollments/inspector.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/program_enrollments/index.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/index.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/components/EntitlementForm/container.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/components/EntitlementForm/index.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/components/Table/EntitlementSupportTable.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/components/Table/EntitlementSupportTableContainer.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/components/Main/MainContainer.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/components/Main/Main.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/components/Search/SearchContainer.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/components/Search/Search.jsx'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/store.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/api/client.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/api/endpoints.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/constants/formTypes.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/constants/actionTypes.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/actions/error.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/actions/form.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/actions/entitlement.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/reducers/index.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/reducers/error.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/reducers/entitlements.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'support/jsx/entitlements/data/reducers/form.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/manage.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/edit-team-member.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/topics.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/team-profile.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/team-assignment.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/instructor-tools.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/team-profile-header-actions.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/team-country-language.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/team-membership-details.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/edit-team.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/team-actions.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/teams_tab.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/date.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/team-member.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/templates/teams.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/teams_tab_factory.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/utils/team_analytics.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/collections/topic.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/collections/base.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/collections/my_teams.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/collections/team.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/models/topic.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/models/team_membership.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/models/team.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/team_discussion.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/team_card.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/topics.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Error: Cannot uglify2 file: /tmp/tmpt_yg_t89/js/student_account/logistration_factory.js. Skipping it. Error is:
+Unexpected character '`' (line: 1276, col: 36, pos: 51283)
+
+Error
+    at new JS_Parse_Error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:19710:18)
+    at js_error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:19718:11)
+    at parse_error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:19831:9)
+    at Object.next_token [as input] (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20095:9)
+    at next (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20195:25)
+    at expect_token (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20228:20)
+    at expect (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20233:36)
+    at expr_list (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20736:44)
+    at subscripts (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20875:30)
+    at subscripts (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20852:20)
+Error: Cannot uglify2 file: /tmp/tmpt_yg_t89/js/student_account/views/finish_auth_factory.js. Skipping it. Error is:
+Unexpected character '`' (line: 123, col: 39, pos: 5058)
+
+Error
+    at new JS_Parse_Error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:19710:18)
+    at js_error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:19718:11)
+    at parse_error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:19831:9)
+    at Object.next_token [as input] (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20095:9)
+    at next (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20195:25)
+    at maybe_assign (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20959:17)
+    at expression (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20975:20)
+    at simple_statement (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20423:55)
+    at /openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20296:19
+    at /openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20256:24
+Error: Cannot uglify2 file: /tmp/tmpt_yg_t89/teams/js/teams_tab_factory.js. Skipping it. Error is:
+Unexpected token operator «=», expected punc «,» (line: 2915, col: 58, pos: 111996)
+
+Error
+    at new JS_Parse_Error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:19710:18)
+    at js_error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:19718:11)
+    at croak (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20209:9)
+    at token_error (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20217:9)
+    at expect_token (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20230:9)
+    at expect (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20233:36)
+    at /openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20498:52
+    at function_ (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20503:15)
+    at expr_atom (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20722:24)
+    at maybe_unary (/openedx/venv/lib/python3.11/site-packages/require/resources/r.js:20892:19)
+
+course_bookmarks/js/course_bookmarks_factory.js
+----------------
+js/vendor/requirejs/text.js
+text!templates/fields/message_banner.underscore
+js/views/message_banner.js
+common/js/vendor/backbone.paginator.js
+edx-ui-toolkit/js/pagination/paging-collection.js
+course_bookmarks/js/models/bookmark.js
+course_bookmarks/js/collections/bookmarks.js
+common/js/vendor/moment-with-locales.js
+text!common/templates/components/paging-header.underscore
+common/js/components/views/paging_header.js
+text!common/templates/components/paging-footer.underscore
+common/js/components/views/paging_footer.js
+text!course_bookmarks/templates/bookmarks-list.underscore
+course_bookmarks/js/views/bookmarks_list.js
+course_bookmarks/js/course_bookmarks_factory.js
+
+course_search/js/course_search_factory.js
+----------------
+course_search/js/search_router.js
+course_search/js/views/search_form.js
+course_search/js/models/search_result.js
+course_search/js/collections/search_collection.js
+course_search/js/views/search_item_view.js
+js/vendor/requirejs/text.js
+text!course_search/templates/search_loading.underscore
+text!course_search/templates/search_error.underscore
+course_search/js/views/search_results_view.js
+text!course_search/templates/course_search_results.underscore
+text!course_search/templates/course_search_item.underscore
+course_search/js/views/course_search_results_view.js
+course_search/js/course_search_factory.js
+
+course_search/js/dashboard_search_factory.js
+----------------
+course_search/js/search_router.js
+course_search/js/views/search_form.js
+course_search/js/models/search_result.js
+course_search/js/collections/search_collection.js
+course_search/js/views/search_item_view.js
+js/vendor/requirejs/text.js
+text!course_search/templates/search_loading.underscore
+text!course_search/templates/search_error.underscore
+course_search/js/views/search_results_view.js
+text!course_search/templates/dashboard_search_results.underscore
+text!course_search/templates/dashboard_search_item.underscore
+course_search/js/views/dashboard_search_results_view.js
+course_search/js/dashboard_search_factory.js
+
+discussion/js/discussion_board_factory.js
+----------------
+common/js/discussion/content.js
+common/js/discussion/discussion.js
+common/js/discussion/utils.js
+common/js/discussion/models/discussion_course_settings.js
+common/js/discussion/models/discussion_user.js
+common/js/discussion/views/new_post_view.js
+common/js/discussion/views/discussion_thread_view.js
+discussion/js/discussion_router.js
+edx-ui-toolkit/js/utils/constants.js
+common/js/discussion/views/discussion_thread_list_view.js
+js/vendor/requirejs/text.js
+text!discussion/templates/fake-breadcrumbs.underscore
+discussion/js/views/discussion_fake_breadcrumbs.js
+text!discussion/templates/search.underscore
+discussion/js/views/discussion_search_view.js
+text!discussion/templates/discussion-home.underscore
+discussion/js/views/discussion_board_view.js
+discussion/js/discussion_board_factory.js
+
+discussion/js/discussion_profile_page_factory.js
+----------------
+common/js/discussion/content.js
+common/js/discussion/discussion.js
+common/js/discussion/utils.js
+common/js/discussion/models/discussion_user.js
+common/js/discussion/models/discussion_course_settings.js
+js/vendor/requirejs/text.js
+text!common/templates/components/system-feedback.underscore
+common/js/components/views/feedback.js
+common/js/components/views/feedback_notification.js
+common/js/components/views/feedback_prompt.js
+common/js/components/utils/view_utils.js
+common/js/discussion/views/discussion_thread_profile_view.js
+text!discussion/templates/user-profile.underscore
+common/js/discussion/views/discussion_thread_list_view.js
+discussion/js/views/discussion_user_profile_view.js
+discussion/js/discussion_profile_page_factory.js
+
+js/api_admin/catalog_preview_factory.js
+----------------
+js/vendor/requirejs/text.js
+text!templates/api_admin/catalog-results.underscore
+text!templates/api_admin/catalog-error.underscore
+js/api_admin/views/catalog_preview.js
+js/api_admin/catalog_preview_factory.js
+
+js/courseware/courseware_factory.js
+----------------
+js/courseware/courseware_factory.js
+
+js/discovery/discovery_factory.js
+----------------
+js/discovery/models/course_card.js
+js/discovery/models/facet_option.js
+js/discovery/models/course_discovery.js
+js/discovery/models/filter.js
+js/discovery/collections/filters.js
+js/discovery/models/search_state.js
+js/discovery/views/search_form.js
+common/js/vendor/moment-with-locales.js
+common/js/vendor/moment-timezone-with-data.js
+edx-ui-toolkit/js/utils/date-utils.js
+js/discovery/views/course_card.js
+js/discovery/views/courses_listing.js
+js/discovery/views/filter_label.js
+js/discovery/views/filter_bar.js
+js/discovery/views/refine_sidebar.js
+js/discovery/discovery_factory.js
+
+js/edxnotes/views/notes_visibility_factory.js
+----------------
+js/vendor/edxnotes/annotator-full.min.js
+js/edxnotes/utils/logger.js
+js/edxnotes/utils/notes_collector.js
+js/edxnotes/utils/utils.js
+js/edxnotes/views/shim.js
+js/edxnotes/plugins/scroller.js
+js/edxnotes/plugins/events.js
+edx-ui-toolkit/js/utils/constants.js
+js/edxnotes/plugins/accessibility.js
+js/edxnotes/plugins/caret_navigation.js
+js/edxnotes/plugins/store_error_handler.js
+js/edxnotes/plugins/search_override.js
+js/edxnotes/views/notes_factory.js
+js/edxnotes/views/visibility_decorator.js
+js/utils/animation.js
+js/edxnotes/views/notes_visibility_factory.js
+
+js/edxnotes/views/page_factory.js
+----------------
+common/js/vendor/backbone.paginator.js
+edx-ui-toolkit/js/pagination/paging-collection.js
+js/edxnotes/utils/utils.js
+js/edxnotes/models/note.js
+js/edxnotes/collections/notes.js
+js/edxnotes/utils/logger.js
+js/edxnotes/models/tab.js
+js/edxnotes/collections/tabs.js
+js/edxnotes/utils/template.js
+js/edxnotes/views/tab_item.js
+js/edxnotes/views/tabs_list.js
+js/edxnotes/views/note_item.js
+js/vendor/requirejs/text.js
+text!common/templates/components/paging-header.underscore
+common/js/components/views/paging_header.js
+text!common/templates/components/paging-footer.underscore
+common/js/components/views/paging_footer.js
+js/edxnotes/views/tab_panel.js
+js/edxnotes/views/tab_view.js
+js/edxnotes/views/tabs/recent_activity.js
+js/edxnotes/views/note_group.js
+js/edxnotes/views/tabs/course_structure.js
+js/edxnotes/views/search_box.js
+js/edxnotes/views/tabs/search_results.js
+js/edxnotes/views/tabs/tags.js
+js/edxnotes/views/notes_page.js
+js/edxnotes/views/page_factory.js
+
+js/financial-assistance/financial_assistance_form_factory.js
+----------------
+js/financial-assistance/models/financial_assistance_model.js
+common/js/utils/edx.utils.validate.js
+js/vendor/requirejs/text.js
+text!templates/student_account/form_errors.underscore
+js/student_account/views/FormView.js
+text!templates/financial-assistance/financial_assessment_form.underscore
+text!templates/financial-assistance/financial_assessment_submitted.underscore
+text!templates/student_account/form_field.underscore
+js/src/string_utils.js
+js/financial-assistance/views/financial_assistance_form_view.js
+js/financial-assistance/financial_assistance_form_factory.js
+
+js/groups/views/cohorts_dashboard_factory.js
+----------------
+js/groups/models/cohort.js
+js/models/notification.js
+js/views/notification.js
+js/groups/views/cohort_form.js
+js/src/string_utils.js
+js/groups/views/cohort_editor.js
+js/groups/views/course_cohort_settings_notification.js
+js/views/base_dashboard_view.js
+js/views/file_uploader.js
+js/groups/views/cohorts.js
+js/groups/collections/cohort.js
+js/groups/models/course_cohort_settings.js
+js/groups/models/content_group.js
+js/groups/views/cohorts_dashboard_factory.js
+
+js/discussions_management/views/discussions_dashboard_factory.js
+----------------
+js/models/notification.js
+js/views/notification.js
+js/discussions_management/views/divided_discussions.js
+js/vendor/jquery.qubit.js
+js/discussions_management/views/divided_discussions_inline.js
+js/discussions_management/views/divided_discussions_course_wide.js
+js/views/base_dashboard_view.js
+js/discussions_management/views/discussions.js
+js/discussions_management/models/course_discussions_detail.js
+js/discussions_management/models/course_discussions_settings.js
+js/discussions_management/views/discussions_dashboard_factory.js
+
+js/header_factory.js
+----------------
+edx-ui-toolkit/js/utils/constants.js
+js/vendor/requirejs/text.js
+text!edx-ui-toolkit/js/dropdown-menu/dropdown.underscore
+edx-ui-toolkit/js/dropdown-menu/dropdown-menu-view.js
+js/header_factory.js
+
+js/student_account/logistration_factory.js
+----------------
+js/student_account/models/LoginModel.js
+js/student_account/models/PasswordResetModel.js
+js/student_account/models/RegisterModel.js
+js/student_account/models/AccountRecoveryModel.js
+common/js/utils/edx.utils.validate.js
+js/vendor/requirejs/text.js
+text!templates/student_account/form_errors.underscore
+js/student_account/views/FormView.js
+text!templates/student_account/form_success.underscore
+text!templates/student_account/form_status.underscore
+js/student_account/views/LoginView.js
+js/student_account/views/PasswordResetView.js
+js/student_account/views/RegisterView.js
+js/student_account/views/InstitutionLoginView.js
+js/student_account/views/HintedLoginView.js
+js/student_account/utils.js
+js/student_account/multiple_enterprise.js
+js/vendor/history.js
+js/student_account/views/AccessView.js
+js/student_account/logistration_factory.js
+
+js/student_account/views/finish_auth_factory.js
+----------------
+js/student_account/emailoptin.js
+js/student_account/enrollment.js
+js/student_account/shoppingcart.js
+js/student_account/views/FinishAuthView.js
+js/student_account/views/finish_auth_factory.js
+
+js/views/message_banner.js
+----------------
+js/vendor/requirejs/text.js
+text!templates/fields/message_banner.underscore
+js/views/message_banner.js
+
+lms/js/preview/preview_factory.js
+----------------
+js/vendor/requirejs/text.js
+text!common/templates/components/system-feedback.underscore
+common/js/components/views/feedback.js
+common/js/components/views/feedback_notification.js
+common/js/components/views/feedback_prompt.js
+common/js/components/utils/view_utils.js
+lms/js/preview/preview_factory.js
+
+support/js/certificates_factory.js
+----------------
+support/js/models/certificate.js
+support/js/collections/certificate.js
+js/vendor/requirejs/text.js
+text!support/templates/certificates.underscore
+text!support/templates/certificates_results.underscore
+support/js/views/certificates.js
+support/js/certificates_factory.js
+
+support/js/enrollment_factory.js
+----------------
+common/js/vendor/moment-with-locales.js
+js/vendor/requirejs/text.js
+text!support/templates/enrollment-modal.underscore
+support/js/views/enrollment_modal.js
+support/js/models/enrollment.js
+support/js/collections/enrollment.js
+text!support/templates/enrollment.underscore
+support/js/views/enrollment.js
+support/js/enrollment_factory.js
+
+support/js/manage_user_factory.js
+----------------
+common/js/vendor/moment-with-locales.js
+support/js/models/manage_user.js
+js/vendor/requirejs/text.js
+text!support/templates/manage_user.underscore
+support/js/views/manage_user.js
+support/js/manage_user_factory.js
+
+teams/js/teams_tab_factory.js
+----------------
+js/vendor/requirejs/text.js
+text!common/templates/components/search-field.underscore
+common/js/components/views/search_field.js
+text!templates/components/header/header.underscore
+js/components/header/views/header.js
+js/components/header/models/header.js
+teams/js/models/topic.js
+common/js/vendor/backbone.paginator.js
+edx-ui-toolkit/js/pagination/paging-collection.js
+teams/js/collections/base.js
+teams/js/collections/topic.js
+teams/js/models/team.js
+teams/js/collections/team.js
+teams/js/collections/my_teams.js
+teams/js/utils/team_analytics.js
+edx-ui-toolkit/js/utils/constants.js
+text!common/templates/components/tabbed_view.underscore
+text!common/templates/components/tab.underscore
+text!common/templates/components/tabpanel.underscore
+common/js/components/views/tabbed_view.js
+teams/js/views/teams_tabbed_view.js
+text!templates/components/card/card.underscore
+js/components/card/views/card.js
+teams/js/views/topic_card.js
+teams/js/views/team_utils.js
+text!common/templates/components/paging-header.underscore
+common/js/components/views/paging_header.js
+text!common/templates/components/paging-footer.underscore
+common/js/components/views/paging_footer.js
+common/js/components/views/list.js
+text!common/templates/components/paginated-view.underscore
+common/js/components/views/paginated_view.js
+teams/js/views/topics.js
+teams/js/views/team_discussion.js
+text!common/templates/components/system-feedback.underscore
+common/js/components/views/feedback.js
+common/js/components/views/feedback_notification.js
+common/js/components/views/feedback_prompt.js
+common/js/components/utils/view_utils.js
+text!teams/templates/team-profile.underscore
+text!teams/templates/team-member.underscore
+text!teams/templates/team-assignment.underscore
+teams/js/views/team_profile.js
+common/js/vendor/moment-with-locales.js
+text!teams/templates/team-membership-details.underscore
+text!teams/templates/team-country-language.underscore
+text!teams/templates/date.underscore
+teams/js/views/team_card.js
+teams/js/views/teams.js
+teams/js/views/my_teams.js
+text!teams/templates/manage.underscore
+teams/js/views/manage.js
+text!teams/templates/team-actions.underscore
+teams/js/views/topic_teams.js
+common/js/vendor/moment-timezone-with-data.js
+edx-ui-toolkit/js/utils/date-utils.js
+text!templates/fields/field_readonly.underscore
+text!templates/fields/field_dropdown.underscore
+text!templates/fields/field_link.underscore
+text!templates/fields/field_text.underscore
+text!templates/fields/field_textarea.underscore
+js/vendor/backbone-super.js
+js/views/fields.js
+text!teams/templates/edit-team.underscore
+teams/js/views/edit_team.js
+text!teams/templates/edit-team-member.underscore
+teams/js/views/edit_team_members.js
+text!teams/templates/team-profile-header-actions.underscore
+teams/js/views/team_profile_header_actions.js
+text!teams/templates/instructor-tools.underscore
+teams/js/views/instructor_tools.js
+text!teams/templates/teams_tab.underscore
+teams/js/views/teams_tab.js
+teams/js/teams_tab_factory.js
+
+js/dateutil_factory.js
+----------------
+common/js/vendor/moment-with-locales.js
+common/js/vendor/moment-timezone-with-data.js
+edx-ui-toolkit/js/utils/date-utils.js
+js/dateutil_factory.js
+
+Found another file with the destination path 'teams/js/views/instructor_tools.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/my_teams.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/edit_team.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/team_profile_header_actions.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/edit_team_members.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/teams_tabbed_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/team_profile.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/manage.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/topic_teams.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/teams.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/team_utils.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/teams_tab.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'teams/js/views/topic_card.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_bookmarks/templates/bookmarks-list.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_bookmarks/js/course_bookmarks_factory.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_bookmarks/js/collections/bookmarks.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_bookmarks/js/models/bookmark.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_bookmarks/js/views/bookmark_button.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_bookmarks/js/views/bookmarks_list.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_experience/images/verified-cert.png'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_experience/images/learner-quote2.png'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_experience/images/learner-quote.png'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'course_experience/js/currency.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/templates/search.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/templates/fake-breadcrumbs.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/templates/discussion-home.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/templates/user-profile.underscore'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/js/discussion_board_factory.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/js/discussion_router.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/js/discussion_profile_page_factory.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/js/views/discussion_search_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/js/views/discussion_board_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/js/views/discussion_fake_breadcrumbs.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+Found another file with the destination path 'discussion/js/views/discussion_user_profile_view.js'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+
+1 static file copied to '/openedx/staticfiles', 8893 unmodified, 3921 post-processed.
+cba-theme: collectstatic finished — hashed theme CSS in the running LMS is up to date.
+Building image docker.io/overhangio/openedx-mfe:21.0.0
+docker buildx build --tag=docker.io/overhangio/openedx-mfe:21.0.0 --output=type=docker --cache-from=type=registry,ref=docker.io/overhangio/openedx-mfe:21.0.0-cache /home/tiksimon/.local/share/tutor/env/plugins/mfe/build/mfe
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 20.86kB done
+#1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+#2 DONE 1.6s
+
+#3 docker-image://docker.io/docker/dockerfile:1@sha256:2780b5c3bab67f1f76c781860de469442999ed1a0d7992a5efdf2cffc0e3d769
+#3 CACHED
+
+#4 [internal] load metadata for docker.io/library/caddy:2.7.4
+#4 DONE 0.0s
+
+#5 [internal] load metadata for docker.io/library/node:24.11.0-bullseye-slim
+#5 DONE 1.0s
+
+#6 [internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 importing cache manifest from docker.io/overhangio/openedx-mfe:21.0.0-cache
+#7 ...
+
+#8 [internal] load build context
+#8 DONE 0.0s
+
+#9 [base 1/4] FROM docker.io/library/node:24.11.0-bullseye-slim@sha256:61bfe4ca608025ed7da3575f66a11eaf76178b6f7e69607be88ca10ca0a94a22
+#9 DONE 0.0s
+
+#10 [production  1/13] FROM docker.io/library/caddy:2.7.4
+#10 DONE 0.0s
+
+#11 [discussions-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-discussions.git#release/ulmo.2 .
+#11 ...
+
+#12 [admin-console-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-admin-console.git#release/ulmo.2 .
+#12 1.962 a77878cc39f2e0dbf5279eae4eff044b27f4fea0	refs/tags/release/ulmo.2
+#12 DONE 2.0s
+
+#7 importing cache manifest from docker.io/overhangio/openedx-mfe:21.0.0-cache
+#7 inferred cache manifest type: application/vnd.oci.image.manifest.v1+json done
+#7 ...
+
+#13 [ora-grading-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-ora-grading.git#release/ulmo.2 .
+#13 2.204 508c91d4871832ae6a8b247a652b7e16597c1df0	refs/tags/release/ulmo.2
+#13 DONE 2.2s
+
+#14 [communications-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-communications.git#release/ulmo.2 .
+#14 2.261 7ddc95003e02f2a9f2d9fb2b1f0fd763c320fe6b	refs/tags/release/ulmo.2
+#14 DONE 2.3s
+
+#15 [authoring-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-authoring.git#release/ulmo.2 .
+#15 ...
+
+#11 [discussions-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-discussions.git#release/ulmo.2 .
+#11 2.659 16901009cb8fa45a1423557131dfebf8091ea25d	refs/tags/release/ulmo.2
+#11 DONE 2.7s
+
+#16 [learner-dashboard-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-learner-dashboard.git#release/ulmo.2 .
+#16 2.685 2b1c56e8500217d052bc6b60240dc669d939713c	refs/tags/release/ulmo.2
+#16 DONE 2.7s
+
+#17 [authn-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-authn.git#release/ulmo.2 .
+#17 2.971 362a2962af54b9ad9d148995ab22cb0af9047b92	refs/tags/release/ulmo.2
+#17 DONE 3.0s
+
+#18 [gradebook-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-gradebook.git#release/ulmo.2 .
+#18 2.994 02a3bda10a572eb89204b42b54c32cccf0c79685	refs/tags/release/ulmo.2
+#18 DONE 3.0s
+
+#19 [account-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-account.git#release/ulmo.2 .
+#19 3.014 9c78bf34ef3bac2c45b12d2d896bd7d0f2f89288	refs/tags/release/ulmo.2
+#19 DONE 3.0s
+
+#20 [learning-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-learning.git#release/ulmo.2 .
+#20 3.127 1d5484ff1d47da354b10f334e2376cf8136344eb	refs/tags/release/ulmo.2
+#20 DONE 3.1s
+
+#21 [profile-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-profile.git#release/ulmo.2 .
+#21 3.249 e08014c656d66f9c37e18658f02f5ac75c51d013	refs/tags/release/ulmo.2
+#21 DONE 3.2s
+
+#15 [authoring-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-authoring.git#release/ulmo.2 .
+#15 3.370 fedb85577e073d423e3c23b6832610dea3c6f448	refs/tags/release/ulmo.2
+#15 DONE 3.4s
+
+#7 importing cache manifest from docker.io/overhangio/openedx-mfe:21.0.0-cache
+#7 DONE 3.9s
+
+#22 [production  2/13] RUN mkdir -p /openedx/dist
+#22 CACHED
+
+#23 [base 2/4] RUN apt update   && apt install -y git     gcc libgl1 libxi6 make     autoconf libtool pkg-config zlib1g-dev     python g++     libpng-dev     libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+#23 CACHED
+
+#24 [base 3/4] RUN mkdir -p /openedx/app /openedx/env
+#24 CACHED
+
+#25 [profile-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-profile.git#release/ulmo.2 .
+#25 CACHED
+
+#26 [base 4/4] WORKDIR /openedx/app
+#26 CACHED
+
+#27 [profile-common 1/6] COPY --from=profile-src /package.json /openedx/app/package.json
+#27 CACHED
+
+#28 [profile-common 2/6] COPY --from=profile-src /package-lock.json /openedx/app/package-lock.json
+#28 CACHED
+
+#29 [profile-src 1/1] COPY --from=profile-git /openedx/app /
+#29 CACHED
+
+#8 [internal] load build context
+#8 transferring context: 36B 0.0s done
+#8 DONE 0.0s
+
+#30 [profile-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#30 ...
+
+#31 [authn-common 1/6] COPY --from=authn-src /package.json /openedx/app/package.json
+#31 CACHED
+
+#32 [authn-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-authn.git#release/ulmo.2 .
+#32 CACHED
+
+#33 [authn-src 1/1] COPY --from=authn-git /openedx/app /
+#33 CACHED
+
+#34 [authn-common 4/6] COPY --from=authn-src / /openedx/app
+#34 CACHED
+
+#35 [authn-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#35 CACHED
+
+#36 [authn-common 2/6] COPY --from=authn-src /package-lock.json /openedx/app/package-lock.json
+#36 CACHED
+
+#37 [authn-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#37 CACHED
+
+#38 [admin-console-common 1/6] COPY --from=admin-console-src /package.json /openedx/app/package.json
+#38 CACHED
+
+#39 [admin-console-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#39 CACHED
+
+#40 [admin-console-common 4/6] COPY --from=admin-console-src / /openedx/app
+#40 CACHED
+
+#41 [admin-console-src 1/1] COPY --from=admin-console-git /openedx/app /
+#41 CACHED
+
+#42 [admin-console-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#42 CACHED
+
+#43 [admin-console-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-admin-console.git#release/ulmo.2 .
+#43 CACHED
+
+#44 [admin-console-common 2/6] COPY --from=admin-console-src /package-lock.json /openedx/app/package-lock.json
+#44 CACHED
+
+#45 [authn-common 6/6] COPY env.config.jsx /openedx/app
+#45 CACHED
+
+#46 [admin-console-common 6/6] COPY env.config.jsx /openedx/app
+#46 CACHED
+
+#47 [gradebook-common 1/6] COPY --from=gradebook-src /package.json /openedx/app/package.json
+#47 CACHED
+
+#48 [gradebook-common 4/6] COPY --from=gradebook-src / /openedx/app
+#48 CACHED
+
+#49 [gradebook-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-gradebook.git#release/ulmo.2 .
+#49 CACHED
+
+#50 [gradebook-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#50 CACHED
+
+#51 [gradebook-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#51 CACHED
+
+#52 [gradebook-src 1/1] COPY --from=gradebook-git /openedx/app /
+#52 CACHED
+
+#53 [gradebook-common 2/6] COPY --from=gradebook-src /package-lock.json /openedx/app/package-lock.json
+#53 CACHED
+
+#54 [discussions-common 4/6] COPY --from=discussions-src / /openedx/app
+#54 CACHED
+
+#55 [discussions-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#55 CACHED
+
+#56 [discussions-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#56 CACHED
+
+#57 [discussions-common 2/6] COPY --from=discussions-src /package-lock.json /openedx/app/package-lock.json
+#57 CACHED
+
+#58 [discussions-common 1/6] COPY --from=discussions-src /package.json /openedx/app/package.json
+#58 CACHED
+
+#59 [discussions-src 1/1] COPY --from=discussions-git /openedx/app /
+#59 CACHED
+
+#60 [discussions-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-discussions.git#release/ulmo.2 .
+#60 CACHED
+
+#61 [gradebook-common 6/6] COPY env.config.jsx /openedx/app
+#61 CACHED
+
+#62 [discussions-common 6/6] COPY env.config.jsx /openedx/app
+#62 CACHED
+
+#63 [communications-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-communications.git#release/ulmo.2 .
+#63 CACHED
+
+#64 [communications-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#64 CACHED
+
+#65 [communications-common 4/6] COPY --from=communications-src / /openedx/app
+#65 CACHED
+
+#66 [communications-src 1/1] COPY --from=communications-git /openedx/app /
+#66 CACHED
+
+#67 [communications-common 2/6] COPY --from=communications-src /package-lock.json /openedx/app/package-lock.json
+#67 CACHED
+
+#68 [communications-common 1/6] COPY --from=communications-src /package.json /openedx/app/package.json
+#68 CACHED
+
+#69 [communications-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#69 CACHED
+
+#70 [communications-common 6/6] COPY env.config.jsx /openedx/app
+#70 CACHED
+
+#71 [communications-prod 1/1] RUN npm run build
+#71 CACHED
+
+#72 [ora-grading-common 1/6] COPY --from=ora-grading-src /package.json /openedx/app/package.json
+#72 CACHED
+
+#73 [ora-grading-src 1/1] COPY --from=ora-grading-git /openedx/app /
+#73 CACHED
+
+#74 [ora-grading-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#74 CACHED
+
+#75 [ora-grading-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-ora-grading.git#release/ulmo.2 .
+#75 CACHED
+
+#76 [ora-grading-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#76 CACHED
+
+#77 [ora-grading-common 2/6] COPY --from=ora-grading-src /package-lock.json /openedx/app/package-lock.json
+#77 CACHED
+
+#78 [ora-grading-common 4/6] COPY --from=ora-grading-src / /openedx/app
+#78 CACHED
+
+#79 [account-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#79 CACHED
+
+#80 [account-common 2/6] COPY --from=account-src /package-lock.json /openedx/app/package-lock.json
+#80 CACHED
+
+#81 [account-common 4/6] COPY --from=account-src / /openedx/app
+#81 CACHED
+
+#82 [account-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-account.git#release/ulmo.2 .
+#82 CACHED
+
+#83 [account-common 1/6] COPY --from=account-src /package.json /openedx/app/package.json
+#83 CACHED
+
+#84 [account-src 1/1] COPY --from=account-git /openedx/app /
+#84 CACHED
+
+#85 [account-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#85 CACHED
+
+#86 [learner-dashboard-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-learner-dashboard.git#release/ulmo.2 .
+#86 CACHED
+
+#87 [learner-dashboard-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#87 CACHED
+
+#88 [learner-dashboard-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#88 CACHED
+
+#89 [learner-dashboard-common 2/6] COPY --from=learner-dashboard-src /package-lock.json /openedx/app/package-lock.json
+#89 CACHED
+
+#90 [learner-dashboard-common 4/6] COPY --from=learner-dashboard-src / /openedx/app
+#90 CACHED
+
+#91 [learner-dashboard-common 1/6] COPY --from=learner-dashboard-src /package.json /openedx/app/package.json
+#91 CACHED
+
+#92 [learner-dashboard-src 1/1] COPY --from=learner-dashboard-git /openedx/app /
+#92 CACHED
+
+#93 [authoring-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#93 CACHED
+
+#94 [authoring-src 1/1] COPY --from=authoring-git /openedx/app /
+#94 CACHED
+
+#95 [authoring-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-authoring.git#release/ulmo.2 .
+#95 CACHED
+
+#96 [authoring-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#96 CACHED
+
+#97 [authoring-common 2/6] COPY --from=authoring-src /package-lock.json /openedx/app/package-lock.json
+#97 CACHED
+
+#98 [authoring-common 4/6] COPY --from=authoring-src / /openedx/app
+#98 CACHED
+
+#99 [authoring-common 1/6] COPY --from=authoring-src /package.json /openedx/app/package.json
+#99 CACHED
+
+#100 [learning-common 1/6] COPY --from=learning-src /package.json /openedx/app/package.json
+#100 CACHED
+
+#101 [learning-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#101 CACHED
+
+#102 [learning-common 4/6] COPY --from=learning-src / /openedx/app
+#102 CACHED
+
+#103 [learning-git 1/1] ADD --keep-git-dir=true https://github.com/openedx/frontend-app-learning.git#release/ulmo.2 .
+#103 CACHED
+
+#104 [learning-src 1/1] COPY --from=learning-git /openedx/app /
+#104 CACHED
+
+#105 [learning-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#105 CACHED
+
+#106 [learning-common 2/6] COPY --from=learning-src /package-lock.json /openedx/app/package-lock.json
+#106 CACHED
+
+#107 [ora-grading-common 6/6] COPY env.config.jsx /openedx/app
+#107 CACHED
+
+#108 [learner-dashboard-common 6/6] COPY env.config.jsx /openedx/app
+#108 CACHED
+
+#109 [account-common 6/6] COPY env.config.jsx /openedx/app
+#109 CACHED
+
+#110 [authoring-common 6/6] COPY env.config.jsx /openedx/app
+#110 CACHED
+
+#111 [learning-common 6/6] COPY env.config.jsx /openedx/app
+#111 CACHED
+
+#112 [learning-prod 1/1] RUN npm run build
+#112 1.934 
+#112 1.934 > @edx/frontend-app-learning@1.0.0-semantically-released build
+#112 1.934 > fedx-scripts webpack
+#112 1.934 
+#112 2.091 Running with resolved config:
+#112 2.091 /openedx/app/webpack.prod.config.js
+#112 2.091 
+#112 4.748 Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+#112 4.748   npx update-browserslist-db@latest
+#112 4.748   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#112 ...
+
+#113 [authoring-prod 1/1] RUN npm run build
+#113 1.944 
+#113 1.944 > @edx/frontend-app-authoring@0.1.0 build
+#113 1.944 > fedx-scripts webpack
+#113 1.944 
+#113 2.080 Running with resolved config:
+#113 2.080 /openedx/app/webpack.prod.config.js
+#113 2.080 
+#113 3.102 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+#113 4.550 Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+#113 4.550   npx update-browserslist-db@latest
+#113 4.550   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#113 ...
+
+#114 [authn-prod 1/1] RUN npm run build
+#114 1.998 
+#114 1.998 > @edx/frontend-app-authn@0.1.0 build
+#114 1.998 > fedx-scripts webpack
+#114 1.998 
+#114 2.133 Running with resolved config:
+#114 2.133 /openedx/app/webpack.prod.config.js
+#114 2.133 
+#114 3.171 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+#114 4.683 Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:
+#114 4.683   npx update-browserslist-db@latest
+#114 4.683   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#114 ...
+
+#115 [ora-grading-prod 1/1] RUN npm run build
+#115 1.949 
+#115 1.949 > @edx/frontend-app-ora-grading@0.0.1 build
+#115 1.949 > fedx-scripts webpack
+#115 1.949 
+#115 2.101 Running with resolved config:
+#115 2.101 /openedx/app/webpack.prod.config.js
+#115 2.101 
+#115 4.698 Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+#115 4.698   npx update-browserslist-db@latest
+#115 4.698   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#115 ...
+
+#116 [discussions-prod 1/1] RUN npm run build
+#116 1.999 
+#116 1.999 > @edx/frontend-app-discussions@0.1.0 build
+#116 1.999 > fedx-scripts webpack
+#116 1.999 
+#116 2.138 Running with resolved config:
+#116 2.138 /openedx/app/node_modules/@openedx/frontend-build/config/webpack.prod.config.js
+#116 2.138 
+#116 4.631 Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:
+#116 4.631   npx update-browserslist-db@latest
+#116 4.631   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#116 ...
+
+#117 [learner-dashboard-prod 1/1] RUN npm run build
+#117 2.036 
+#117 2.036 > @edx/frontend-app-learner-dashboard@0.0.1 build
+#117 2.036 > fedx-scripts webpack
+#117 2.036 
+#117 2.138 Running with resolved config:
+#117 2.138 /openedx/app/webpack.prod.config.js
+#117 2.138 
+#117 4.805 Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+#117 4.805   npx update-browserslist-db@latest
+#117 4.805   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#117 ...
+
+#118 [admin-console-prod 1/1] RUN npm run build
+#118 2.005 
+#118 2.005 > @openedx/frontend-app-admin-console@0.1.0 build
+#118 2.005 > fedx-scripts webpack
+#118 2.005 
+#118 2.120 Running with resolved config:
+#118 2.120 /openedx/app/node_modules/@openedx/frontend-build/config/webpack.prod.config.js
+#118 2.120 
+#118 3.128 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+#118 ...
+
+#119 [account-prod 1/1] RUN npm run build
+#119 1.995 
+#119 1.995 > @edx/frontend-app-account@1.0.0-semantically-released build
+#119 1.995 > fedx-scripts webpack
+#119 1.995 
+#119 2.123 Running with resolved config:
+#119 2.123 /openedx/app/node_modules/@openedx/frontend-build/config/webpack.prod.config.js
+#119 2.123 
+#119 3.132 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+#119 4.525 Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+#119 4.525   npx update-browserslist-db@latest
+#119 4.525   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#119 ...
+
+#120 [gradebook-prod 1/1] RUN npm run build
+#120 1.972 
+#120 1.972 > @edx/frontend-app-gradebook@1.6.3 build
+#120 1.972 > fedx-scripts webpack
+#120 1.972 
+#120 2.101 Running with resolved config:
+#120 2.101 /openedx/app/webpack.prod.config.js
+#120 2.101 
+#120 4.562 Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+#120 4.562   npx update-browserslist-db@latest
+#120 4.562   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#120 ...
+
+#30 [profile-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#30 32.21 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+#30 32.54 npm warn deprecated lodash.pick@4.4.0: This package is deprecated. Use destructuring assignment syntax instead.
+#30 32.55 npm warn deprecated lodash.get@4.4.2: This package is deprecated. Use the optional chaining (?.) operator instead.
+#30 32.77 npm warn deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+#30 33.00 npm warn deprecated rimraf@2.6.2: Rimraf versions prior to v4 are no longer supported
+#30 33.16 npm warn deprecated lodash.omit@4.5.0: This package is deprecated. Use destructuring assignment syntax instead.
+#30 33.37 npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+#30 33.45 npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+#30 33.90 npm warn deprecated @humanwhocodes/config-array@0.11.14: Use @eslint/config-array instead
+#30 34.23 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+#30 34.30 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+#30 34.86 npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+#30 35.19 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 35.19 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 35.19 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 35.19 npm warn deprecated glob@8.1.0: Glob versions prior to v9 are no longer supported
+#30 35.19 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 35.19 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 35.19 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 35.19 npm warn deprecated glob@8.1.0: Glob versions prior to v9 are no longer supported
+#30 35.19 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 35.19 npm warn deprecated glob@8.1.0: Glob versions prior to v9 are no longer supported
+#30 35.19 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 35.19 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 35.19 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 35.19 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#30 35.83 npm warn deprecated @babel/plugin-proposal-object-rest-spread@7.20.7: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-object-rest-spread instead.
+#30 36.44 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+#30 37.16 npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+#30 86.24 npm warn deprecated popper.js@1.16.1: You can find the new Popper v2 at @popperjs/core, this package is dedicated to the legacy v1
+#30 ...
+
+#114 [authn-prod 1/1] RUN npm run build
+#114 243.8 Webpack Bundle Analyzer saved report to /openedx/app/dist/report.html
+#114 244.0 assets by path *.css 820 KiB
+#114 244.0   asset paragon-theme-core.9f1c95693f88cbabe300.css 616 KiB [emitted] [immutable] [big] (name: paragon-theme-core) (id hint: paragon-theme-core) 1 related asset
+#114 244.0   asset paragon-theme-variants-light.0fdc195621108fefcd50.css 187 KiB [emitted] [immutable] (name: paragon-theme-variants-light) (id hint: paragon-theme-variants-light) 1 related asset
+#114 244.0   asset app.7a3a4bd15be196e768fb.css 17.4 KiB [emitted] [immutable] (name: app) 1 related asset
+#114 244.0   asset 326.0d0f3cfd6b2b9cf9e3c5.css 1 bytes [emitted] [immutable] (id hint: vendors)
+#114 244.0 assets by path *.js 2.7 MiB
+#114 244.0   asset 326.0d0f3cfd6b2b9cf9e3c5.js 1.83 MiB [emitted] [immutable] [minimized] [big] (id hint: vendors) 2 related assets
+#114 244.0   asset app.7a3a4bd15be196e768fb.js 882 KiB [emitted] [immutable] [minimized] [big] (name: app) 1 related asset
+#114 244.0   asset runtime.a33fcc163037ad2c6376.js 2.05 KiB [emitted] [immutable] [minimized] (name: runtime) 1 related asset
+#114 244.0 asset index.html 1.26 KiB [emitted]
+#114 244.0 asset 95ec738c0b7faac5b5c9126794446bbd.svg 342 bytes [emitted] [immutable] [from: node_modules/@openedx/paragon/dist/Avatar/default-avatar.svg] (auxiliary name: app)
+#114 244.0 Entrypoint app [big] 2.71 MiB (7.29 MiB) = runtime.a33fcc163037ad2c6376.js 2.05 KiB 326.0d0f3cfd6b2b9cf9e3c5.css 1 bytes 326.0d0f3cfd6b2b9cf9e3c5.js 1.83 MiB app.7a3a4bd15be196e768fb.css 17.4 KiB app.7a3a4bd15be196e768fb.js 882 KiB 5 auxiliary assets
+#114 244.0 Entrypoint paragon.theme.core [big] 618 KiB (523 KiB) = runtime.a33fcc163037ad2c6376.js 2.05 KiB paragon-theme-core.9f1c95693f88cbabe300.css 616 KiB 2 auxiliary assets
+#114 244.0 Entrypoint paragon.theme.variants.light 189 KiB (200 KiB) = runtime.a33fcc163037ad2c6376.js 2.05 KiB paragon-theme-variants-light.0fdc195621108fefcd50.css 187 KiB 2 auxiliary assets
+#114 244.0 orphan modules 5.21 MiB [orphan] 3409 modules
+#114 244.0 runtime modules 4.91 KiB 11 modules
+#114 244.0 cacheable modules 5.55 MiB (javascript) 820 KiB (css/mini-extract) 1008 modules
+#114 244.0 
+#114 244.0 WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+#114 244.0 This can impact web performance.
+#114 244.0 Assets: 
+#114 244.0   app.7a3a4bd15be196e768fb.js (882 KiB)
+#114 244.0   paragon-theme-core.9f1c95693f88cbabe300.css (616 KiB)
+#114 244.0   326.0d0f3cfd6b2b9cf9e3c5.js (1.83 MiB)
+#114 244.0 
+#114 244.0 WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+#114 244.0 Entrypoints:
+#114 244.0   app (2.71 MiB)
+#114 244.0       runtime.a33fcc163037ad2c6376.js
+#114 244.0       326.0d0f3cfd6b2b9cf9e3c5.css
+#114 244.0       326.0d0f3cfd6b2b9cf9e3c5.js
+#114 244.0       app.7a3a4bd15be196e768fb.css
+#114 244.0       app.7a3a4bd15be196e768fb.js
+#114 244.0   paragon.theme.core (618 KiB)
+#114 244.0       runtime.a33fcc163037ad2c6376.js
+#114 244.0       paragon-theme-core.9f1c95693f88cbabe300.css
+#114 244.0 
+#114 244.0 WARNING in webpack performance recommendations: 
+#114 244.0 You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+#114 244.0 For more info visit https://webpack.js.org/guides/code-splitting/
+#114 244.0 
+#114 244.0 webpack 5.101.3 compiled with 3 warnings in 227212 ms
+#114 252.1 npm notice
+#114 252.1 npm notice New minor version of npm available! 11.6.1 -> 11.12.1
+#114 252.1 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+#114 252.1 npm notice To update run: npm install -g npm@11.12.1
+#114 252.1 npm notice
+#114 DONE 254.1s
+
+#30 [profile-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#30 246.7 npm warn deprecated graphql@14.7.0: No longer supported; please update to a newer version. Details: https://github.com/graphql/graphql-js#version-support
+#30 256.6 npm warn deprecated eslint@8.44.0: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+#30 ...
+
+#120 [gradebook-prod 1/1] RUN npm run build
+#120 262.1 Webpack Bundle Analyzer saved report to /openedx/app/dist/report.html
+#120 262.5 assets by chunk 929 KiB (auxiliary name: app)
+#120 262.5   assets by path *.svg 434 KiB
+#120 262.5     asset c1e38fd9e0e74ba58f7a2b77ef29fdd3.svg 434 KiB [emitted] [immutable] [from: node_modules/font-awesome/fonts/fontawesome-webfont.svg] [big] (auxiliary name: app)
+#120 262.5     asset 95ec738c0b7faac5b5c9126794446bbd.svg 342 bytes [emitted] [immutable] [from: node_modules/@openedx/paragon/dist/Avatar/default-avatar.svg] (auxiliary name: app)
+#120 262.5   + 4 assets
+#120 262.5 assets by path *.css 836 KiB
+#120 262.5   asset paragon-theme-core.0e89b063a046753e4b4a.css 610 KiB [emitted] [immutable] [big] (name: paragon-theme-core) (id hint: paragon-theme-core) 1 related asset
+#120 262.5   asset paragon-theme-variants-light.33ab881b4a6cde726fee.css 187 KiB [emitted] [immutable] (name: paragon-theme-variants-light) (id hint: paragon-theme-variants-light) 1 related asset
+#120 262.5   asset app.a8f909bac32e73acc36b.css 38.5 KiB [emitted] [immutable] (name: app) 1 related asset
+#120 262.5   asset 478.f0b728a17df424ecc789.css 1 bytes [emitted] [immutable] (id hint: vendors)
+#120 262.5 assets by path *.js 2.33 MiB
+#120 262.5   asset 478.f0b728a17df424ecc789.js 1.69 MiB [emitted] [immutable] [minimized] [big] (id hint: vendors) 2 related assets
+#120 262.5   asset app.a8f909bac32e73acc36b.js 646 KiB [emitted] [immutable] [minimized] [big] (name: app) 1 related asset
+#120 262.5   asset runtime.25a6c7fb7cda07d82d4c.js 2.27 KiB [emitted] [immutable] [minimized] (name: runtime) 1 related asset
+#120 262.5 asset index.html 1 KiB [emitted]
+#120 262.5 Entrypoint app [big] 2.36 MiB (7.33 MiB) = runtime.25a6c7fb7cda07d82d4c.js 2.27 KiB 478.f0b728a17df424ecc789.css 1 bytes 478.f0b728a17df424ecc789.js 1.69 MiB app.a8f909bac32e73acc36b.css 38.5 KiB app.a8f909bac32e73acc36b.js 646 KiB 10 auxiliary assets
+#120 262.5 Entrypoint paragon.theme.core [big] 612 KiB (521 KiB) = runtime.25a6c7fb7cda07d82d4c.js 2.27 KiB paragon-theme-core.0e89b063a046753e4b4a.css 610 KiB 2 auxiliary assets
+#120 262.5 Entrypoint paragon.theme.variants.light 190 KiB (201 KiB) = runtime.25a6c7fb7cda07d82d4c.js 2.27 KiB paragon-theme-variants-light.33ab881b4a6cde726fee.css 187 KiB 2 auxiliary assets
+#120 262.5 orphan modules 5.08 MiB [orphan] 3503 modules
+#120 262.5 runtime modules 5.22 KiB 12 modules
+#120 262.5 cacheable modules 4.87 MiB (javascript) 836 KiB (css/mini-extract)
+#120 262.5   javascript modules 4.85 MiB
+#120 262.5     modules by path ./node_modules/ 4.13 MiB 797 modules
+#120 262.5     modules by path ./src/ 738 KiB 2 modules
+#120 262.5     + 1 module
+#120 262.5   css modules 836 KiB
+#120 262.5     modules by path ./node_modules/@openedx/paragon/dist/*.css 797 KiB 2 modules
+#120 262.5     css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[4]!./src/App.scss 38.4 KiB [built] [code generated]
+#120 262.5     css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[4]!./node_modules/@openedx/paragon/styles/scss/core/_exports.module.scss 0 bytes [built] [code generated]
+#120 262.5   json modules 14.7 KiB
+#120 262.5     ./node_modules/i18n-iso-countries/codes.json 8.55 KiB [built] [code generated]
+#120 262.5     ./node_modules/@cospired/i18n-iso-languages/codes.json 6.12 KiB [built] [code generated]
+#120 262.5 
+#120 262.5 WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+#120 262.5 This can impact web performance.
+#120 262.5 Assets: 
+#120 262.5   c1e38fd9e0e74ba58f7a2b77ef29fdd3.svg (434 KiB)
+#120 262.5   app.a8f909bac32e73acc36b.js (646 KiB)
+#120 262.5   paragon-theme-core.0e89b063a046753e4b4a.css (610 KiB)
+#120 262.5   478.f0b728a17df424ecc789.js (1.69 MiB)
+#120 262.5 
+#120 262.5 WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+#120 262.5 Entrypoints:
+#120 262.5   app (2.36 MiB)
+#120 262.5       runtime.25a6c7fb7cda07d82d4c.js
+#120 262.5       478.f0b728a17df424ecc789.css
+#120 262.5       478.f0b728a17df424ecc789.js
+#120 262.5       app.a8f909bac32e73acc36b.css
+#120 262.5       app.a8f909bac32e73acc36b.js
+#120 262.5   paragon.theme.core (612 KiB)
+#120 262.5       runtime.25a6c7fb7cda07d82d4c.js
+#120 262.5       paragon-theme-core.0e89b063a046753e4b4a.css
+#120 262.5 
+#120 262.5 WARNING in webpack performance recommendations: 
+#120 262.5 You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+#120 262.5 For more info visit https://webpack.js.org/guides/code-splitting/
+#120 262.5 
+#120 262.5 webpack 5.99.7 compiled with 3 warnings in 245348 ms
+#120 267.4 npm notice
+#120 267.4 npm notice New minor version of npm available! 11.6.1 -> 11.12.1
+#120 267.4 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+#120 267.4 npm notice To update run: npm install -g npm@11.12.1
+#120 267.4 npm notice
+#120 DONE 268.3s
+
+#116 [discussions-prod 1/1] RUN npm run build
+#116 ...
+
+#117 [learner-dashboard-prod 1/1] RUN npm run build
+#117 312.1 Webpack Bundle Analyzer saved report to /openedx/app/dist/report.html
+#117 312.7 assets by info 4.81 MiB [immutable]
+#117 312.7   assets by chunk 1.01 MiB (auxiliary name: app)
+#117 312.7     assets by path *.svg 537 KiB 5 assets
+#117 312.7     + 5 assets
+#117 312.7   assets by path *.css 844 KiB
+#117 312.7     asset paragon-theme-core.0f15e2d16a779186290b.css 616 KiB [emitted] [immutable] [big] (name: paragon-theme-core) (id hint: paragon-theme-core) 1 related asset
+#117 312.7     asset paragon-theme-variants-light.82a1e4adbb599e75cbc0.css 187 KiB [emitted] [immutable] (name: paragon-theme-variants-light) (id hint: paragon-theme-variants-light) 1 related asset
+#117 312.7     asset app.b7d1fc0939a21ddc5a41.css 41.2 KiB [emitted] [immutable] (name: app) 1 related asset
+#117 312.7     asset 460.99a3f12d241ea87eb878.css 1 bytes [emitted] [immutable] (id hint: vendors)
+#117 312.7   assets by path *.js 2.97 MiB
+#117 312.7     asset 460.99a3f12d241ea87eb878.js 2.07 MiB [emitted] [immutable] [minimized] [big] (id hint: vendors) 2 related assets
+#117 312.7     asset app.b7d1fc0939a21ddc5a41.js 919 KiB [emitted] [immutable] [minimized] [big] (name: app) 1 related asset
+#117 312.7     asset runtime.d1dd82b52b8c888f4c15.js 2.07 KiB [emitted] [immutable] [minimized] (name: runtime) 1 related asset
+#117 312.7 asset index.html 997 bytes [emitted]
+#117 312.7 asset robots.txt 26 bytes [emitted] [from: public/robots.txt] [copied]
+#117 312.7 Entrypoint app [big] 3.01 MiB (9.02 MiB) = runtime.d1dd82b52b8c888f4c15.js 2.07 KiB 460.99a3f12d241ea87eb878.css 1 bytes 460.99a3f12d241ea87eb878.js 2.07 MiB app.b7d1fc0939a21ddc5a41.css 41.2 KiB app.b7d1fc0939a21ddc5a41.js 919 KiB 14 auxiliary assets
+#117 312.7 Entrypoint paragon.theme.core [big] 618 KiB (523 KiB) = runtime.d1dd82b52b8c888f4c15.js 2.07 KiB paragon-theme-core.0f15e2d16a779186290b.css 616 KiB 2 auxiliary assets
+#117 312.7 Entrypoint paragon.theme.variants.light 189 KiB (201 KiB) = runtime.d1dd82b52b8c888f4c15.js 2.07 KiB paragon-theme-variants-light.82a1e4adbb599e75cbc0.css 187 KiB 2 auxiliary assets
+#117 312.7 orphan modules 5.59 MiB [orphan] 3634 modules
+#117 312.7 runtime modules 4.91 KiB 11 modules
+#117 312.7 built modules 6.2 MiB (javascript) 844 KiB (css/mini-extract) [built] 1181 modules
+#117 312.7 
+#117 312.7 WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+#117 312.7 This can impact web performance.
+#117 312.7 Assets: 
+#117 312.7   c1e38fd9e0e74ba58f7a2b77ef29fdd3.svg (434 KiB)
+#117 312.7   app.b7d1fc0939a21ddc5a41.js (919 KiB)
+#117 312.7   paragon-theme-core.0f15e2d16a779186290b.css (616 KiB)
+#117 312.7   460.99a3f12d241ea87eb878.js (2.07 MiB)
+#117 312.7 
+#117 312.7 WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+#117 312.7 Entrypoints:
+#117 312.7   app (3.01 MiB)
+#117 312.7       runtime.d1dd82b52b8c888f4c15.js
+#117 312.7       460.99a3f12d241ea87eb878.css
+#117 312.7       460.99a3f12d241ea87eb878.js
+#117 312.7       app.b7d1fc0939a21ddc5a41.css
+#117 312.7       app.b7d1fc0939a21ddc5a41.js
+#117 312.7   paragon.theme.core (618 KiB)
+#117 312.7       runtime.d1dd82b52b8c888f4c15.js
+#117 312.7       paragon-theme-core.0f15e2d16a779186290b.css
+#117 312.7 
+#117 312.7 WARNING in webpack performance recommendations: 
+#117 312.7 You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+#117 312.7 For more info visit https://webpack.js.org/guides/code-splitting/
+#117 312.7 
+#117 312.7 webpack 5.99.9 compiled with 3 warnings in 297153 ms
+#117 314.2 npm notice
+#117 314.2 npm notice New minor version of npm available! 11.6.1 -> 11.12.1
+#117 314.2 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+#117 314.2 npm notice To update run: npm install -g npm@11.12.1
+#117 314.2 npm notice
+#117 DONE 315.3s
+
+#116 [discussions-prod 1/1] RUN npm run build
+#116 ...
+
+#30 [profile-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#30 317.4 npm warn deprecated core-js@2.6.12: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
+#30 317.7 npm warn deprecated core-js@2.6.12: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
+#30 ...
+
+#115 [ora-grading-prod 1/1] RUN npm run build
+#115 538.2 Webpack Bundle Analyzer saved report to /openedx/app/dist/report.html
+#115 539.1 assets by chunk 960 KiB (auxiliary name: app)
+#115 539.1   assets by path *.svg 465 KiB
+#115 539.1     asset c1e38fd9e0e74ba58f7a2b77ef29fdd3.svg 434 KiB [emitted] [immutable] [from: node_modules/font-awesome/fonts/fontawesome-webfont.svg] [big] (auxiliary name: app)
+#115 539.1     + 2 assets
+#115 539.1   + 4 assets
+#115 539.1 assets by path *.js 3.22 MiB
+#115 539.1   asset 762.1462e75831a93ee9d122.js 2.52 MiB [emitted] [immutable] [minimized] [big] (id hint: vendors) 2 related assets
+#115 539.1   asset app.b533c825879ff3713c4f.js 718 KiB [emitted] [immutable] [minimized] [big] (name: app) 1 related asset
+#115 539.1   asset runtime.27cafc01ecb4df66ee09.js 2.05 KiB [emitted] [immutable] [minimized] (name: runtime) 1 related asset
+#115 539.1 assets by path *.css 848 KiB
+#115 539.1   asset paragon-theme-core.28ab421cb1e228461c3e.css 610 KiB [emitted] [immutable] [big] (name: paragon-theme-core) (id hint: paragon-theme-core) 1 related asset
+#115 539.1   asset paragon-theme-variants-light.9d9d1a715b45d0b736b4.css 187 KiB [emitted] [immutable] (name: paragon-theme-variants-light) (id hint: paragon-theme-variants-light) 1 related asset
+#115 539.1   asset app.b533c825879ff3713c4f.css 50.1 KiB [emitted] [immutable] (name: app) 1 related asset
+#115 539.1 asset index.html 983 bytes [emitted]
+#115 539.1 Entrypoint app [big] 3.27 MiB (10.7 MiB) = runtime.27cafc01ecb4df66ee09.js 2.05 KiB 762.1462e75831a93ee9d122.js 2.52 MiB app.b533c825879ff3713c4f.css 50.1 KiB app.b533c825879ff3713c4f.js 718 KiB 11 auxiliary assets
+#115 539.1 Entrypoint paragon.theme.core [big] 612 KiB (520 KiB) = runtime.27cafc01ecb4df66ee09.js 2.05 KiB paragon-theme-core.28ab421cb1e228461c3e.css 610 KiB 2 auxiliary assets
+#115 539.1 Entrypoint paragon.theme.variants.light 189 KiB (201 KiB) = runtime.27cafc01ecb4df66ee09.js 2.05 KiB paragon-theme-variants-light.9d9d1a715b45d0b736b4.css 187 KiB 2 auxiliary assets
+#115 539.1 orphan modules 5.65 MiB [orphan] 3589 modules
+#115 539.1 runtime modules 4.89 KiB 11 modules
+#115 539.1 built modules 6.99 MiB (javascript) 847 KiB (css/mini-extract) [built]
+#115 539.1   modules by path ./node_modules/ 6.18 MiB (javascript) 806 KiB (css/mini-extract)
+#115 539.1     javascript modules 6.17 MiB 1278 modules
+#115 539.1     css modules 806 KiB 4 modules
+#115 539.1     json modules 14.7 KiB
+#115 539.1       ./node_modules/i18n-iso-countries/codes.json 8.55 KiB [built] [code generated]
+#115 539.1       ./node_modules/@cospired/i18n-iso-languages/codes.json 6.12 KiB [built] [code generated]
+#115 539.1   modules by path ./src/ 40.9 KiB (css/mini-extract) 815 KiB (javascript)
+#115 539.1     modules by path ./src/containers/ 5.63 KiB 5 modules
+#115 539.1     ./src/index.jsx + 321 modules 815 KiB [built] [code generated]
+#115 539.1     css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[4]!./src/App.scss 34.9 KiB [built] [code generated]
+#115 539.1     css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[4]!./src/components/FilePreview/FileCard.scss 405 bytes [built] [code generated]
+#115 539.1   + 7 modules
+#115 539.1 
+#115 539.1 WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+#115 539.1 This can impact web performance.
+#115 539.1 Assets: 
+#115 539.1   c1e38fd9e0e74ba58f7a2b77ef29fdd3.svg (434 KiB)
+#115 539.1   app.b533c825879ff3713c4f.js (718 KiB)
+#115 539.1   paragon-theme-core.28ab421cb1e228461c3e.css (610 KiB)
+#115 539.1   762.1462e75831a93ee9d122.js (2.52 MiB)
+#115 539.1 
+#115 539.1 WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+#115 539.1 Entrypoints:
+#115 539.1   app (3.27 MiB)
+#115 539.1       runtime.27cafc01ecb4df66ee09.js
+#115 539.1       762.1462e75831a93ee9d122.js
+#115 539.1       app.b533c825879ff3713c4f.css
+#115 539.1       app.b533c825879ff3713c4f.js
+#115 539.1   paragon.theme.core (612 KiB)
+#115 539.1       runtime.27cafc01ecb4df66ee09.js
+#115 539.1       paragon-theme-core.28ab421cb1e228461c3e.css
+#115 539.1 
+#115 539.1 WARNING in webpack performance recommendations: 
+#115 539.1 You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+#115 539.1 For more info visit https://webpack.js.org/guides/code-splitting/
+#115 539.1 
+#115 539.1 webpack 5.99.7 compiled with 3 warnings in 522313 ms
+#115 539.7 npm notice
+#115 539.7 npm notice New minor version of npm available! 11.6.1 -> 11.12.1
+#115 539.7 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+#115 539.7 npm notice To update run: npm install -g npm@11.12.1
+#115 539.7 npm notice
+#115 DONE 540.9s
+
+#118 [admin-console-prod 1/1] RUN npm run build
+#118 539.0 Webpack Bundle Analyzer saved report to /openedx/app/dist/report.html
+#118 539.7 assets by path *.css 809 KiB
+#118 539.7   asset paragon-theme-core.293e6fa3eb0f2f9bc07d.css 616 KiB [emitted] [immutable] [big] (name: paragon-theme-core) (id hint: paragon-theme-core) 1 related asset
+#118 539.7   asset paragon-theme-variants-light.23bcdf6dba378a35a54c.css 187 KiB [emitted] [immutable] (name: paragon-theme-variants-light) (id hint: paragon-theme-variants-light) 1 related asset
+#118 539.7   asset app.de49896806fc27d74a91.css 6.06 KiB [emitted] [immutable] (name: app) 1 related asset
+#118 539.7   asset 430.fb17321fc084395182b4.css 1 bytes [emitted] [immutable] (id hint: vendors)
+#118 539.7 assets by path *.js 2.15 MiB
+#118 539.7   asset 430.fb17321fc084395182b4.js 1.76 MiB [emitted] [immutable] [minimized] [big] (id hint: vendors) 2 related assets
+#118 539.7   asset app.de49896806fc27d74a91.js 395 KiB [emitted] [immutable] [minimized] [big] (name: app) 1 related asset
+#118 539.7   asset runtime.e4f24cff0889b37c11fb.js 2.08 KiB [emitted] [immutable] [minimized] (name: runtime) 1 related asset
+#118 539.7 asset index.html 1.03 KiB [emitted]
+#118 539.7 asset 95ec738c0b7faac5b5c9126794446bbd.svg 342 bytes [emitted] [immutable] [from: node_modules/@openedx/paragon/dist/Avatar/default-avatar.svg] (auxiliary name: app)
+#118 539.7 Entrypoint app [big] 2.15 MiB (5.58 MiB) = runtime.e4f24cff0889b37c11fb.js 2.08 KiB 430.fb17321fc084395182b4.css 1 bytes 430.fb17321fc084395182b4.js 1.76 MiB app.de49896806fc27d74a91.css 6.06 KiB app.de49896806fc27d74a91.js 395 KiB 5 auxiliary assets
+#118 539.7 Entrypoint paragon.theme.core [big] 618 KiB (523 KiB) = runtime.e4f24cff0889b37c11fb.js 2.08 KiB paragon-theme-core.293e6fa3eb0f2f9bc07d.css 616 KiB 2 auxiliary assets
+#118 539.7 Entrypoint paragon.theme.variants.light 189 KiB (201 KiB) = runtime.e4f24cff0889b37c11fb.js 2.08 KiB paragon-theme-variants-light.23bcdf6dba378a35a54c.css 187 KiB 2 auxiliary assets
+#118 539.7 orphan modules 7.78 MiB [orphan] 3381 modules
+#118 539.7 runtime modules 4.94 KiB 11 modules
+#118 539.7 cacheable modules 4.38 MiB (javascript) 809 KiB (css/mini-extract)
+#118 539.7   javascript modules 4.36 MiB
+#118 539.7     modules by path ./node_modules/ 3.93 MiB 417 modules
+#118 539.7     ./src/index.tsx + 207 modules 435 KiB [built] [code generated]
+#118 539.7     ./env.config.jsx 8.63 KiB [built] [code generated]
+#118 539.7   css modules 809 KiB
+#118 539.7     modules by path ./node_modules/@openedx/paragon/ 803 KiB 3 modules
+#118 539.7     modules by path ./src/ 6 KiB 2 modules
+#118 539.7   json modules 16.1 KiB
+#118 539.7     ./node_modules/i18n-iso-countries/codes.json 8.55 KiB [built] [code generated]
+#118 539.7     ./node_modules/@cospired/i18n-iso-languages/codes.json 6.12 KiB [built] [code generated]
+#118 539.7     ./node_modules/@fortawesome/fontawesome-svg-core/package.json 1.39 KiB [optional] [built] [code generated]
+#118 539.7 
+#118 539.7 WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+#118 539.7 This can impact web performance.
+#118 539.7 Assets: 
+#118 539.7   app.de49896806fc27d74a91.js (395 KiB)
+#118 539.7   paragon-theme-core.293e6fa3eb0f2f9bc07d.css (616 KiB)
+#118 539.7   430.fb17321fc084395182b4.js (1.76 MiB)
+#118 539.7 
+#118 539.7 WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+#118 539.7 Entrypoints:
+#118 539.7   app (2.15 MiB)
+#118 539.7       runtime.e4f24cff0889b37c11fb.js
+#118 539.7       430.fb17321fc084395182b4.css
+#118 539.7       430.fb17321fc084395182b4.js
+#118 539.7       app.de49896806fc27d74a91.css
+#118 539.7       app.de49896806fc27d74a91.js
+#118 539.7   paragon.theme.core (618 KiB)
+#118 539.7       runtime.e4f24cff0889b37c11fb.js
+#118 539.7       paragon-theme-core.293e6fa3eb0f2f9bc07d.css
+#118 539.7 
+#118 539.7 WARNING in webpack performance recommendations: 
+#118 539.7 You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+#118 539.7 For more info visit https://webpack.js.org/guides/code-splitting/
+#118 539.7 
+#118 539.7 webpack 5.102.1 compiled with 3 warnings in 526809 ms
+#118 541.6 npm notice
+#118 541.6 npm notice New minor version of npm available! 11.6.1 -> 11.12.1
+#118 541.6 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+#118 541.6 npm notice To update run: npm install -g npm@11.12.1
+#118 541.6 npm notice
+#118 DONE 542.2s
+
+#112 [learning-prod 1/1] RUN npm run build
+#112 ...
+
+#121 [production  3/13] COPY --from=admin-console-prod /openedx/app/dist /openedx/dist/admin-console
+#121 DONE 1.9s
+
+#112 [learning-prod 1/1] RUN npm run build
+#112 ...
+
+#122 [production  4/13] COPY --from=authn-prod /openedx/app/dist /openedx/dist/authn
+#122 DONE 2.7s
+
+#116 [discussions-prod 1/1] RUN npm run build
+#116 ...
+
+#119 [account-prod 1/1] RUN npm run build
+#119 680.0 Webpack Bundle Analyzer saved report to /openedx/app/dist/report.html
+#119 680.8 assets by chunk 957 KiB (auxiliary name: app)
+#119 680.8   assets by path *.svg 434 KiB
+#119 680.8     asset c1e38fd9e0e74ba58f7a2b77ef29fdd3.svg 434 KiB [emitted] [immutable] [from: node_modules/font-awesome/fonts/fontawesome-webfont.svg] [big] (auxiliary name: app)
+#119 680.8     asset 95ec738c0b7faac5b5c9126794446bbd.svg 342 bytes [emitted] [immutable] [from: node_modules/@openedx/paragon/dist/Avatar/default-avatar.svg] (auxiliary name: app)
+#119 680.8   + 5 assets
+#119 680.8 assets by path *.css 843 KiB
+#119 680.8   asset paragon-theme-core.655cdd14b1572e65fbdf.css 616 KiB [emitted] [immutable] [big] (name: paragon-theme-core) (id hint: paragon-theme-core) 1 related asset
+#119 680.8   asset paragon-theme-variants-light.afa6d33221bdc4413749.css 187 KiB [emitted] [immutable] (name: paragon-theme-variants-light) (id hint: paragon-theme-variants-light) 1 related asset
+#119 680.8   asset app.8e1342144d87ed341ccd.css 39.6 KiB [emitted] [immutable] (name: app) 1 related asset
+#119 680.8   asset 397.c2b66f59f12ff175e1a5.css 1 bytes [emitted] [immutable] (id hint: vendors)
+#119 680.8 assets by path *.js 4.31 MiB
+#119 680.8   asset 397.c2b66f59f12ff175e1a5.js 2.43 MiB [emitted] [immutable] [minimized] [big] (id hint: vendors) 2 related assets
+#119 680.8   asset app.8e1342144d87ed341ccd.js 1.88 MiB [emitted] [immutable] [minimized] [big] (name: app) 1 related asset
+#119 680.8   asset runtime.09e2da599c69b03ab4b3.js 2.13 KiB [emitted] [immutable] [minimized] (name: runtime) 1 related asset
+#119 680.8 asset index.html 5.59 KiB [emitted]
+#119 680.8 Entrypoint app [big] 4.35 MiB (10.8 MiB) = runtime.09e2da599c69b03ab4b3.js 2.13 KiB 397.c2b66f59f12ff175e1a5.css 1 bytes 397.c2b66f59f12ff175e1a5.js 2.43 MiB app.8e1342144d87ed341ccd.css 39.6 KiB app.8e1342144d87ed341ccd.js 1.88 MiB 11 auxiliary assets
+#119 680.8 Entrypoint paragon.theme.core [big] 618 KiB (523 KiB) = runtime.09e2da599c69b03ab4b3.js 2.13 KiB paragon-theme-core.655cdd14b1572e65fbdf.css 616 KiB 2 auxiliary assets
+#119 680.8 Entrypoint paragon.theme.variants.light 189 KiB (201 KiB) = runtime.09e2da599c69b03ab4b3.js 2.13 KiB paragon-theme-variants-light.afa6d33221bdc4413749.css 187 KiB 2 auxiliary assets
+#119 680.8 orphan modules 10.8 MiB [orphan] 3957 modules
+#119 680.8 runtime modules 5.04 KiB 13 modules
+#119 680.8 cacheable modules 8.36 MiB (javascript) 842 KiB (css/mini-extract) 1114 modules
+#119 680.8 
+#119 680.8 WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+#119 680.8 This can impact web performance.
+#119 680.8 Assets: 
+#119 680.8   c1e38fd9e0e74ba58f7a2b77ef29fdd3.svg (434 KiB)
+#119 680.8   app.8e1342144d87ed341ccd.js (1.88 MiB)
+#119 680.8   paragon-theme-core.655cdd14b1572e65fbdf.css (616 KiB)
+#119 680.8   397.c2b66f59f12ff175e1a5.js (2.43 MiB)
+#119 680.8 
+#119 680.8 WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+#119 680.8 Entrypoints:
+#119 680.8   app (4.35 MiB)
+#119 680.8       runtime.09e2da599c69b03ab4b3.js
+#119 680.8       397.c2b66f59f12ff175e1a5.css
+#119 680.8       397.c2b66f59f12ff175e1a5.js
+#119 680.8       app.8e1342144d87ed341ccd.css
+#119 680.8       app.8e1342144d87ed341ccd.js
+#119 680.8   paragon.theme.core (618 KiB)
+#119 680.8       runtime.09e2da599c69b03ab4b3.js
+#119 680.8       paragon-theme-core.655cdd14b1572e65fbdf.css
+#119 680.8 
+#119 680.8 WARNING in webpack performance recommendations: 
+#119 680.8 You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+#119 680.8 For more info visit https://webpack.js.org/guides/code-splitting/
+#119 680.8 
+#119 680.8 webpack 5.101.3 compiled with 3 warnings in 663480 ms
+#119 682.1 npm notice
+#119 682.1 npm notice New minor version of npm available! 11.6.1 -> 11.12.1
+#119 682.1 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+#119 682.1 npm notice To update run: npm install -g npm@11.12.1
+#119 682.1 npm notice
+#119 DONE 682.5s
+
+#116 [discussions-prod 1/1] RUN npm run build
+#116 681.7 Webpack Bundle Analyzer saved report to /openedx/app/dist/report.html
+#116 682.5 assets by path *.js 4.44 MiB
+#116 682.5   assets by status 4.35 MiB [big]
+#116 682.5     asset 332.920612752fd156284e1a.js 3.26 MiB [emitted] [immutable] [minimized] [big] (id hint: vendors) 2 related assets
+#116 682.5     asset app.c2c59a83b628bb019477.js 1.09 MiB [emitted] [immutable] [minimized] [big] (name: app) 1 related asset
+#116 682.5   + 17 assets
+#116 682.5 assets by path *.css 891 KiB
+#116 682.5   asset paragon-theme-core.30d772dbe06d2a132ad3.css 616 KiB [emitted] [immutable] [big] (name: paragon-theme-core) (id hint: paragon-theme-core) 1 related asset
+#116 682.5   asset paragon-theme-variants-light.26d6f082c596a459796d.css 187 KiB [emitted] [immutable] (name: paragon-theme-variants-light) (id hint: paragon-theme-variants-light) 1 related asset
+#116 682.5   asset 332.920612752fd156284e1a.css 73.1 KiB [emitted] [immutable] (id hint: vendors) 1 related asset
+#116 682.5   asset app.c2c59a83b628bb019477.css 14.3 KiB [emitted] [immutable] (name: app) 1 related asset
+#116 682.5   asset 448.b53d86d85d3acc6ed785.css 795 bytes [emitted] [immutable] 1 related asset
+#116 682.5 assets by path *.svg 41.5 KiB
+#116 682.5   asset ce54a3c2e5b77ffdfa5e77d15e14a6ee.svg 41.2 KiB [emitted] [immutable] [from: src/assets/confirm-email.svg]
+#116 682.5   asset 95ec738c0b7faac5b5c9126794446bbd.svg 342 bytes [emitted] [immutable] [from: node_modules/@openedx/paragon/dist/Avatar/default-avatar.svg] (auxiliary name: app)
+#116 682.5 asset index.html 6.71 KiB [emitted]
+#116 682.5 Entrypoint app [big] 4.44 MiB (12.3 MiB) = runtime.7ed6fe835303d4a069dd.js 4.95 KiB 332.920612752fd156284e1a.css 73.1 KiB 332.920612752fd156284e1a.js 3.26 MiB app.c2c59a83b628bb019477.css 14.3 KiB app.c2c59a83b628bb019477.js 1.09 MiB 6 auxiliary assets
+#116 682.5 Entrypoint paragon.theme.core [big] 621 KiB (535 KiB) = runtime.7ed6fe835303d4a069dd.js 4.95 KiB paragon-theme-core.30d772dbe06d2a132ad3.css 616 KiB 2 auxiliary assets
+#116 682.5 Entrypoint paragon.theme.variants.light 192 KiB (213 KiB) = runtime.7ed6fe835303d4a069dd.js 4.95 KiB paragon-theme-variants-light.26d6f082c596a459796d.css 187 KiB 2 auxiliary assets
+#116 682.5 orphan modules 8.65 MiB [orphan] 3633 modules
+#116 682.5 runtime modules 11.6 KiB 16 modules
+#116 682.5 cacheable modules 9.24 MiB (javascript) 891 KiB (css/mini-extract)
+#116 682.5   modules by path ./node_modules/ 7.87 MiB (javascript) 876 KiB (css/mini-extract)
+#116 682.5     javascript modules 7.85 MiB 1034 modules
+#116 682.5     css modules 876 KiB 4 modules
+#116 682.5     json modules 16.1 KiB 3 modules
+#116 682.5   modules by path ./src/ 1.36 MiB (javascript) 14.9 KiB (css/mini-extract)
+#116 682.5     modules by path ./src/discussions/ 504 KiB (javascript) 40 bytes (css/mini-extract) 78 modules
+#116 682.5     modules by path ./src/components/ 48.8 KiB (javascript) 738 bytes (css/mini-extract) 12 modules
+#116 682.5     modules by path ./src/data/*.js 10.4 KiB 4 modules
+#116 682.5     ./src/index.jsx + 214 modules 829 KiB [built] [code generated]
+#116 682.5     css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[4]!./src/index.scss 14.2 KiB [built] [code generated]
+#116 682.5   ./env.config.jsx 8.63 KiB [built] [code generated]
+#116 682.5 
+#116 682.5 WARNING in ./src/index.scss (./node_modules/raw-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/index.scss)
+#116 682.5 Module Warning (from ./node_modules/sass-loader/dist/cjs.js):
+#116 682.5 Deprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
+#116 682.5 
+#116 682.5 More info: https://sass-lang.com/d/legacy-js-api
+#116 682.5  @ ./src/components/TinyMCEEditor.jsx 39:0-65 106:46-57
+#116 682.5  @ ./src/components/index.js 4:0-59 4:0-59
+#116 682.5  @ ./src/discussions/discussions-home/DiscussionsHome.jsx
+#116 682.5  @ ./src/discussions/index.js 1:0-80 1:0-80
+#116 682.5  @ ./src/index.jsx 10:0-48 20:64-79
+#116 682.5 
+#116 682.5 WARNING in ./src/index.scss (./node_modules/raw-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/index.scss)
+#116 682.5 Module Warning (from ./node_modules/sass-loader/dist/cjs.js):
+#116 682.5 Deprecation Warning on line 3, column 8 of file:///openedx/app/src/index.scss:3:8:
+#116 682.5 Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+#116 682.5 
+#116 682.5 More info and automated migrator: https://sass-lang.com/d/import
+#116 682.5 
+#116 682.5 3 | @import "~@edx/frontend-component-footer/dist/footer";
+#116 682.5 
+#116 682.5 
+#116 682.5 src/index.scss 4:9  root stylesheet
+#116 682.5  @ ./src/components/TinyMCEEditor.jsx 39:0-65 106:46-57
+#116 682.5  @ ./src/components/index.js 4:0-59 4:0-59
+#116 682.5  @ ./src/discussions/discussions-home/DiscussionsHome.jsx
+#116 682.5  @ ./src/discussions/index.js 1:0-80 1:0-80
+#116 682.5  @ ./src/index.jsx 10:0-48 20:64-79
+#116 682.5 
+#116 682.5 WARNING in ./src/index.scss (./node_modules/raw-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/index.scss)
+#116 682.5 Module Warning (from ./node_modules/sass-loader/dist/cjs.js):
+#116 682.5 Deprecation Warning on line 4, column 8 of file:///openedx/app/src/index.scss:4:8:
+#116 682.5 Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+#116 682.5 
+#116 682.5 More info and automated migrator: https://sass-lang.com/d/import
+#116 682.5 
+#116 682.5 4 | @import "~@edx/frontend-component-header/dist/index";
+#116 682.5 
+#116 682.5 
+#116 682.5 src/index.scss 5:9  root stylesheet
+#116 682.5  @ ./src/components/TinyMCEEditor.jsx 39:0-65 106:46-57
+#116 682.5  @ ./src/components/index.js 4:0-59 4:0-59
+#116 682.5  @ ./src/discussions/discussions-home/DiscussionsHome.jsx
+#116 682.5  @ ./src/discussions/index.js 1:0-80 1:0-80
+#116 682.5  @ ./src/index.jsx 10:0-48 20:64-79
+#116 682.5 
+#116 682.5 WARNING in ./src/index.scss (./node_modules/raw-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/index.scss)
+#116 682.5 Module Warning (from ./node_modules/sass-loader/dist/cjs.js):
+#116 682.5 Deprecation Warning on line 7, column 8 of file:///openedx/app/node_modules/@edx/frontend-component-header/dist/index.scss:7:8:
+#116 682.5 Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+#116 682.5 
+#116 682.5 More info and automated migrator: https://sass-lang.com/d/import
+#116 682.5 
+#116 682.5 7 | @import './Menu/menu.scss';
+#116 682.5 
+#116 682.5 
+#116 682.5 node_modules/@edx/frontend-component-header/dist/index.scss 8:9  @import
+#116 682.5 src/index.scss 5:9                                               root stylesheet
+#116 682.5  @ ./src/components/TinyMCEEditor.jsx 39:0-65 106:46-57
+#116 682.5  @ ./src/components/index.js 4:0-59 4:0-59
+#116 682.5  @ ./src/discussions/discussions-home/DiscussionsHome.jsx
+#116 682.5  @ ./src/discussions/index.js 1:0-80 1:0-80
+#116 682.5  @ ./src/index.jsx 10:0-48 20:64-79
+#116 682.5 
+#116 682.5 WARNING in ./src/index.scss (./node_modules/raw-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/index.scss)
+#116 682.5 Module Warning (from ./node_modules/sass-loader/dist/cjs.js):
+#116 682.5 Deprecation Warning on line 8, column 8 of file:///openedx/app/node_modules/@edx/frontend-component-header/dist/index.scss:8:8:
+#116 682.5 Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+#116 682.5 
+#116 682.5 More info and automated migrator: https://sass-lang.com/d/import
+#116 682.5 
+#116 682.5 8 | @import './studio-header/StudioHeader.scss';
+#116 682.5 
+#116 682.5 
+#116 682.5 node_modules/@edx/frontend-component-header/dist/index.scss 9:9  @import
+#116 682.5 src/index.scss 5:9                                               root stylesheet
+#116 682.5  @ ./src/components/TinyMCEEditor.jsx 39:0-65 106:46-57
+#116 682.5  @ ./src/components/index.js 4:0-59 4:0-59
+#116 682.5  @ ./src/discussions/discussions-home/DiscussionsHome.jsx
+#116 682.5  @ ./src/discussions/index.js 1:0-80 1:0-80
+#116 682.5  @ ./src/index.jsx 10:0-48 20:64-79
+#116 682.5 
+#116 682.5 WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+#116 682.5 This can impact web performance.
+#116 682.5 Assets: 
+#116 682.5   app.c2c59a83b628bb019477.js (1.09 MiB)
+#116 682.5   paragon-theme-core.30d772dbe06d2a132ad3.css (616 KiB)
+#116 682.5   332.920612752fd156284e1a.js (3.26 MiB)
+#116 682.5 
+#116 682.5 WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+#116 682.5 Entrypoints:
+#116 682.5   app (4.44 MiB)
+#116 682.5       runtime.7ed6fe835303d4a069dd.js
+#116 682.5       332.920612752fd156284e1a.css
+#116 682.5       332.920612752fd156284e1a.js
+#116 682.5       app.c2c59a83b628bb019477.css
+#116 682.5       app.c2c59a83b628bb019477.js
+#116 682.5   paragon.theme.core (621 KiB)
+#116 682.5       runtime.7ed6fe835303d4a069dd.js
+#116 682.5       paragon-theme-core.30d772dbe06d2a132ad3.css
+#116 682.5 
+#116 682.5 webpack 5.101.3 compiled with 7 warnings in 665705 ms
+#116 683.5 npm notice
+#116 683.5 npm notice New minor version of npm available! 11.6.1 -> 11.12.1
+#116 683.5 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+#116 683.5 npm notice To update run: npm install -g npm@11.12.1
+#116 683.5 npm notice
+#116 DONE 683.8s
+
+#112 [learning-prod 1/1] RUN npm run build
+#112 ...
+
+#30 [profile-common 3/6] RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=https://registry.npmjs.org/
+#30 707.9 
+#30 707.9 added 2276 packages in 12m
+#30 DONE 708.6s
+
+#112 [learning-prod 1/1] RUN npm run build
+#112 ...
+
+#123 [profile-common 4/6] COPY --from=profile-src / /openedx/app
+#123 DONE 0.4s
+
+#112 [learning-prod 1/1] RUN npm run build
+#112 ...
+
+#124 [profile-common 5/6] RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository=openedx/openedx-translations --revision=release/ulmo.2 " pull_translations
+#124 0.581 rm -rf src/i18n/messages
+#124 0.583 mkdir src/i18n/messages
+#124 0.612 cd src/i18n/messages \
+#124 0.612       && atlas pull --repository=openedx/openedx-translations --revision=release/ulmo.2  \
+#124 0.612                translations/frontend-platform/src/i18n/messages:frontend-platform \
+#124 0.612                translations/paragon/src/i18n/messages:paragon \
+#124 0.612                translations/frontend-component-header/src/i18n/messages:frontend-component-header \
+#124 0.612                translations/frontend-component-footer/src/i18n/messages:frontend-component-footer \
+#124 0.612                translations/frontend-app-profile/src/i18n/messages:frontend-app-profile
+#124 0.644 Pulling translation files
+#124 0.644  - directory: translations/frontend-platform/src/i18n/messages:frontend-platform translations/paragon/src/i18n/messages:paragon translations/frontend-component-header/src/i18n/messages:frontend-component-header translations/frontend-component-footer/src/i18n/messages:frontend-component-footer translations/frontend-app-profile/src/i18n/messages:frontend-app-profile
+#124 0.644  - repository: openedx/openedx-translations
+#124 0.644  - revision: release/ulmo.2
+#124 0.644  - filter: Not Specified
+#124 0.644  - expand-glob: Not Specified
+#124 0.664 Creating a temporary Git repository to pull translations into "./translations_TEMP"...
+#124 4.134 Done.
+#124 4.135 Setting git sparse-checkout rules...
+#124 4.204 Done.
+#124 4.207 Pulling translation files from the repository...
+#124 5.378 Done.
+#124 5.378 Copying translations from "./translations_TEMP/translations/frontend-platform/src/i18n/messages" to "./frontend-platform"...
+#124 5.404 Done.
+#124 5.404 Copying translations from "./translations_TEMP/translations/paragon/src/i18n/messages" to "./paragon"...
+#124 5.424 Done.
+#124 5.424 Copying translations from "./translations_TEMP/translations/frontend-component-header/src/i18n/messages" to "./frontend-component-header"...
+#124 5.445 Done.
+#124 5.445 Copying translations from "./translations_TEMP/translations/frontend-component-footer/src/i18n/messages" to "./frontend-component-footer"...
+#124 5.465 Done.
+#124 5.465 Copying translations from "./translations_TEMP/translations/frontend-app-profile/src/i18n/messages" to "./frontend-app-profile"...
+#124 5.474 Done.
+#124 5.474 Removing temporary directory...
+#124 5.485 Done.
+#124 5.485 
+#124 5.485 Translations pulled successfully!
+#124 5.486 ./node_modules/.bin/intl-imports.js frontend-platform paragon frontend-component-header frontend-component-footer frontend-app-profile
+#124 DONE 5.7s
+
+#112 [learning-prod 1/1] RUN npm run build
+#112 ...
+
+#125 [profile-common 6/6] COPY env.config.jsx /openedx/app
+#125 DONE 0.3s
+
+#112 [learning-prod 1/1] RUN npm run build
+#112 ...
+
+#126 [profile-prod 1/1] RUN npm run build
+#126 0.984 
+#126 0.984 > @edx/frontend-app-profile@1.0.0-semantically-released build
+#126 0.984 > fedx-scripts webpack
+#126 0.984 
+#126 1.056 Running with resolved config:
+#126 1.056 /openedx/app/node_modules/@openedx/frontend-build/config/webpack.prod.config.js
+#126 1.056 
+#126 1.623 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+#126 2.498 Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+#126 2.498   npx update-browserslist-db@latest
+#126 2.498   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#126 ...
+
+#112 [learning-prod 1/1] RUN npm run build
+#112 759.9 Webpack Bundle Analyzer saved report to /openedx/app/dist/report.html
+#112 760.6 assets by info 10.9 MiB [immutable]
+#112 760.6   assets by chunk 1.25 MiB (auxiliary name: app)
+#112 760.6     assets by path *.svg 25.3 KiB 7 assets
+#112 760.6     assets by path *.png 19.9 KiB 5 assets
+#112 760.6     assets by path *.gif 1.21 MiB 4 assets
+#112 760.6   assets by path *.js 8.82 MiB
+#112 760.6     assets by status 8.79 MiB [big] 2 assets
+#112 760.6     + 12 assets
+#112 760.6   assets by path *.css 829 KiB
+#112 760.6     asset paragon-theme-core.d83a38941b75d7b9dc13.css 610 KiB [emitted] [immutable] [big] (name: paragon-theme-core) (id hint: paragon-theme-core) 1 related asset
+#112 760.6     asset paragon-theme-variants-light.572cbf14cc0176080a11.css 187 KiB [emitted] [immutable] (name: paragon-theme-variants-light) (id hint: paragon-theme-variants-light) 1 related asset
+#112 760.6     asset app.ae1d8481ebd2d152fc4a.css 32 KiB [emitted] [immutable] (name: app) 1 related asset
+#112 760.6 asset index.html 949 bytes [emitted]
+#112 760.6 asset static/LmsHtmlFragment.css 128 bytes [emitted] [from: public/static/LmsHtmlFragment.css] [copied]
+#112 760.6 Entrypoint app [big] 8.83 MiB (13.5 MiB) = runtime.23709e57b3e556f9f803.js 3.79 KiB 76.f70d72069e0adfa4ffba.js 6.24 MiB app.ae1d8481ebd2d152fc4a.css 32 KiB app.ae1d8481ebd2d152fc4a.js 2.56 MiB 20 auxiliary assets
+#112 760.6 Entrypoint paragon.theme.core [big] 614 KiB (528 KiB) = runtime.23709e57b3e556f9f803.js 3.79 KiB paragon-theme-core.d83a38941b75d7b9dc13.css 610 KiB 2 auxiliary assets
+#112 760.6 Entrypoint paragon.theme.variants.light 191 KiB (208 KiB) = runtime.23709e57b3e556f9f803.js 3.79 KiB paragon-theme-variants-light.572cbf14cc0176080a11.css 187 KiB 2 auxiliary assets
+#112 760.6 orphan modules 10.2 MiB [orphan] 3873 modules
+#112 760.6 runtime modules 9.12 KiB 16 modules
+#112 760.6 cacheable modules 13.5 MiB (javascript) 829 KiB (css/mini-extract)
+#112 760.6   modules by path ./node_modules/ 10.7 MiB (javascript) 803 KiB (css/mini-extract)
+#112 760.6     javascript modules 10.7 MiB 774 modules
+#112 760.6     css modules 803 KiB 12 modules
+#112 760.6     json modules 47.3 KiB 9 modules
+#112 760.6   modules by path ./src/ 2.76 MiB (javascript) 26.6 KiB (css/mini-extract)
+#112 760.6     javascript modules 2.76 MiB 29 modules
+#112 760.6     css modules 26.6 KiB
+#112 760.6       css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[4]!./src/index.scss 25.8 KiB [built] [code generated]
+#112 760.6       css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[4]!./src/course-home/outline-tab/widgets/FlagButton.scss 627 bytes [built] [code generated]
+#112 760.6       css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[4]!./src/course-home/outline-tab/DateSummary.scss 215 bytes [built] [code generated]
+#112 760.6   ./env.config.jsx 8.63 KiB [built] [code generated]
+#112 760.6   readable-stream (ignored) 15 bytes [built] [code generated]
+#112 760.6 
+#112 760.6 WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+#112 760.6 This can impact web performance.
+#112 760.6 Assets: 
+#112 760.6   01745124440421a04acfaaf1f81143d4.gif (473 KiB)
+#112 760.6   a4d5e39caba4a4c6dd03b1765a423d7f.gif (652 KiB)
+#112 760.6   app.ae1d8481ebd2d152fc4a.js (2.56 MiB)
+#112 760.6   paragon-theme-core.d83a38941b75d7b9dc13.css (610 KiB)
+#112 760.6   76.f70d72069e0adfa4ffba.js (6.24 MiB)
+#112 760.6 
+#112 760.6 WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+#112 760.6 Entrypoints:
+#112 760.6   app (8.83 MiB)
+#112 760.6       runtime.23709e57b3e556f9f803.js
+#112 760.6       76.f70d72069e0adfa4ffba.js
+#112 760.6       app.ae1d8481ebd2d152fc4a.css
+#112 760.6       app.ae1d8481ebd2d152fc4a.js
+#112 760.6   paragon.theme.core (614 KiB)
+#112 760.6       runtime.23709e57b3e556f9f803.js
+#112 760.6       paragon-theme-core.d83a38941b75d7b9dc13.css
+#112 760.6 
+#112 760.6 webpack 5.99.6 compiled with 2 warnings in 742454 ms
+#112 761.7 npm notice
+#112 761.7 npm notice New minor version of npm available! 11.6.1 -> 11.12.1
+#112 761.7 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+#112 761.7 npm notice To update run: npm install -g npm@11.12.1
+#112 761.7 npm notice
+#112 DONE 762.0s
+
+#113 [authoring-prod 1/1] RUN npm run build
+#113 761.2 Webpack Bundle Analyzer saved report to /openedx/app/dist/report.html
+#113 762.1 assets by path *.js 18 MiB
+#113 762.1   assets by status 17.7 MiB [big] 3 assets
+#113 762.1   + 12 assets
+#113 762.1 assets by chunk 84.9 KiB (auxiliary name: app)
+#113 762.1   assets by path *.png 20.1 KiB 6 assets
+#113 762.1   assets by path *.svg 64.8 KiB
+#113 762.1     asset 54c2ffb7717f21032023b707a1599e50.svg 36 KiB [emitted] [immutable] [from: src/search-modal/images/empty-search.svg] (auxiliary name: app)
+#113 762.1     + 3 assets
+#113 762.1 assets by path *.css 1.15 MiB
+#113 762.1   asset paragon-theme-core.1b6268193e30e1dc9960.css 616 KiB [emitted] [immutable] [big] (name: paragon-theme-core) (id hint: paragon-theme-core) 1 related asset
+#113 762.1   asset paragon-theme-variants-light.06d9aa188a71482f8477.css 187 KiB [emitted] [immutable] (name: paragon-theme-variants-light) (id hint: paragon-theme-variants-light) 1 related asset
+#113 762.1   asset 489.6269a88432e6efda116c.css 180 KiB [emitted] [immutable] 1 related asset
+#113 762.1   + 2 assets
+#113 762.1 asset index.html 1.01 KiB [emitted]
+#113 762.1 Entrypoint app [big] 17.4 MiB (22.8 MiB) = runtime.a7565e7e01750cdf2b12.js 4.84 KiB 704.2f8be9a61bf16ce2cf61.css 102 KiB 704.2f8be9a61bf16ce2cf61.js 4.81 MiB app.adb2564f58761da08430.css 93.1 KiB app.adb2564f58761da08430.js 12.3 MiB 15 auxiliary assets
+#113 762.1 Entrypoint paragon.theme.core [big] 620 KiB (535 KiB) = runtime.a7565e7e01750cdf2b12.js 4.84 KiB paragon-theme-core.1b6268193e30e1dc9960.css 616 KiB 2 auxiliary assets
+#113 762.1 Entrypoint paragon.theme.variants.light 192 KiB (212 KiB) = runtime.a7565e7e01750cdf2b12.js 4.84 KiB paragon-theme-variants-light.06d9aa188a71482f8477.css 187 KiB 2 auxiliary assets
+#113 762.1 orphan modules 20.9 MiB [orphan] 4806 modules
+#113 762.1 runtime modules 11.5 KiB 16 modules
+#113 762.1 built modules 25.7 MiB (javascript) 1.15 MiB (css/mini-extract) [built]
+#113 762.1   modules by path ./node_modules/ 12.1 MiB (javascript) 905 KiB (css/mini-extract)
+#113 762.1     javascript modules 12.1 MiB 1160 modules
+#113 762.1     css modules 905 KiB 5 modules
+#113 762.1     json modules 16.1 KiB 3 modules
+#113 762.1   modules by path ./src/ 13.4 MiB (javascript) 93 KiB (css/mini-extract)
+#113 762.1     javascript modules 13.4 MiB 28 modules
+#113 762.1     css modules 93 KiB 20 modules
+#113 762.1   modules by path ./plugins/course-apps/ 133 KiB (javascript) 180 KiB (css/mini-extract)
+#113 762.1     optional modules 131 KiB [optional] 10 modules
+#113 762.1     ./plugins/course-apps/live/data/slice.js 1.38 KiB [built] [code generated]
+#113 762.1     css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[4]!./plugins/course-apps/xpert_unit_summary/settings-modal/SettingsModal.scss 180 KiB [built] [code generated]
+#113 762.1   ./env.config.jsx 8.63 KiB [built] [code generated]
+#113 762.1 
+#113 762.1 WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+#113 762.1 This can impact web performance.
+#113 762.1 Assets: 
+#113 762.1   app.adb2564f58761da08430.js (12.3 MiB)
+#113 762.1   paragon-theme-core.1b6268193e30e1dc9960.css (616 KiB)
+#113 762.1   704.2f8be9a61bf16ce2cf61.js (4.81 MiB)
+#113 762.1   143.80c865e1a84304be93ae.js (592 KiB)
+#113 762.1 
+#113 762.1 WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+#113 762.1 Entrypoints:
+#113 762.1   app (17.4 MiB)
+#113 762.1       runtime.a7565e7e01750cdf2b12.js
+#113 762.1       704.2f8be9a61bf16ce2cf61.css
+#113 762.1       704.2f8be9a61bf16ce2cf61.js
+#113 762.1       app.adb2564f58761da08430.css
+#113 762.1       app.adb2564f58761da08430.js
+#113 762.1   paragon.theme.core (620 KiB)
+#113 762.1       runtime.a7565e7e01750cdf2b12.js
+#113 762.1       paragon-theme-core.1b6268193e30e1dc9960.css
+#113 762.1 
+#113 762.1 webpack 5.101.3 compiled with 2 warnings in 741476 ms
+#113 763.6 npm notice
+#113 763.6 npm notice New minor version of npm available! 11.6.1 -> 11.12.1
+#113 763.6 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+#113 763.6 npm notice To update run: npm install -g npm@11.12.1
+#113 763.6 npm notice
+#113 DONE 763.8s
+
+#126 [profile-prod 1/1] RUN npm run build
+#126 ...
+
+#127 [production  5/13] COPY --from=authoring-prod /openedx/app/dist /openedx/dist/authoring
+#127 DONE 0.9s
+
+#126 [profile-prod 1/1] RUN npm run build
+#126 ...
+
+#128 [production  6/13] COPY --from=account-prod /openedx/app/dist /openedx/dist/account
+#128 DONE 0.5s
+
+#126 [profile-prod 1/1] RUN npm run build
+#126 ...
+
+#129 [production  7/13] COPY --from=communications-prod /openedx/app/dist /openedx/dist/communications
+#129 DONE 0.5s
+
+#126 [profile-prod 1/1] RUN npm run build
+#126 ...
+
+#130 [production  8/13] COPY --from=discussions-prod /openedx/app/dist /openedx/dist/discussions
+#130 DONE 0.6s
+
+#126 [profile-prod 1/1] RUN npm run build
+#126 ...
+
+#131 [production  9/13] COPY --from=gradebook-prod /openedx/app/dist /openedx/dist/gradebook
+#131 DONE 0.5s
+
+#126 [profile-prod 1/1] RUN npm run build
+#126 ...
+
+#132 [production 10/13] COPY --from=learner-dashboard-prod /openedx/app/dist /openedx/dist/learner-dashboard
+#132 DONE 0.6s
+
+#126 [profile-prod 1/1] RUN npm run build
+#126 ...
+
+#133 [production 11/13] COPY --from=learning-prod /openedx/app/dist /openedx/dist/learning
+#133 DONE 0.6s
+
+#126 [profile-prod 1/1] RUN npm run build
+#126 ...
+
+#134 [production 12/13] COPY --from=ora-grading-prod /openedx/app/dist /openedx/dist/ora-grading
+#134 DONE 0.5s
+
+#126 [profile-prod 1/1] RUN npm run build
+#126 74.35 Webpack Bundle Analyzer saved report to /openedx/app/dist/report.html
+#126 74.86 assets by path *.css 812 KiB
+#126 74.86   asset paragon-theme-core.8c489eb428e9f2640b57.css 616 KiB [emitted] [immutable] [big] (name: paragon-theme-core) (id hint: paragon-theme-core) 1 related asset
+#126 74.86   asset paragon-theme-variants-light.26b123e79bac09f12a2e.css 187 KiB [emitted] [immutable] (name: paragon-theme-variants-light) (id hint: paragon-theme-variants-light) 1 related asset
+#126 74.86   asset app.930cc3a04aa4be9cdb70.css 8.68 KiB [emitted] [immutable] (name: app) 1 related asset
+#126 74.86   asset 91.c5ad4044faa0b34593ba.css 1 bytes [emitted] [immutable] (id hint: vendors)
+#126 74.86 assets by chunk 26.1 KiB (auxiliary name: app)
+#126 74.86   asset a0f0370a16110ae560ce7ae7de5d9ffd.svg 12.7 KiB [emitted] [immutable] [from: src/profile/assets/verified-certificate.svg] (auxiliary name: app)
+#126 74.86   asset 82c9f268652fd1ed8271082f96f126b0.png 12 KiB [emitted] [immutable] [from: src/profile/assets/dot-pattern-light.png] [minimized] (auxiliary name: app)
+#126 74.86   asset b6332218bfc0017c876545f5051d24ac.svg 1010 bytes [emitted] [immutable] [from: src/profile/assets/avatar.svg] (auxiliary name: app)
+#126 74.86   asset 95ec738c0b7faac5b5c9126794446bbd.svg 342 bytes [emitted] [immutable] [from: node_modules/@openedx/paragon/dist/Avatar/default-avatar.svg] (auxiliary name: app)
+#126 74.86 assets by path *.js 2.5 MiB
+#126 74.86   asset 91.c5ad4044faa0b34593ba.js 2 MiB [emitted] [immutable] [minimized] [big] (id hint: vendors) 2 related assets
+#126 74.86   asset app.930cc3a04aa4be9cdb70.js 512 KiB [emitted] [immutable] [minimized] [big] (name: app) 1 related asset
+#126 74.86   asset runtime.e1a49a7328573de132e6.js 2.06 KiB [emitted] [immutable] [minimized] (name: runtime) 1 related asset
+#126 74.86 asset index.html 1020 bytes [emitted]
+#126 74.86 Entrypoint app [big] 2.51 MiB (6.92 MiB) = runtime.e1a49a7328573de132e6.js 2.06 KiB 91.c5ad4044faa0b34593ba.css 1 bytes 91.c5ad4044faa0b34593ba.js 2 MiB app.930cc3a04aa4be9cdb70.css 8.68 KiB app.930cc3a04aa4be9cdb70.js 512 KiB 8 auxiliary assets
+#126 74.86 Entrypoint paragon.theme.core [big] 618 KiB (523 KiB) = runtime.e1a49a7328573de132e6.js 2.06 KiB paragon-theme-core.8c489eb428e9f2640b57.css 616 KiB 2 auxiliary assets
+#126 74.86 Entrypoint paragon.theme.variants.light 189 KiB (200 KiB) = runtime.e1a49a7328573de132e6.js 2.06 KiB paragon-theme-variants-light.26b123e79bac09f12a2e.css 187 KiB 2 auxiliary assets
+#126 74.86 orphan modules 8.1 MiB [orphan] 3477 modules
+#126 74.86 runtime modules 4.91 KiB 11 modules
+#126 74.86 cacheable modules 5.36 MiB (javascript) 811 KiB (css/mini-extract) 1022 modules
+#126 74.86 
+#126 74.86 WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+#126 74.86 This can impact web performance.
+#126 74.86 Assets: 
+#126 74.86   app.930cc3a04aa4be9cdb70.js (512 KiB)
+#126 74.86   paragon-theme-core.8c489eb428e9f2640b57.css (616 KiB)
+#126 74.86   91.c5ad4044faa0b34593ba.js (2 MiB)
+#126 74.86 
+#126 74.86 WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+#126 74.86 Entrypoints:
+#126 74.86   app (2.51 MiB)
+#126 74.86       runtime.e1a49a7328573de132e6.js
+#126 74.86       91.c5ad4044faa0b34593ba.css
+#126 74.86       91.c5ad4044faa0b34593ba.js
+#126 74.86       app.930cc3a04aa4be9cdb70.css
+#126 74.86       app.930cc3a04aa4be9cdb70.js
+#126 74.86   paragon.theme.core (618 KiB)
+#126 74.86       runtime.e1a49a7328573de132e6.js
+#126 74.86       paragon-theme-core.8c489eb428e9f2640b57.css
+#126 74.86 
+#126 74.86 WARNING in webpack performance recommendations: 
+#126 74.86 You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+#126 74.86 For more info visit https://webpack.js.org/guides/code-splitting/
+#126 74.86 
+#126 74.86 webpack 5.101.3 compiled with 3 warnings in 68353 ms
+#126 75.21 npm notice
+#126 75.21 npm notice New minor version of npm available! 11.6.1 -> 11.12.1
+#126 75.21 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+#126 75.21 npm notice To update run: npm install -g npm@11.12.1
+#126 75.21 npm notice
+#126 DONE 75.4s
+
+#135 [production 13/13] COPY --from=profile-prod /openedx/app/dist /openedx/dist/profile
+#135 DONE 0.2s
+
+#136 exporting to image
+#136 exporting layers
+#136 exporting layers 0.4s done
+#136 writing image sha256:2474425da80ef45b0dd75f9a47370c9296ab6891eff1f4ca33783bc5639ec7e8 done
+#136 naming to docker.io/overhangio/openedx-mfe:21.0.0 0.0s done
+#136 DONE 0.5s

@@ -1,0 +1,13 @@
+# Replace git checkout with CBA catalog MFE sources from build context (synced by cba-theme on `tutor images build mfe`).
+RUN rm -rf /openedx/app
+COPY ./cba-catalog-override /openedx/app
+WORKDIR /openedx/app
+ARG NPM_REGISTRY={{ NPM_REGISTRY }}
+ENV CPPFLAGS=-DPNG_ARM_NEON_OPT=0
+ENV PACT_SKIP_BINARY_INSTALL=true
+RUN --mount=type=cache,target=/root/.npm,sharing=shared npm clean-install --no-audit --no-fund --registry=$NPM_REGISTRY
+# Atlas CLI is a bash script in node_modules/.bin; ensure a global atlas exists so pull_translations works even if
+# a cached npm ci layer or stale build context omitted local linked bins.
+RUN npm install -g @edx/openedx-atlas@^0.6.0 --registry=$NPM_REGISTRY
+RUN make OPENEDX_ATLAS_PULL=true ATLAS_OPTIONS="--repository={{ ATLAS_REPOSITORY }} --revision={{ ATLAS_REVISION }} {{ ATLAS_OPTIONS }}" pull_translations
+COPY env.config.jsx /openedx/app/

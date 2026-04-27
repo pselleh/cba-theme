@@ -19,4 +19,4 @@ where = ["."]
 include = ["tutor_cba_theme_content*"]
 
 [tool.setuptools.package-data]
-tutor_cba_theme_content = ["themes/**/*"]
+tutor_cba_theme_content = ["themes/**/*", "patches/*"]

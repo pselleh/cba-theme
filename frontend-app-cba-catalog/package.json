@@ -1,0 +1,53 @@
+{
+  "name": "@cba/frontend-app-cba-catalog",
+  "version": "0.1.0",
+  "description": "CBA catalog, courses, and programs MFE for Tutor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openedx/frontend-template-application.git"
+  },
+  "browserslist": [
+    "extends @edx/browserslist-config"
+  ],
+  "scripts": {
+    "build": "fedx-scripts webpack",
+    "i18n_extract": "fedx-scripts formatjs extract",
+    "lint": "fedx-scripts eslint --ext .jsx,.js src/",
+    "start": "fedx-scripts webpack-dev-server --progress",
+    "test": "TZ=GMT fedx-scripts jest --coverage --passWithNoTests"
+  },
+  "author": "CBA",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "@edx/brand": "npm:@openedx/brand-openedx@^1.2.2",
+    "@edx/frontend-platform": "^8.3.1",
+    "@edx/openedx-atlas": "^0.6.2",
+    "@openedx/paragon": "^23.4.5",
+    "core-js": "3.49.0",
+    "prop-types": "15.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "react-intl": "6.8.9",
+    "react-router-dom": "6.30.3",
+    "regenerator-runtime": "^0.14.0"
+  },
+  "devDependencies": {
+    "@edx/browserslist-config": "^1.3.0",
+    "@openedx/frontend-build": "^14.6.2",
+    "@svgr/webpack": "^8.1.0",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^5.2.7",
+    "file-loader": "^6.2.0",
+    "jest-expect-message": "^1.1.3",
+    "postcss": "^8.4.38",
+    "postcss-loader": "^4.3.0",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.77.0",
+    "sass-loader": "^13.3.3",
+    "source-map-loader": "^5.0.0",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
+  }
+}

@@ -1,0 +1,133 @@
+<%namespace name='static' file='../static_content.html'/>
+<%namespace name='cba' file='/cba_theme_urls.html'/>
+<%page expression_filter="h"/>
+<%! from django.utils.translation import gettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="title">Catalog - Center for Business Acceleration</%block>
+
+<%block name="content">
+<main class="cba-catalog-page">
+  <section class="cba-catalog-page__hero">
+    <h1 class="cba-catalog-page__title">Catalog</h1>
+    <p class="cba-catalog-page__lead">
+      Explore our latest courses and certification programs. Start here, then go deeper into each collection.
+    </p>
+  </section>
+
+  <section class="cba-catalog-page__section">
+    <div class="cba-catalog-page__section-head">
+      <h2 class="cba-catalog-page__section-title">Featured Courses</h2>
+      <a class="cba-catalog-page__section-link" href="${cba.apps_origin(request)}/catalog">View all courses →</a>
+    </div>
+    <div class="cba-catalog-page__grid">
+      <article class="cba-catalog-page__card">
+        <img class="cba-catalog-page__card-media" src="${static.url('images/hero-client-global-network.png')}" alt="" loading="lazy" decoding="async" />
+        <div class="cba-catalog-page__card-body">
+          <span class="cba-catalog-page__badge">Course</span>
+          <h3 class="cba-catalog-page__card-title">Enterprise Risk Management Foundations</h3>
+          <p class="cba-catalog-page__card-text">Build practical risk registers, controls, and reporting cadence for resilient operations.</p>
+          <div class="cba-catalog-page__meta">
+            <span class="cba-catalog-page__meta-item">Self-paced</span>
+            <span class="cba-catalog-page__meta-item">6 weeks</span>
+          </div>
+          <div class="cba-catalog-page__card-footer">
+            <span class="cba-catalog-page__price">$249</span>
+            <a class="cba-catalog-page__card-link" href="${cba.apps_origin(request)}/catalog">View course</a>
+          </div>
+        </div>
+      </article>
+      <article class="cba-catalog-page__card">
+        <img class="cba-catalog-page__card-media" src="${static.url('images/hero-client-global-network.png')}" alt="" loading="lazy" decoding="async" />
+        <div class="cba-catalog-page__card-body">
+          <span class="cba-catalog-page__badge">Course</span>
+          <h3 class="cba-catalog-page__card-title">Business Continuity Planning</h3>
+          <p class="cba-catalog-page__card-text">Design and test continuity plans that teams can execute under pressure.</p>
+          <div class="cba-catalog-page__meta">
+            <span class="cba-catalog-page__meta-item">Instructor-led</span>
+            <span class="cba-catalog-page__meta-item">4 weeks</span>
+          </div>
+          <div class="cba-catalog-page__card-footer">
+            <span class="cba-catalog-page__price">$199</span>
+            <a class="cba-catalog-page__card-link" href="${cba.apps_origin(request)}/catalog">View course</a>
+          </div>
+        </div>
+      </article>
+      <article class="cba-catalog-page__card">
+        <img class="cba-catalog-page__card-media" src="${static.url('images/hero-client-global-network.png')}" alt="" loading="lazy" decoding="async" />
+        <div class="cba-catalog-page__card-body">
+          <span class="cba-catalog-page__badge">Course</span>
+          <h3 class="cba-catalog-page__card-title">Governance and Leadership for Resilience</h3>
+          <p class="cba-catalog-page__card-text">Align board-level priorities, leadership, and resilience metrics across functions.</p>
+          <div class="cba-catalog-page__meta">
+            <span class="cba-catalog-page__meta-item">Self-paced</span>
+            <span class="cba-catalog-page__meta-item">5 weeks</span>
+          </div>
+          <div class="cba-catalog-page__card-footer">
+            <span class="cba-catalog-page__price">$279</span>
+            <a class="cba-catalog-page__card-link" href="${cba.apps_origin(request)}/catalog">View course</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="cba-catalog-page__section">
+    <div class="cba-catalog-page__section-head">
+      <h2 class="cba-catalog-page__section-title">Certification Programs</h2>
+      <a class="cba-catalog-page__section-link" href="${cba.apps_origin(request)}/programs">View all programs →</a>
+    </div>
+    <div class="cba-catalog-page__grid">
+      <article class="cba-catalog-page__card">
+        <img class="cba-catalog-page__card-media" src="${static.url('images/hero-client-global-network.png')}" alt="" loading="lazy" decoding="async" />
+        <div class="cba-catalog-page__card-body">
+          <span class="cba-catalog-page__badge">Program</span>
+          <h3 class="cba-catalog-page__card-title">CBA Resilience Certificate</h3>
+          <p class="cba-catalog-page__card-text">Structured learning path focused on governance, risk, and continuity capabilities.</p>
+          <div class="cba-catalog-page__meta">
+            <span class="cba-catalog-page__meta-item">10 weeks</span>
+            <span class="cba-catalog-page__meta-item">Certificate</span>
+          </div>
+          <div class="cba-catalog-page__card-footer">
+            <span class="cba-catalog-page__price">$1,199</span>
+            <a class="cba-catalog-page__card-link" href="${cba.apps_origin(request)}/programs">View program</a>
+          </div>
+        </div>
+      </article>
+      <article class="cba-catalog-page__card">
+        <img class="cba-catalog-page__card-media" src="${static.url('images/hero-client-global-network.png')}" alt="" loading="lazy" decoding="async" />
+        <div class="cba-catalog-page__card-body">
+          <span class="cba-catalog-page__badge">Program</span>
+          <h3 class="cba-catalog-page__card-title">Workplace Leadership Track</h3>
+          <p class="cba-catalog-page__card-text">For teams building leadership readiness and compliance-aligned operations.</p>
+          <div class="cba-catalog-page__meta">
+            <span class="cba-catalog-page__meta-item">Cohort</span>
+            <span class="cba-catalog-page__meta-item">12 weeks</span>
+          </div>
+          <div class="cba-catalog-page__card-footer">
+            <span class="cba-catalog-page__price">$1,499</span>
+            <a class="cba-catalog-page__card-link" href="${cba.apps_origin(request)}/programs">View program</a>
+          </div>
+        </div>
+      </article>
+      <article class="cba-catalog-page__card">
+        <img class="cba-catalog-page__card-media" src="${static.url('images/hero-client-global-network.png')}" alt="" loading="lazy" decoding="async" />
+        <div class="cba-catalog-page__card-body">
+          <span class="cba-catalog-page__badge">Program</span>
+          <h3 class="cba-catalog-page__card-title">VA Accelerator Pathway</h3>
+          <p class="cba-catalog-page__card-text">Veteran-focused pathway with grant-supported tuition and practical outcomes.</p>
+          <div class="cba-catalog-page__meta">
+            <span class="cba-catalog-page__meta-item">Instructor-led</span>
+            <span class="cba-catalog-page__meta-item">12 weeks</span>
+          </div>
+          <div class="cba-catalog-page__card-footer">
+            <span class="cba-catalog-page__price">Grant funded</span>
+            <a class="cba-catalog-page__card-link" href="${cba.apps_origin(request)}/programs">View program</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+</%block>
+

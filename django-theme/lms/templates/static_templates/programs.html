@@ -1,0 +1,219 @@
+<%namespace name='static' file='../static_content.html'/>
+<%namespace name='cba' file='/cba_theme_urls.html'/>
+<%page expression_filter="h"/>
+<%! from django.utils.translation import gettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="title">Certification Programs - Center for Business Acceleration</%block>
+
+<%block name="content">
+<main class="cba-catalog-page" data-filter-root>
+  <section class="cba-catalog-page__hero">
+    <h1 class="cba-catalog-page__title">Certification Programs</h1>
+    <p class="cba-catalog-page__lead">
+      Explore certification pathways designed for resilience, leadership, and workforce capability.
+    </p>
+  </section>
+
+  <section class="cba-catalog-page__section cba-catalog-page__layout">
+    <aside class="cba-catalog-page__sidebar">
+      <h2 class="cba-catalog-page__sidebar-title">Filter by</h2>
+      <section class="cba-catalog-page__group" data-group>
+        <button class="cba-catalog-page__group-toggle" type="button" data-group-toggle><span>Category</span><span class="cba-catalog-page__group-toggle-icon">▾</span></button>
+        <div class="cba-catalog-page__group-options">
+          <label class="cba-catalog-page__check"><input type="checkbox" data-filter-type="category" value="business"> Business</label>
+          <label class="cba-catalog-page__check"><input type="checkbox" data-filter-type="category" value="environmental"> Environmental</label>
+          <label class="cba-catalog-page__check"><input type="checkbox" data-filter-type="category" value="facility"> Facility</label>
+          <label class="cba-catalog-page__check"><input type="checkbox" data-filter-type="category" value="health-safety"> Health &amp; Safety</label>
+          <label class="cba-catalog-page__check"><input type="checkbox" data-filter-type="category" value="quality"> Quality</label>
+          <label class="cba-catalog-page__check"><input type="checkbox" data-filter-type="category" value="risk"> Risk</label>
+          <label class="cba-catalog-page__check"><input type="checkbox" data-filter-type="category" value="supply-chain"> Supply Chain</label>
+          <label class="cba-catalog-page__check"><input type="checkbox" data-filter-type="category" value="technology"> Technology</label>
+        </div>
+      </section>
+      <section class="cba-catalog-page__group" data-group>
+        <button class="cba-catalog-page__group-toggle" type="button" data-group-toggle><span>Learning format</span><span class="cba-catalog-page__group-toggle-icon">▾</span></button>
+        <div class="cba-catalog-page__group-options">
+          <label class="cba-catalog-page__check"><input type="checkbox" data-filter-type="format" value="self-paced"> Self-paced</label>
+          <label class="cba-catalog-page__check"><input type="checkbox" data-filter-type="format" value="hybrid"> Hybrid</label>
+          <label class="cba-catalog-page__check"><input type="checkbox" data-filter-type="format" value="instructor-paced"> Instructor-paced</label>
+        </div>
+      </section>
+      <section class="cba-catalog-page__group" data-group>
+        <button class="cba-catalog-page__group-toggle" type="button" data-group-toggle><span>Availability</span><span class="cba-catalog-page__group-toggle-icon">▾</span></button>
+        <div class="cba-catalog-page__group-options">
+          <label class="cba-catalog-page__check"><input type="checkbox" data-filter-type="availability" value="current"> Current</label>
+          <label class="cba-catalog-page__check"><input type="checkbox" data-filter-type="availability" value="upcoming"> Upcoming</label>
+          <label class="cba-catalog-page__check"><input type="checkbox" data-filter-type="availability" value="archived"> Archived</label>
+        </div>
+      </section>
+    </aside>
+    <div>
+      <div class="cba-catalog-page__results-head">
+        <p class="cba-catalog-page__results-count" data-results-count>Showing all programs</p>
+        <button class="cba-catalog-page__reset" type="button" data-reset-filters>Reset filters</button>
+      </div>
+
+      <div class="cba-catalog-page__grid" data-filter-grid>
+      <article class="cba-catalog-page__card" data-tags="business risk instructor-paced current">
+        <img class="cba-catalog-page__card-media" src="${static.url('images/hero-client-global-network.png')}" alt="" loading="lazy" decoding="async" />
+        <div class="cba-catalog-page__card-body">
+          <span class="cba-catalog-page__badge">Program</span>
+          <h3 class="cba-catalog-page__card-title">VA Accelerator Program</h3>
+          <p class="cba-catalog-page__card-text">Grant-supported pathway for veterans to develop practical resilience and leadership skills.</p>
+          <div class="cba-catalog-page__meta">
+            <span class="cba-catalog-page__meta-item">Instructor-led</span>
+            <span class="cba-catalog-page__meta-item">12 weeks</span>
+            <span class="cba-catalog-page__meta-item">Certificate</span>
+          </div>
+          <div class="cba-catalog-page__card-footer">
+            <span class="cba-catalog-page__price">Grant funded</span>
+            <a class="cba-catalog-page__card-link" href="${cba.apps_origin(request)}/programs">View program</a>
+          </div>
+        </div>
+      </article>
+      <article class="cba-catalog-page__card" data-tags="quality facility instructor-paced current">
+        <img class="cba-catalog-page__card-media" src="${static.url('images/hero-client-global-network.png')}" alt="" loading="lazy" decoding="async" />
+        <div class="cba-catalog-page__card-body">
+          <span class="cba-catalog-page__badge">Program</span>
+          <h3 class="cba-catalog-page__card-title">Workplace Resilience Certificate</h3>
+          <p class="cba-catalog-page__card-text">Team-focused program for building continuity, governance, and risk discipline at scale.</p>
+          <div class="cba-catalog-page__meta">
+            <span class="cba-catalog-page__meta-item">Cohort</span>
+            <span class="cba-catalog-page__meta-item">10 weeks</span>
+            <span class="cba-catalog-page__meta-item">Team license</span>
+          </div>
+          <div class="cba-catalog-page__card-footer">
+            <span class="cba-catalog-page__price">$1,499</span>
+            <a class="cba-catalog-page__card-link" href="${cba.apps_origin(request)}/programs">View program</a>
+          </div>
+        </div>
+      </article>
+      <article class="cba-catalog-page__card" data-tags="business technology self-paced upcoming">
+        <img class="cba-catalog-page__card-media" src="${static.url('images/hero-client-global-network.png')}" alt="" loading="lazy" decoding="async" />
+        <div class="cba-catalog-page__card-body">
+          <span class="cba-catalog-page__badge">Program</span>
+          <h3 class="cba-catalog-page__card-title">Personal Certification Track</h3>
+          <p class="cba-catalog-page__card-text">Flexible certification journey for professionals advancing their own capability.</p>
+          <div class="cba-catalog-page__meta">
+            <span class="cba-catalog-page__meta-item">Self-paced</span>
+            <span class="cba-catalog-page__meta-item">8 weeks</span>
+            <span class="cba-catalog-page__meta-item">Digital badge</span>
+          </div>
+          <div class="cba-catalog-page__card-footer">
+            <span class="cba-catalog-page__price">$899</span>
+            <a class="cba-catalog-page__card-link" href="${cba.apps_origin(request)}/programs">View program</a>
+          </div>
+        </div>
+      </article>
+      <article class="cba-catalog-page__card" data-tags="business risk hybrid current">
+        <img class="cba-catalog-page__card-media" src="${static.url('images/hero-client-global-network.png')}" alt="" loading="lazy" decoding="async" />
+        <div class="cba-catalog-page__card-body">
+          <span class="cba-catalog-page__badge">Program</span>
+          <h3 class="cba-catalog-page__card-title">Governance and Decision Excellence</h3>
+          <p class="cba-catalog-page__card-text">Program centered on decision-making quality, stakeholder trust, and strategic execution.</p>
+          <div class="cba-catalog-page__meta">
+            <span class="cba-catalog-page__meta-item">Instructor-led</span>
+            <span class="cba-catalog-page__meta-item">9 weeks</span>
+            <span class="cba-catalog-page__meta-item">Certificate</span>
+          </div>
+          <div class="cba-catalog-page__card-footer">
+            <span class="cba-catalog-page__price">$1,199</span>
+            <a class="cba-catalog-page__card-link" href="${cba.apps_origin(request)}/programs">View program</a>
+          </div>
+        </div>
+      </article>
+      <article class="cba-catalog-page__card" data-tags="supply-chain health-safety hybrid archived">
+        <img class="cba-catalog-page__card-media" src="${static.url('images/hero-client-global-network.png')}" alt="" loading="lazy" decoding="async" />
+        <div class="cba-catalog-page__card-body">
+          <span class="cba-catalog-page__badge">Program</span>
+          <h3 class="cba-catalog-page__card-title">Transition-to-Leadership Pathway</h3>
+          <p class="cba-catalog-page__card-text">Designed for service members and employers supporting structured career transition.</p>
+          <div class="cba-catalog-page__meta">
+            <span class="cba-catalog-page__meta-item">Blended</span>
+            <span class="cba-catalog-page__meta-item">11 weeks</span>
+            <span class="cba-catalog-page__meta-item">Career-focused</span>
+          </div>
+          <div class="cba-catalog-page__card-footer">
+            <span class="cba-catalog-page__price">$1,050</span>
+            <a class="cba-catalog-page__card-link" href="${cba.apps_origin(request)}/programs">View program</a>
+          </div>
+        </div>
+      </article>
+      <article class="cba-catalog-page__card" data-tags="facility risk instructor-paced upcoming">
+        <img class="cba-catalog-page__card-media" src="${static.url('images/hero-client-global-network.png')}" alt="" loading="lazy" decoding="async" />
+        <div class="cba-catalog-page__card-body">
+          <span class="cba-catalog-page__badge">Program</span>
+          <h3 class="cba-catalog-page__card-title">Organizational Continuity Program</h3>
+          <p class="cba-catalog-page__card-text">Builds repeatable continuity capability with tested scenarios and operational governance.</p>
+          <div class="cba-catalog-page__meta">
+            <span class="cba-catalog-page__meta-item">Team cohort</span>
+            <span class="cba-catalog-page__meta-item">14 weeks</span>
+            <span class="cba-catalog-page__meta-item">Capstone</span>
+          </div>
+          <div class="cba-catalog-page__card-footer">
+            <span class="cba-catalog-page__price">$1,790</span>
+            <a class="cba-catalog-page__card-link" href="${cba.apps_origin(request)}/programs">View program</a>
+          </div>
+        </div>
+      </article>
+      </div>
+      <p class="cba-catalog-page__empty" data-empty-state hidden>No programs match your selected filters.</p>
+    </div>
+  </section>
+</main>
+</%block>
+
+<%block name="js_extra">
+<script>
+(function () {
+  var root = document.querySelector('[data-filter-root]');
+  if (!root) return;
+  var checks = root.querySelectorAll('input[data-filter-type]');
+  var cards = root.querySelectorAll('[data-tags]');
+  var resultCount = root.querySelector('[data-results-count]');
+  var reset = root.querySelector('[data-reset-filters]');
+  var empty = root.querySelector('[data-empty-state]');
+  var groups = root.querySelectorAll('[data-group]');
+  var groupToggles = root.querySelectorAll('[data-group-toggle]');
+  function selectedValues(type) {
+    return Array.prototype.slice.call(root.querySelectorAll('input[data-filter-type="' + type + '"]:checked')).map(function (el) { return el.value; });
+  }
+  function applyFilters() {
+    var category = selectedValues('category');
+    var format = selectedValues('format');
+    var availability = selectedValues('availability');
+    var visible = 0;
+    cards.forEach(function (card) {
+      var tags = (card.getAttribute('data-tags') || '').split(/\s+/);
+      var categoryMatch = category.length === 0 || category.some(function (f) { return tags.indexOf(f) !== -1; });
+      var formatMatch = format.length === 0 || format.some(function (f) { return tags.indexOf(f) !== -1; });
+      var availabilityMatch = availability.length === 0 || availability.some(function (f) { return tags.indexOf(f) !== -1; });
+      var show = categoryMatch && formatMatch && availabilityMatch;
+      card.style.display = show ? '' : 'none';
+      if (show) visible += 1;
+    });
+    if (resultCount) resultCount.textContent = 'Showing ' + visible + ' program' + (visible === 1 ? '' : 's');
+    if (empty) empty.hidden = visible !== 0;
+  }
+  checks.forEach(function (check) { check.addEventListener('change', applyFilters); });
+  if (reset) {
+    reset.addEventListener('click', function () {
+      checks.forEach(function (check) { check.checked = false; });
+      applyFilters();
+    });
+  }
+  groupToggles.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var section = btn.closest('[data-group]');
+      if (section) section.classList.toggle('is-collapsed');
+    });
+  });
+  groups.forEach(function (group, index) {
+    if (index > 0) group.classList.add('is-collapsed');
+  });
+  applyFilters();
+})();
+</script>
+</%block>
+

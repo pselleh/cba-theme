@@ -1,6 +1,7 @@
 <%page expression_filter="h"/>
 <%inherit file="main.html" />
 <%namespace name='static' file='static_content.html'/>
+<%namespace name='cba' file='/cba_theme_urls.html'/>
 
 <%block name="headextra">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,12 +21,11 @@
         <div class="cba-home__hero-inner">
             <h1 class="cba-home__hero-title">Can you Afford to Be Unprepared?</h1>
             <p class="cba-home__hero-lead">
-                In today’s complex world, disconnected systems and unmanaged risk can derail even the best organizations.
-                We help you master business management systems and enterprise risk management — so you can lead with confidence.
+                In today’s complex world, unmanaged risk can derail even the strongest organizations. We help you build organizational resilience through strong governance &amp; leadership, enterprise risk management, and business continuity — so you can protect value and thrive under disruption.
             </p>
             <div class="cba-home__hero-actions">
-                <a class="cba-home__btn-hero" href="/courses">Take a course</a>
-                <a class="cba-home__btn-hero-secondary" href="/programs">Enroll in a Certificate Program</a>
+                <a class="cba-home__btn-hero" href="${cba.apps_origin(request)}/catalog">Take a course</a>
+                <a class="cba-home__btn-hero-secondary" href="${cba.apps_origin(request)}/programs">Enroll in a Certificate Program</a>
             </div>
         </div>
     </section>
@@ -53,7 +53,7 @@
                     <p>
                         Apply international standards in real operations — complete a single course or earn a full certificate you can take anywhere.
                     </p>
-                    <a class="cba-home__btn-tab" href="/courses">Explore individual learning</a>
+                    <a class="cba-home__btn-tab" href="${cba.apps_origin(request)}/catalog">Explore individual learning</a>
                 </div>
                 <div class="cba-home__tab-panel-img-wrap">
                     <img
@@ -74,7 +74,7 @@
                         Support your employees’ growth with targeted, skill-based training. Whether you’re upskilling a department
                         or onboarding new team members, our workplace programs deliver measurable results.
                     </p>
-                    <a class="cba-home__btn-tab" href="/programs">Discover workplace learning</a>
+                    <a class="cba-home__btn-tab" href="${cba.apps_origin(request)}/programs">Discover workplace learning</a>
                 </div>
                 <div class="cba-home__tab-panel-img-wrap">
                     <img
@@ -113,24 +113,40 @@
     </section>
 
     <section class="cba-home__block cba-home__block--white cba-home__why-resilience" aria-labelledby="why-resilience-heading">
-        <div class="cba-home__why cba-home__why--split">
-            <div class="cba-home__why-split">
-                <div class="cba-home__why-lead">
-                    <h2 id="why-resilience-heading" class="cba-home__section-heading">Why resilience matters</h2>
+        <div class="cba-home__why cba-home__why--with-visual">
+            <header class="cba-home__why-header">
+                <h2 id="why-resilience-heading" class="cba-home__section-heading">Why resilience matters</h2>
+                <p class="cba-home__why-deck">
+                    How strategy, trust, and continuity connect — from objectives and decisions to protection under disruption.
+                </p>
+            </header>
+            <div class="cba-home__why-visual-layout">
+                <figure class="cba-home__resilience-framework">
+                    <img
+                        class="cba-home__resilience-framework-img"
+                        src="${static.url('images/hero.svg')}"
+                        width="558"
+                        height="455"
+                        alt="Organizational resilience: strategic objectives, stakeholder confidence, decision making, business continuity, and asset protection."
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </figure>
+                <div class="cba-home__why-copy">
                     <div class="cba-home__why-body">
                         <p>Unmanaged risk slows momentum. Organizations that identify threats early, build continuity, and train leaders recover faster and scale with confidence.</p>
                         <p>This program gives your team a shared language for risk, compliance, and operational readiness — so acceleration is sustainable, not fragile.</p>
                     </div>
+                    <aside class="cba-home__why-outcomes" aria-labelledby="why-outcomes-heading">
+                        <h3 id="why-outcomes-heading" class="cba-home__why-subhead cba-home__why-subhead--outcomes">What you’ll achieve</h3>
+                        <ul class="cba-home__why-list">
+                            <li>Identify and assess risks early — before they become crises</li>
+                            <li>Build continuity plans that teams can actually run</li>
+                            <li>Align leadership decisions with sector-specific standards</li>
+                            <li>Demonstrate quality assurance to stakeholders &amp; partners</li>
+                        </ul>
+                    </aside>
                 </div>
-                <aside class="cba-home__why-outcomes" aria-labelledby="why-outcomes-heading">
-                    <h3 id="why-outcomes-heading" class="cba-home__why-subhead cba-home__why-subhead--outcomes">What you’ll achieve</h3>
-                    <ul class="cba-home__why-list">
-                        <li>Identify and assess risks early — before they become crises</li>
-                        <li>Build continuity plans that teams can actually run</li>
-                        <li>Align leadership decisions with sector-specific standards</li>
-                        <li>Demonstrate quality assurance to stakeholders &amp; partners</li>
-                    </ul>
-                </aside>
             </div>
         </div>
     </section>
@@ -138,7 +154,7 @@
     <section class="cba-home__block cba-home__block--surface cba-home__accredit" aria-labelledby="accredit-heading">
         <h2 id="accredit-heading" class="cba-home__section-heading cba-home__section-heading--center">Standards &amp; organizations</h2>
         <p class="cba-home__accredit-intro">
-            Our work maps to frameworks from recognized standards bodies — open each card to read more on the official site.
+            Our Education maps to frameworks from recognized standards bodies — open each card to read more on the official site.
         </p>
         <div class="cba-home__accredit-grid">
             <a class="cba-home__accredit-card" href="https://accet.org/" target="_blank" rel="noopener noreferrer">
@@ -187,13 +203,11 @@
 
     <section class="cba-home__block cba-home__block--surface cba-home__va" id="va-accelerator">
         <h2 class="cba-home__section-heading">VA Accelerator™</h2>
-        <p class="cba-home__va-lead">The VA Accelerator is exclusive for veterans.</p>
-        <p class="cba-home__va-text">
-            Our VA Accelerator program is designed to recognize your experience and help you move forward with confidence.
-            It provides a clear pathway through our comprehensive academics, leading to a valued certificate that prepares you better for your career.
-        </p>
         <p class="cba-home__va-highlight">
-            The <strong>VA Accelerator Tuition</strong> is solely funded through Veterans Benefits or Grants.
+            The <strong>VA Accelerator Tuition</strong> is solely funded through Grants.
+        </p>
+        <p class="cba-home__va-text">
+            Our Education maps to frameworks from recognized standards bodies — open each card to read more on the official site.
         </p>
 
         <div class="cba-home__va-subsections">
@@ -252,7 +266,7 @@
         <div class="cba-home__cta-band-inner">
             <h2>Don’t let unmanaged risk slow your momentum.</h2>
             <div class="cba-home__cta-buttons">
-                <a class="cba-home__btn-solid" href="/courses">Explore programs &amp; enroll →</a>
+                <a class="cba-home__btn-solid" href="${cba.apps_origin(request)}/catalog">Explore programs &amp; enroll →</a>
                 <a class="cba-home__btn-ghost" href="/contact">Request guidance</a>
             </div>
         </div>

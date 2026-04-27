@@ -1,0 +1,25 @@
+## Mako namespaces only expose <%def> names as attributes (e.g. cba.apps_origin).
+## A <%! def apps_origin(...) %> is module-level and is NOT visible on the namespace object.
+
+<%def name="apps_origin(request)">
+    <%
+    # Tutor MFE host: apps.<LMS_HOST> (same port as the request).
+    result = ''
+    if request is not None:
+        try:
+            scheme = request.scheme
+            host = request.get_host()
+            if host and scheme:
+                if host.startswith('['):
+                    result = scheme + '://' + host
+                else:
+                    host_only, sep, port = host.partition(':')
+                    port_suffix = sep + port if sep else ''
+                    if host_only.startswith('apps.'):
+                        result = scheme + '://' + host_only + port_suffix
+                    else:
+                        result = scheme + '://apps.' + host_only + port_suffix
+        except Exception:
+            result = ''
+    %>
+${result}</%def>

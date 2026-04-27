@@ -1,0 +1,358 @@
+/* Catalog / courses / programs — aligned with LMS .cba-catalog-page look */
+
+.cba-mfe-catalog {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+  box-sizing: border-box;
+}
+
+.cba-mfe-catalog__hero {
+  margin-bottom: 2rem;
+}
+
+.cba-mfe-catalog__title {
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--cba-text-primary);
+  margin: 0 0 0.7rem;
+}
+
+.cba-mfe-catalog__lead {
+  margin: 0;
+  color: var(--cba-text-secondary);
+  line-height: 1.6;
+  max-width: 46rem;
+}
+
+.cba-mfe-catalog__section {
+  margin-top: 2.2rem;
+}
+
+.cba-mfe-catalog__section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.cba-mfe-catalog__section-title {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--cba-text-primary);
+}
+
+.cba-mfe-catalog__section-link {
+  color: var(--cba-primary);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.cba-mfe-catalog__section-link:hover {
+  text-decoration: underline;
+}
+
+.cba-mfe-catalog__tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cba-mfe-catalog__tab {
+  border: 1px solid var(--cba-primary);
+  background: var(--cba-surface);
+  color: var(--cba-primary);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cba-mfe-catalog__tab.is-active {
+  background: var(--cba-primary);
+  color: var(--cba-text-on-dark);
+}
+
+.cba-mfe-catalog__layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+  gap: 1.25rem 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 991px) {
+  .cba-mfe-catalog__layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cba-mfe-catalog__sidebar {
+  border: 1px solid var(--cba-border);
+  background: var(--cba-card-bg);
+  border-radius: 12px;
+  padding: 0.9rem;
+  box-shadow: var(--cba-shadow-sm);
+  position: sticky;
+  top: 5.5rem;
+}
+
+@media (max-width: 991px) {
+  .cba-mfe-catalog__sidebar {
+    position: static;
+  }
+}
+
+.cba-mfe-catalog__sidebar-title {
+  margin: 0 0 0.7rem;
+  color: var(--cba-text-primary);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.cba-mfe-catalog__group {
+  border-top: 1px solid var(--cba-border);
+  padding-top: 0.65rem;
+  margin-top: 0.65rem;
+}
+
+.cba-mfe-catalog__group:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.cba-mfe-catalog__group-label {
+  margin: 0 0 0.45rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--cba-text-primary);
+}
+
+.cba-mfe-catalog__group-options {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.cba-mfe-catalog__check {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  color: var(--cba-text-muted);
+  font-size: 0.84rem;
+  line-height: 1.25;
+  cursor: pointer;
+}
+
+.cba-mfe-catalog__results-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.cba-mfe-catalog__results-count {
+  margin: 0;
+  color: var(--cba-text-secondary);
+  font-size: 0.92rem;
+}
+
+.cba-mfe-catalog__reset {
+  border: 1px solid var(--cba-border-strong);
+  background: var(--cba-surface);
+  border-radius: 8px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--cba-text-muted);
+  cursor: pointer;
+}
+
+.cba-mfe-catalog__reset:hover {
+  border-color: var(--cba-text-secondary);
+}
+
+.cba-mfe-catalog__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.cba-mfe-catalog__card {
+  border: 1px solid var(--cba-border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--cba-card-bg);
+  box-shadow: var(--cba-shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.cba-mfe-catalog__card-media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--cba-card-muted-bg);
+}
+
+.cba-mfe-catalog__card-body {
+  padding: 1rem 1.05rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  gap: 0.45rem;
+}
+
+.cba-mfe-catalog__badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cba-primary);
+  background: var(--cba-badge-bg);
+  border-radius: 6px;
+  padding: 0.2rem 0.45rem;
+  width: fit-content;
+}
+
+.cba-mfe-catalog__card-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--cba-text-primary);
+  line-height: 1.3;
+}
+
+.cba-mfe-catalog__card-text {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--cba-text-secondary);
+  line-height: 1.5;
+  flex: 1 1 auto;
+}
+
+.cba-mfe-catalog__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.65rem;
+}
+
+.cba-mfe-catalog__meta-item {
+  font-size: 0.78rem;
+  color: var(--cba-text-secondary);
+}
+
+.cba-mfe-catalog__card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.35rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--cba-border);
+}
+
+.cba-mfe-catalog__price {
+  font-weight: 800;
+  color: var(--cba-text-primary);
+  font-size: 0.95rem;
+}
+
+.cba-mfe-catalog__card-link {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--cba-primary);
+  text-decoration: none;
+}
+
+.cba-mfe-catalog__card-link:hover {
+  text-decoration: underline;
+}
+
+.cba-mfe-catalog__pagination {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.cba-mfe-catalog__page {
+  border: 1px solid var(--cba-border-strong);
+  background: var(--cba-surface);
+  color: var(--cba-text-muted);
+  border-radius: 8px;
+  min-width: 2rem;
+  padding: 0.3rem 0.55rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cba-mfe-catalog__page.is-active {
+  border-color: var(--cba-primary);
+  background: var(--cba-primary);
+  color: var(--cba-text-on-dark);
+}
+
+.cba-mfe-catalog__loading,
+.cba-mfe-catalog__error {
+  padding: 2rem 0;
+  color: var(--cba-text-secondary);
+}
+
+.cba-mfe-catalog__error {
+  color: var(--cba-warning-text);
+}
+
+/* Keep card heights visually consistent on /courses and /programs */
+.cba-catalog-page__grid > * {
+  height: 100%;
+}
+
+.cba-catalog-page__card {
+  height: 100%;
+}
+
+.cba-catalog-page__pagination {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.cba-catalog-page__page {
+  border: 1px solid var(--cba-border-strong, var(--cba-border));
+  background: var(--cba-surface);
+  color: var(--cba-text-muted);
+  border-radius: 8px;
+  min-width: 2rem;
+  padding: 0.3rem 0.55rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cba-catalog-page__page:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cba-catalog-page__page.is-active {
+  border-color: var(--cba-primary);
+  background: var(--cba-primary);
+  color: var(--cba-text-on-dark, #fff);
+}

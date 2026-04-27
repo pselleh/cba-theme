@@ -189,6 +189,16 @@ html[data-theme="dark"] body {
       box-shadow: none !important;
     }
 
+    &__why-deck {
+      color: var(--text-secondary) !important;
+    }
+
+    &__resilience-framework {
+      background: var(--bg-body) !important;
+      border-color: var(--border-color) !important;
+      box-shadow: none !important;
+    }
+
     &__section-lead,
     &__why-body p,
     &__why-list,
@@ -465,6 +475,70 @@ html[data-theme="dark"] body {
           color: var(--text-primary) !important;
         }
       }
+    }
+  }
+
+  .cba-catalog-page {
+    &__title,
+    &__section-title,
+    &__card-title {
+      color: var(--text-primary) !important;
+    }
+
+    &__lead,
+    &__card-text {
+      color: var(--text-secondary) !important;
+    }
+
+    &__card {
+      background: var(--bg-body) !important;
+      border-color: var(--border-color) !important;
+      box-shadow: none !important;
+    }
+
+    &__card-media {
+      border-color: var(--border-color) !important;
+      filter: brightness(0.9);
+    }
+
+    &__filter {
+      background: var(--bg-body) !important;
+      border-color: var(--border-color) !important;
+      color: var(--text-primary) !important;
+
+      &.is-active {
+        background: var(--text-primary) !important;
+        border-color: var(--text-primary) !important;
+        color: var(--bg-body) !important;
+      }
+    }
+
+    &__meta-item {
+      background: var(--bg-body) !important;
+      border-color: var(--border-color) !important;
+      color: var(--text-secondary) !important;
+    }
+
+    &__price {
+      color: var(--text-primary) !important;
+    }
+
+    &__sidebar,
+    &__empty {
+      background: var(--bg-body) !important;
+      border-color: var(--border-color) !important;
+      box-shadow: none !important;
+    }
+
+    &__sidebar-title,
+    &__group-toggle {
+      color: var(--text-primary) !important;
+    }
+
+    &__group-toggle-icon,
+    &__results-count,
+    &__check {
+      color: var(--text-secondary) !important;
     }
   }
   
