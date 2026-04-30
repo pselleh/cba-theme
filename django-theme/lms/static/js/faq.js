@@ -4,6 +4,7 @@
 
 (function() {
     'use strict';
+    var RECAPTCHA_SITE_KEY = '6LfKR8EsAAAAAKgwPEkhC2k97upjknJxXJ2u-Jm7';
 
     // FAQ: delegate on #faq so clicks on .faq-icon / text always hit the handler;
     // toggle display via inline !important so no stylesheet can keep answers hidden.
@@ -65,8 +66,23 @@
         if (!form) {
             return;
         }
+        var recaptchaWidgetId = null;
 
-        form.addEventListener('submit', function(e) {
+        function ensureRecaptchaWidget() {
+            if (recaptchaWidgetId !== null) return;
+            if (typeof grecaptcha === 'undefined' || !grecaptcha.enterprise || !grecaptcha.enterprise.render) return;
+            var slot = document.getElementById('contact-recaptcha-slot');
+            if (!slot) return;
+            recaptchaWidgetId = grecaptcha.enterprise.render(slot, {
+                sitekey: RECAPTCHA_SITE_KEY,
+                action: 'CONTACT'
+            });
+        }
+
+        var renderLoop = window.setInterval(ensureRecaptchaWidget, 350);
+        ensureRecaptchaWidget();
+
+        form.addEventListener('submit', async function(e) {
             e.preventDefault();
 
             // Reset validation
@@ -102,28 +118,26 @@
                 isValid = false;
             }
 
-            // Validate reCAPTCHA (script may still be loading)
+            // Validate reCAPTCHA widget response
             var recaptchaError = document.getElementById('recaptcha-error');
             var recaptchaResponse = '';
-            if (typeof grecaptcha !== 'undefined' && grecaptcha.getResponse) {
-                recaptchaResponse = grecaptcha.getResponse();
+            if (recaptchaWidgetId !== null && typeof grecaptcha !== 'undefined' && grecaptcha.enterprise && grecaptcha.enterprise.getResponse) {
+                recaptchaResponse = grecaptcha.enterprise.getResponse(recaptchaWidgetId);
             }
 
             if (!recaptchaResponse) {
-                if (recaptchaError) {
-                    recaptchaError.style.display = 'block';
-                }
+                if (recaptchaError) recaptchaError.style.display = 'block';
                 isValid = false;
-            } else if (recaptchaError) {
-                recaptchaError.style.display = 'none';
+            } else {
+                if (recaptchaError) recaptchaError.style.display = 'none';
             }
 
             if (isValid) {
                 console.log('Form is valid - submitting...');
                 alert('Thank you for your message! We will get back to you soon.');
                 form.reset();
-                if (typeof grecaptcha !== 'undefined' && grecaptcha.reset) {
-                    grecaptcha.reset();
+                if (recaptchaWidgetId !== null && typeof grecaptcha !== 'undefined' && grecaptcha.enterprise && grecaptcha.enterprise.reset) {
+                    grecaptcha.enterprise.reset(recaptchaWidgetId);
                 }
             } else {
                 var firstError = form.querySelector('.is-invalid');
@@ -162,6 +176,10 @@
                     }
                 }
             });
+        });
+
+        window.addEventListener('beforeunload', function() {
+            window.clearInterval(renderLoop);
         });
     }
 

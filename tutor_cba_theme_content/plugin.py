@@ -1,3 +1,4 @@
+import importlib.resources
 import os
 import shutil
 import subprocess
@@ -9,6 +10,8 @@ from tutor import fmt, hooks
 
 _REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 _DJANGO_THEME = os.path.join(_REPO_ROOT, "django-theme")
+_AUTHN_OVERRIDE = os.path.join(_REPO_ROOT, "authn-override")
+_MFE_BRAND = os.path.join(_REPO_ROOT, "mfe-brand")
 _BUILD_SCRIPT = os.path.join(_REPO_ROOT, "django-theme", "scripts", "build-theme.sh")
 
 _TUTOR_ROOT: str | None = None
@@ -60,6 +63,101 @@ def _run_lms_collectstatic(*, clear_first: bool = False) -> int:
 def _store_tutor_root(root: str) -> None:
     global _TUTOR_ROOT
     _TUTOR_ROOT = root
+
+
+def _resolved_tutor_root() -> str:
+    if _TUTOR_ROOT:
+        return _TUTOR_ROOT
+    env_root = os.environ.get("TUTOR_ROOT")
+    if env_root:
+        return env_root
+    return os.path.expanduser("~/.local/share/tutor")
+
+
+def _register_env_patches_from_package() -> None:
+    """Load tutor_cba_theme_content/patches/* into ENV_PATCHES."""
+    try:
+        pkg_files = importlib.resources.files("tutor_cba_theme_content")
+        pdir = pkg_files / "patches"
+    except (FileNotFoundError, TypeError, AttributeError, ModuleNotFoundError):
+        return
+    if not pdir.is_dir():
+        return
+    for entry in pdir.iterdir():
+        if not entry.is_file() or entry.name.startswith("."):
+            continue
+        try:
+            body = entry.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        hooks.Filters.ENV_PATCHES.add_item((entry.name, body))
+
+
+_register_env_patches_from_package()
+
+
+def _sync_authn_override_to_mfe_build_dir(tutor_root: str) -> None:
+    """Rsync repo authn-override/ into Tutor's MFE Docker build context."""
+    if not os.path.isdir(_AUTHN_OVERRIDE):
+        fmt.echo_info("cba-theme: authn-override/ missing — authn source override skipped.")
+        return
+    authn_dest = os.path.join(
+        tutor_root,
+        "env",
+        "plugins",
+        "mfe",
+        "build",
+        "mfe",
+        "authn-override",
+    )
+    os.makedirs(authn_dest, exist_ok=True)
+    fmt.echo_info(f"cba-theme: syncing authn-override → {authn_dest}")
+    subprocess.run(
+        ["rsync", "-a", "--delete", f"{_AUTHN_OVERRIDE}/", f"{authn_dest}/"],
+        check=True,
+    )
+
+
+def _sync_mfe_brand_to_mfe_build_dir(tutor_root: str) -> None:
+    """Rsync repo mfe-brand/ into Tutor's MFE Docker build context."""
+    if not os.path.isdir(_MFE_BRAND):
+        fmt.echo_info("cba-theme: mfe-brand/ missing — MFE brand override skipped.")
+        return
+    brand_dest = os.path.join(
+        tutor_root,
+        "env",
+        "plugins",
+        "mfe",
+        "build",
+        "mfe",
+        "mfe-brand-override",
+    )
+    os.makedirs(brand_dest, exist_ok=True)
+    fmt.echo_info(f"cba-theme: syncing mfe-brand → {brand_dest}")
+    subprocess.run(
+        ["rsync", "-a", "--delete", f"{_MFE_BRAND}/", f"{brand_dest}/"],
+        check=True,
+    )
+
+
+# Use LOW so this runs *after* DEFAULT callbacks that append the `mfe` image to the list.
+# (HIGH runs first; at that moment the list is still empty or missing `mfe`, so sync was skipped.)
+@hooks.Filters.IMAGES_BUILD.add(priority=hooks.priorities.LOW)
+def _sync_authn_override_into_build_context(build_images, config):
+    """Before `docker build` for image mfe, sync local authn overrides used by Dockerfile patches."""
+    if not any(name == "mfe" for name, *_ in build_images):
+        return build_images
+    _sync_authn_override_to_mfe_build_dir(_resolved_tutor_root())
+    return build_images
+
+
+@hooks.Filters.IMAGES_BUILD.add(priority=hooks.priorities.LOW)
+def _sync_mfe_brand_into_build_context(build_images, config):
+    """Before `docker build` for image mfe, sync local mfe-brand override sources."""
+    if not any(name == "mfe" for name, *_ in build_images):
+        return build_images
+    _sync_mfe_brand_to_mfe_build_dir(_resolved_tutor_root())
+    return build_images
 
 
 def _should_sync_theme_into_tutor_env() -> bool:
@@ -228,6 +326,20 @@ def cba_theme_collectstatic(clear_first: bool) -> None:
     if rc != 0:
         raise SystemExit(rc)
     fmt.echo_info("cba-theme: done. Hard-refresh the browser (Ctrl+Shift+R) if styles look cached.")
+
+
+@cba_theme_cli.command("sync-mfe-overrides")
+def cba_theme_sync_mfe_overrides() -> None:
+    """
+    Copy authn-override/ and mfe-brand/ into Tutor's MFE Docker build directory.
+
+    Use after changing those folders, then ``tutor images build mfe``. (The automatic
+    sync during image build had a priority bug before; this command is always safe.)
+    """
+    root = _resolved_tutor_root()
+    _sync_authn_override_to_mfe_build_dir(root)
+    _sync_mfe_brand_to_mfe_build_dir(root)
+    fmt.echo_info("cba-theme: MFE override sync done.")
 
 
 hooks.Filters.CLI_COMMANDS.add_item(cba_theme_cli)

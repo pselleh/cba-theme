@@ -13,12 +13,26 @@
     (function () {
         try {
             var k = 'cba-theme';
-            var v = localStorage.getItem(k);
+            function getCookie(name) {
+                var source = document.cookie || '';
+                var parts = source.split('; ');
+                for (var i = 0; i < parts.length; i += 1) {
+                    var item = parts[i];
+                    var eq = item.indexOf('=');
+                    if (eq < 0) {
+                        continue;
+                    }
+                    var key = item.slice(0, eq);
+                    if (key === name) {
+                        return decodeURIComponent(item.slice(eq + 1));
+                    }
+                }
+                return null;
+            }
+            var v = getCookie(k) || localStorage.getItem(k);
             var dark;
             if (v === 'dark' || v === 'light') {
                 dark = v === 'dark';
-            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                dark = true;
             } else {
                 dark = false;
             }
@@ -55,19 +69,49 @@
     (function () {
         'use strict';
         var THEME_KEY = 'cba-theme';
+        function getCookie(name) {
+            var source = document.cookie || '';
+            var parts = source.split('; ');
+            for (var i = 0; i < parts.length; i += 1) {
+                var item = parts[i];
+                var eq = item.indexOf('=');
+                if (eq < 0) {
+                    continue;
+                }
+                var key = item.slice(0, eq);
+                if (key === name) {
+                    return decodeURIComponent(item.slice(eq + 1));
+                }
+            }
+            return null;
+        }
+        function cookieDomainForHost(hostname) {
+            if (!hostname || hostname === 'localhost' || /^[\d.]+$/.test(hostname)) {
+                return '';
+            }
+            var parts = hostname.split('.');
+            if (parts.length >= 3) {
+                return '.' + parts.slice(-3).join('.');
+            }
+            return '.' + hostname;
+        }
+        function setThemeCookie(value) {
+            var domain = cookieDomainForHost(window.location.hostname);
+            var secure = window.location.protocol === 'https:' ? '; Secure' : '';
+            var domainPart = domain ? '; Domain=' + domain : '';
+            document.cookie = THEME_KEY + '=' + encodeURIComponent(value) + '; Path=/; Max-Age=31536000; SameSite=Lax' + domainPart + secure;
+        }
         function storageGet(key) {
-            try { return localStorage.getItem(key); } catch (e) { return null; }
+            try { return getCookie(key) || localStorage.getItem(key); } catch (e) { return getCookie(key); }
         }
         function storageSet(key, value) {
             try { localStorage.setItem(key, value); } catch (e) {}
+            setThemeCookie(value);
         }
         function getPreferredTheme() {
             var saved = storageGet(THEME_KEY);
             if (saved === 'dark' || saved === 'light') {
                 return saved;
-            }
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                return 'dark';
             }
             return 'light';
         }

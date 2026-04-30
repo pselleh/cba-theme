@@ -210,7 +210,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
   }
 
   &__tab-pill {
@@ -234,7 +234,7 @@
 
   &__tab-panels {
     // Reserve vertical space so tab switches do not jump (cover longest copy + image row)
-    min-height: 36rem;
+    min-height: 0;
 
     @media (max-width: 768px) {
       min-height: 0;
@@ -245,9 +245,9 @@
     display: none;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    align-items: stretch;
+    align-items: start;
     // Same floor height for all three tabs on desktop (avoids layout shift when switching)
-    min-height: 35rem;
+    min-height: 0;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
@@ -267,13 +267,14 @@
       margin-bottom: 1.25rem;
     }
 
-    // Center copy + CTA in the text column (image column stays visually balanced)
+    // Keep copy and CTA closer to tab controls to reduce empty space.
     > div:first-child {
       text-align: left;
       display: flex;
       flex-direction: column;
       align-items: start;
-      justify-content: center;
+      justify-content: flex-start;
+      padding-top: 40px;
 
 
       p:last-of-type {
@@ -298,11 +299,12 @@
 
   &__tab-panel-img-wrap {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     text-align: center;
-    min-height: 280px;
+    min-height: 0;
     align-self: stretch;
+    position: relative;
 
     @media (max-width: 768px) {
       min-height: 220px;
@@ -310,11 +312,25 @@
   }
 
   &__tab-panel-img {
-    max-width: 100%;
-    width: auto;
-    height: auto;
+    width: 100%;
+    max-width: 460px;
+    height: 400px;
     object-fit: contain;
     border-radius: $radius-base;
+
+    @media (min-width: 769px) {
+      position: absolute;
+      top: -70px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: auto;
+      max-height: 320px;
+      object-fit: contain;
+    }
   }
 
   &__btn-tab {
@@ -338,27 +354,63 @@
     margin: 0 auto;
   }
 
-  &__why--split {
+  // “Why resilience matters” — headline + 2-col (copy + outcomes | diagram card)
+  &__why--with-visual {
     max-width: 100%;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
-  &__why-split {
-    display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-    gap: 2.5rem 3rem;
-    align-items: start;
+  &__why-header {
+    text-align: center;
+    max-width: 40rem;
+    margin: 0 auto 2.25rem;
 
-    @media (max-width: 900px) {
-      grid-template-columns: 1fr;
-      gap: 2.25rem;
+    .cba-home__section-heading {
+      margin-bottom: 0.65rem;
     }
   }
 
-  &__why-lead {
-    .cba-home__section-heading {
-      text-align: left;
-      margin-bottom: 1.35rem;
+  &__why-deck {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: $cba-gray;
+  }
+
+  &__why-visual-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem 2.5rem;
+
+    .cba-home__why-copy {
+      flex: 1 1 56%;
+      min-width: 0;
+      display: grid;
+      gap: 1.2rem;
+      align-content: start;
+    }
+
+    .cba-home__resilience-framework {
+      flex: 0 1 44%;
+      min-width: 260px;
+      align-self: stretch;
+    }
+
+    @media (max-width: 900px) {
+      display: block;
+      gap: 1.75rem;
+
+      .cba-home__resilience-framework {
+        align-self: start;
+        max-width: 28rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        min-width: 0;
+        margin-bottom: 1.25rem;
+      }
     }
   }
 
@@ -369,10 +421,6 @@
     border: 1px solid $cba-border;
     background: $cba-surface;
     box-shadow: $shadow-sm;
-
-    @media (min-width: 901px) {
-      margin-top: 0.15rem;
-    }
 
     @media (max-width: 900px) {
       padding: 1.25rem 1.35rem 1.4rem;
@@ -427,6 +475,30 @@
         color: $cba-teal;
       }
     }
+  }
+
+  // Framework diagram (hero.svg) — paired with copy in &__why-visual-layout
+  &__resilience-framework {
+    margin: 0;
+    padding: 0.25rem;
+    border-radius: 12px;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    text-align: center;
+    min-height: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  &__resilience-framework-img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    object-fit: contain;
+    margin: 0 auto;
   }
 
   &__accredit {
@@ -601,7 +673,14 @@
     color: $cba-gray;
     font-size: 0.98rem;
     line-height: 1.55;
-    margin: 0;
+    margin: 0 0 0.9rem;
+  }
+
+  // Smaller CTA buttons specifically for VA subsection cards.
+  &__va-sub .cba-home__btn-tab {
+    padding: 0.58rem 1rem;
+    font-size: 0.86rem;
+    border-radius: 7px;
   }
 
   &__acceleration {
