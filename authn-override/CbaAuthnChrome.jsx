@@ -33,6 +33,8 @@ function setThemeCookie(value) {
 }
 
 export default function CbaAuthnChrome({ children }) {
+  console.log('=== CBA AuthnChrome loaded ===');
+
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
