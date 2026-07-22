@@ -4,3 +4,7 @@ django-theme/node_modules/
 *.pyo
 .env
 .DS_Store
+*.bak
+*.backup
+*.bak.*
+*.backup.*
