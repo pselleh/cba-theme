@@ -1,6 +1,7 @@
-COPY ./authn-override/CbaAuthnChrome.jsx /openedx/app/src/CbaAuthnChrome.jsx
-COPY ./authn-override/MainApp.jsx /openedx/app/src/MainApp.jsx
-COPY ./authn-override/index.jsx /openedx/app/src/index.jsx
-COPY ./authn-override/styles.scss /openedx/app/src/styles.scss
-COPY ./mfe-brand-override/src/components/Header.jsx /openedx/app/src/cba-shell/Header.jsx
-COPY ./mfe-brand-override/src/components/Footer.jsx /openedx/app/src/cba-shell/Footer.jsx
+COPY ./cba-mfe/authn/CbaAuthnChrome.jsx /openedx/app/src/CbaAuthnChrome.jsx
+COPY ./cba-mfe/authn/MainApp.jsx /openedx/app/src/MainApp.jsx
+COPY ./cba-mfe/authn/index.jsx /openedx/app/src/index.jsx
+COPY ./cba-mfe/authn/styles.scss /openedx/app/src/styles.scss
+
+COPY ./cba-mfe/components/Header.jsx /openedx/app/src/cba-shell/Header.jsx
+COPY ./cba-mfe/components/Footer.jsx /openedx/app/src/cba-shell/Footer.jsx
