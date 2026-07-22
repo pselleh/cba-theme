@@ -4,7 +4,7 @@ import Header from './cba-shell/Header';
 import Footer from './cba-shell/Footer';
 
 const THEME_KEY = 'cba-theme';
-const RECAPTCHA_SITE_KEY = '6LfBVV0tAAAAAI2M3K2FFcMz2tbLZ2EXgkAo81G_';
+const RECAPTCHA_SITE_KEY = '6LfKR8EsAAAAAKgwPEkhC2k97upjknJxXJ2u-Jm7';
 
 function getCookie(name) {
   if (typeof document === 'undefined') return null;

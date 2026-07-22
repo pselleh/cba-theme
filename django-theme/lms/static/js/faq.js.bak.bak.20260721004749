@@ -4,7 +4,7 @@
 
 (function() {
     'use strict';
-    var RECAPTCHA_SITE_KEY = '6LfBVV0tAAAAAI2M3K2FFcMz2tbLZ2EXgkAo81G_';
+    var RECAPTCHA_SITE_KEY = '6LfKR8EsAAAAAKgwPEkhC2k97upjknJxXJ2u-Jm7';
 
     // FAQ: delegate on #faq so clicks on .faq-icon / text always hit the handler;
     // toggle display via inline !important so no stylesheet can keep answers hidden.

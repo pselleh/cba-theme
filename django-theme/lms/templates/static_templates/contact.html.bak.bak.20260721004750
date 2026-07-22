@@ -672,7 +672,7 @@
 
 <%block name="js_extra">
     <!-- Google reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=explicit&sitekey=6LfBVV0tAAAAAI2M3K2FFcMz2tbLZ2EXgkAo81G_" async defer></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=explicit&sitekey=6LfKR8EsAAAAAKgwPEkhC2k97upjknJxXJ2u-Jm7" async defer></script>
     
     <!-- FAQ and Contact Form JavaScript -->
     <script src="${static.url('js/faq.js')}"></script>
