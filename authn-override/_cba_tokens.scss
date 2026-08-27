@@ -1,0 +1,145 @@
+// CBA design tokens — navy / red / gold / ice only (no teal)
+
+:root {
+  // Core redesign
+  --cba-navy: #122a4d;
+  --cba-navy-dark: #0b1d38;
+  --cba-brand-navy: #122a4d;
+  --cba-red: #c31f2e;
+  --cba-red-hover: #a11824;
+  --cba-gold: #d9a441;
+  --cba-ice: #eef3f9;
+  --cba-gray: #5b6470;
+  --cba-line: #e3e8ef;
+  --cba-white: #ffffff;
+
+  --cba-slate: #122a4d;
+  --cba-slate-light: #334155;
+  --cba-amber: #d9a441;
+  --cba-amber-hover: #b88a35;
+  --cba-surface: #eef3f9;
+  --cba-text-muted: #94a3b8;
+
+  // Semantic roles
+  --cba-primary: #122a4d;
+  --cba-secondary: #5b6470;
+  --cba-accent: #c31f2e;
+  --cba-dark: #122a4d;
+  --cba-light: #eef3f9;
+  --cba-text-on-dark: #ffffff;
+
+  --bg-body: #ffffff;
+  --bg-surface: #eef3f9;
+  --bg-elevated: #ffffff;
+  --bg-hero: #122a4d;
+
+  --text-primary: #122a4d;
+  --text-secondary: #5b6470;
+  --text-muted: #94a3b8;
+
+  --border-color: #e3e8ef;
+  --divider-color: #e3e8ef;
+
+  --card-bg: #ffffff;
+  --navbar-bg: #ffffff;
+  --navbar-bg-end: #ffffff;
+  --navbar-text: #122a4d;
+  --footer-bg: #0b1d38;
+
+  --shadow-sm: 0 2px 4px rgba(18, 42, 77, 0.08);
+  --shadow-base: 0 4px 12px rgba(18, 42, 77, 0.1);
+  --shadow-lg: 0 8px 24px rgba(18, 42, 77, 0.12);
+
+  --tab-bg: #eef3f9;
+  --tab-active-bg: #122a4d;
+  --tab-text: #122a4d;
+  --tab-active-text: #ffffff;
+
+  --btn-outline-border: #122a4d;
+  --btn-outline-text: #122a4d;
+  --btn-outline-hover-bg: #122a4d;
+  --btn-outline-hover-text: #ffffff;
+
+  --cba-focus-ring: 0 0 0 3px rgba(18, 42, 77, 0.12);
+  --cba-shadow-card: 0 6px 22px rgba(18, 42, 77, 0.08);
+  --cba-font: 'IBM Plex Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --cba-radius-field: 3px;
+  --cba-radius-card: 4px;
+
+  // AuthN chrome / forms
+  --on-dark-high: rgba(255, 255, 255, 0.96);
+  --on-dark: rgba(255, 255, 255, 0.88);
+  --on-dark-border: rgba(255, 255, 255, 0.2);
+  --on-dark-hover: rgba(255, 255, 255, 0.08);
+  --on-dark-hover-soft: rgba(255, 255, 255, 0.06);
+  --switch-track: #e3e8ef;
+  --switch-knob: #ffffff;
+  --panel-border-subtle: rgba(227, 232, 239, 0.95);
+  --field-bg: var(--bg-elevated);
+  --field-text: var(--text-primary);
+  --field-placeholder: var(--text-muted);
+  --pgn-color-white: var(--bg-elevated);
+}
+
+html[data-theme='dark'] {
+  --cba-primary: #f1f5f9;
+  --cba-secondary: #a8b3c0;
+  --cba-accent: #c31f2e;
+  --cba-gray: #94a3b8;
+  --cba-ice: #0b0f14;
+  --cba-line: #2a3544;
+  --cba-surface: #1e293b;
+  --cba-navy: #f1f5f9;
+  --cba-navy-dark: #0b0f14;
+  --cba-red: #c31f2e;
+  --cba-red-hover: #a11824;
+  --cba-gold: #d9a441;
+  --cba-white: #ffffff;
+
+  --bg-body: #0b0f14;
+  --bg-surface: #1e293b;
+  --bg-elevated: #151b24;
+  --bg-hero: #0b1d38;
+
+  --text-primary: #f1f5f9;
+  --text-secondary: #a8b3c0;
+  --text-muted: #7c8796;
+
+  --border-color: #2a3544;
+  --divider-color: #2a3544;
+
+  --card-bg: #151b24;
+  --navbar-bg: #0f141c;
+  --navbar-bg-end: #0f141c;
+  --navbar-text: #f1f5f9;
+  --footer-bg: #0b1d38;
+
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
+  --shadow-base: 0 6px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.45);
+
+  --tab-bg: #0b0f14;
+  --tab-active-bg: #c31f2e;
+  --tab-text: #a8b3c0;
+  --tab-active-text: #ffffff;
+
+  --btn-outline-border: #f1f5f9;
+  --btn-outline-text: #f1f5f9;
+  --btn-outline-hover-bg: #334155;
+  --btn-outline-hover-text: #ffffff;
+
+  --on-dark-high: var(--text-primary);
+  --on-dark: var(--text-secondary);
+  --on-dark-border: var(--border-color);
+  --on-dark-hover: rgba(255, 255, 255, 0.08);
+  --on-dark-hover-soft: rgba(255, 255, 255, 0.06);
+  --switch-track: rgba(255, 255, 255, 0.28);
+  --switch-knob: #f1f5f9;
+  --panel-border-subtle: var(--border-color);
+  --field-bg: var(--bg-body);
+  --field-text: var(--text-primary);
+  --field-placeholder: var(--text-muted);
+  --pgn-color-white: var(--bg-body);
+
+  --cba-focus-ring: 0 0 0 3px rgba(195, 31, 46, 0.28);
+}

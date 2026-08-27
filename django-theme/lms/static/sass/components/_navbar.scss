@@ -94,7 +94,7 @@ body {
 
   .nav-item .cba-nav__enroll {
     display: inline-block;
-    background: $cba-amber;
+    background: $cba-red;
     color: $cba-white !important;
     padding: 0.65rem 1.25rem;
     border-radius: 6px;
@@ -110,7 +110,7 @@ body {
     }
 
     &:hover {
-      background: $cba-amber-hover;
+      background: $cba-red-hover;
       color: $cba-white !important;
     }
   }

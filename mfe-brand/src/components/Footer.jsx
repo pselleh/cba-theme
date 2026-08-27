@@ -1,48 +1,65 @@
-export default function Footer() {
-  const lms = (() => {
-    if (typeof window === 'undefined') return '';
+import { getConfig } from '@edx/frontend-platform';
+
+import { CBA_MARKETING_HOME } from '../data/constants';
+
+function themeImage(filename) {
+  if (typeof window !== 'undefined') {
     const host = window.location.hostname || '';
-    const lmsHost = host.indexOf('apps.') === 0 ? host.slice(5) : host;
-    const port = window.location.port ? `:${window.location.port}` : '';
-    return `${window.location.protocol}//${lmsHost}${port}`;
-  })();
+    if (host === 'localhost' || host === '127.0.0.1') {
+      return `/static/cba-theme/images/${filename}`;
+    }
+  }
+  const lms = (getConfig().LMS_BASE_URL || '').replace(/\/$/, '');
+  if (lms) {
+    return `${lms}/static/cba-theme/images/${filename}`;
+  }
+  return `${CBA_MARKETING_HOME}/static/cba/images/${filename}`;
+}
+
+export default function Footer() {
+  const home = CBA_MARKETING_HOME;
+  const logo = themeImage('logo.svg');
 
   return (
     <footer className="footer">
       <div className="section-inner">
-        <div className="row align-items-center mb-4">
+        <div className="row align-items-center footer-top">
           <div className="col-md-4">
-            <div className="d-flex align-items-center">
-              <img src={`${lms}/static/cba-theme/images/logo.svg`} alt="Center for Business Acceleration" />
+            <div className="footer-brand d-flex align-items-center">
+              <a href={`${home}/`}>
+                <img src={logo} alt="Center for Business Acceleration" />
+              </a>
             </div>
           </div>
 
           <div className="col-md-8">
-            <div className="d-flex justify-content-center justify-content-md-end">
-              <ul className="list-unstyled d-flex flex-column flex-md-row mb-0">
-                <li><a href={`${lms}/about`}>About</a></li>
-                <li><a href={`${lms}/courses`}>Catalog</a></li>
-                <li><a href={`${lms}/programs`}>Our Programs</a></li>
-                <li><a href={`${lms}/credentialing`}>Credentialing</a></li>
-                <li><a href={`${lms}/contact`}>Contact Us</a></li>
+            <nav className="footer-nav" aria-label="Footer">
+              <ul className="footer-main-links list-unstyled mb-0">
+                <li><a href={`${home}/`}>Home</a></li>
+                <li><a href={`${home}/about`}>About</a></li>
+                <li><a href={`${home}/contact`}>Contact</a></li>
               </ul>
-            </div>
+            </nav>
           </div>
         </div>
 
-        <hr />
+        <nav className="footer-legal-links footer-legal-links--mobile" aria-label="Legal">
+          <a href={`${home}/privacy`}>Privacy</a>
+          <a href={`${home}/terms`}>Terms</a>
+          <a href={`${home}/cookies`}>Cookies</a>
+        </nav>
 
-        <div className="row align-items-center">
-          <div className="col-12 text-center">
-            <div className="d-flex flex-column flex-md-row justify-content-center align-items-center footer-bottom">
-              <p>© 2025 Center for Business Acceleration. All rights reserved.</p>
-              <div className="d-flex flex-column flex-md-row footer-links">
-                <a href={`${lms}/privacy`}>Privacy</a>
-                <a href={`${lms}/tos`}>Terms</a>
-                <a href={`${lms}/cookies`}>Cookies</a>
-              </div>
-            </div>
-          </div>
+        <hr className="footer-divider" />
+
+        <div className="footer-bottom">
+          <p className="footer-copyright mb-0">
+            © 2025 Center for Business Acceleration. All rights reserved.
+          </p>
+          <nav className="footer-legal-links footer-legal-links--desktop" aria-label="Legal">
+            <a href={`${home}/privacy`}>Privacy</a>
+            <a href={`${home}/terms`}>Terms</a>
+            <a href={`${home}/cookies`}>Cookies</a>
+          </nav>
         </div>
       </div>
     </footer>

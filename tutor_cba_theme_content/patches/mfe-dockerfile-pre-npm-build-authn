@@ -2,5 +2,8 @@ COPY ./authn-override/CbaAuthnChrome.jsx /openedx/app/src/CbaAuthnChrome.jsx
 COPY ./authn-override/MainApp.jsx /openedx/app/src/MainApp.jsx
 COPY ./authn-override/index.jsx /openedx/app/src/index.jsx
 COPY ./authn-override/styles.scss /openedx/app/src/styles.scss
+COPY ./authn-override/_cba_tokens.scss /openedx/app/src/sass/_cba_tokens.scss
+COPY ./authn-override/_cba_chrome.scss /openedx/app/src/sass/_cba_chrome.scss
+COPY ./authn-override/_cba_auth_dark.scss /openedx/app/src/sass/_cba_auth_dark.scss
 COPY ./mfe-brand-override/src/components/Header.jsx /openedx/app/src/cba-shell/Header.jsx
 COPY ./mfe-brand-override/src/components/Footer.jsx /openedx/app/src/cba-shell/Footer.jsx

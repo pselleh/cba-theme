@@ -1,0 +1,303 @@
+// Auth form dark mode — navy / red / gold only (no teal)
+
+html[data-theme='dark'] {
+  body.cba-auth-page,
+  body:has(.cba-auth) {
+    background-color: var(--bg-body) !important;
+    color: var(--text-primary) !important;
+  }
+
+  .cba-auth {
+    .bg-primary-400 {
+      background-color: var(--cba-navy-dark, #0b1d38) !important;
+    }
+
+    .bg-white,
+    .layout > .bg-white,
+    .content {
+      background-color: var(--bg-body) !important;
+    }
+
+    #controlled-tab .nav-item .nav-link {
+      color: var(--text-primary) !important;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+
+      &:hover {
+        color: var(--cba-red) !important;
+        background: transparent !important;
+      }
+
+      &.active {
+        color: var(--text-primary) !important;
+        background: transparent !important;
+        border: none !important;
+      }
+    }
+  }
+
+  .cba-auth-notice {
+    border-color: var(--border-color) !important;
+    background: var(--bg-surface) !important;
+  }
+
+  .cba-auth-notice__eyebrow {
+    color: var(--cba-red) !important;
+  }
+
+  .cba-auth-notice__title {
+    color: var(--text-primary) !important;
+  }
+
+  .cba-auth-notice__lead {
+    color: var(--text-secondary) !important;
+  }
+
+  .cba-auth-notice__link {
+    color: var(--text-primary) !important;
+
+    &:hover {
+      color: var(--cba-red) !important;
+    }
+  }
+
+  .cba-auth-notice--error {
+    border-color: rgba(195, 31, 46, 0.4) !important;
+    background: rgba(195, 31, 46, 0.12) !important;
+
+    .cba-auth-notice__eyebrow,
+    .cba-auth-notice__title,
+    .cba-auth-notice__lead {
+      color: var(--cba-red) !important;
+    }
+  }
+
+  .cba-auth-card,
+  .cba-auth-card--register,
+  .cba-auth-card--notice {
+    background: var(--bg-elevated) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: var(--shadow-base) !important;
+  }
+
+  .cba-auth-card__eyebrow {
+    color: var(--cba-red) !important;
+  }
+
+  .cba-auth-card__title {
+    color: var(--text-primary) !important;
+  }
+
+  .cba-auth-card__lead {
+    color: var(--text-secondary) !important;
+  }
+
+  .cba-auth-card__footer,
+  .cba-auth-card__footer--support {
+    color: var(--text-secondary) !important;
+
+    a {
+      color: var(--text-primary) !important;
+
+      &:hover {
+        color: var(--cba-red) !important;
+      }
+    }
+  }
+
+  .cba-auth-login,
+  .cba-auth-register,
+  .cba-auth-forgot,
+  .cba-auth-reset,
+  .cba-auth-card {
+    .form-control,
+    .pgn__form-control-decorator-group .form-control,
+    .form-group__form-field,
+    input.form-control,
+    textarea.form-control,
+    select.form-control {
+      background-color: var(--field-bg) !important;
+      border-color: var(--border-color) !important;
+      color: var(--field-text) !important;
+      -webkit-text-fill-color: var(--field-text);
+
+      &::placeholder {
+        color: var(--field-placeholder) !important;
+        opacity: 1;
+      }
+
+      &:focus {
+        border-color: var(--cba-red) !important;
+        box-shadow: var(--cba-focus-ring) !important;
+      }
+    }
+
+    .pgn__form-label,
+    label,
+    .pgn__form-checkbox-label,
+    .form-field--checkbox .pgn__form-label {
+      color: var(--text-primary) !important;
+    }
+
+    #terms-of-service .pgn__form-label {
+      color: var(--text-secondary) !important;
+    }
+
+    #terms-of-service .cba-tos-link,
+    #terms-of-service a {
+      color: var(--text-primary) !important;
+
+      &:hover {
+        color: var(--cba-red) !important;
+      }
+    }
+
+    .pgn__form-text,
+    .form-text,
+    .pgn-form-text-default,
+    .pgn__form-control-description,
+    .password-requirement,
+    li {
+      color: var(--text-secondary) !important;
+    }
+
+    #forgot-password,
+    a.btn-link,
+    .btn-link {
+      color: var(--text-primary) !important;
+
+      &:hover {
+        color: var(--cba-red) !important;
+      }
+    }
+
+    .btn-brand,
+    button.btn-brand {
+      background-color: #c31f2e !important;
+      border-color: #c31f2e !important;
+      color: #ffffff !important;
+
+      &:hover,
+      &:focus {
+        background-color: #a11824 !important;
+        border-color: #a11824 !important;
+        color: #ffffff !important;
+      }
+    }
+  }
+
+  .cba-auth-page,
+  .cba-auth,
+  .cba-auth-login,
+  .cba-auth-register,
+  .cba-auth-forgot,
+  .cba-auth-reset {
+    .invalid-feedback,
+    .pgn__form-control-description.is-invalid,
+    .pgn__form-text-invalid,
+    .form-field-error .invalid-feedback,
+    .form-field-error .pgn__form-text-invalid {
+      color: #ff7b84 !important;
+    }
+
+    .is-invalid > .form-control,
+    .is-invalid .form-control,
+    .form-control.is-invalid,
+    .form-field-error .form-control {
+      background-color: rgba(195, 31, 46, 0.08) !important;
+      border-color: var(--cba-red) !important;
+      color: var(--text-primary) !important;
+
+      &:focus {
+        box-shadow: 0 0 0 3px rgba(195, 31, 46, 0.25) !important;
+      }
+    }
+  }
+
+  .alert-danger,
+  .pgn__alert-danger {
+    background-color: rgba(195, 31, 46, 0.12) !important;
+    border-color: rgba(195, 31, 46, 0.45) !important;
+    color: #ffb4ba !important;
+
+    .alert-heading,
+    .pgn__alert-heading {
+      color: #ff7b84 !important;
+    }
+
+    a,
+    .alert-link,
+    .pgn__alert-link {
+      color: #ff7b84 !important;
+
+      &:hover {
+        color: #ff9aa2 !important;
+      }
+    }
+
+    svg,
+    .pgn__icon {
+      color: #ff7b84 !important;
+    }
+
+    p {
+      color: #ffb4ba !important;
+    }
+  }
+
+  .alert-success,
+  .pgn__alert-success {
+    background-color: rgba(217, 164, 65, 0.12) !important;
+    border-color: rgba(217, 164, 65, 0.4) !important;
+    color: var(--text-primary) !important;
+
+    .alert-heading,
+    .pgn__alert-heading,
+    svg,
+    .pgn__icon {
+      color: var(--cba-gold) !important;
+    }
+
+    a,
+    .alert-link {
+      color: var(--cba-gold) !important;
+    }
+  }
+
+  .spinner-border,
+  .spinner-border-sm,
+  #reset-password-spinner {
+    color: var(--cba-red) !important;
+  }
+
+  .pgn__form-control-floating-label .pgn__form-control-floating-label-text {
+    background-color: var(--bg-elevated) !important;
+    color: var(--text-secondary) !important;
+  }
+
+  #main-content input.form-control:-webkit-autofill,
+  #main-content input.form-control:-webkit-autofill:hover,
+  #main-content input.form-control:-webkit-autofill:focus,
+  .cba-auth-card input.form-control:-webkit-autofill,
+  .cba-auth-card input.form-control:-webkit-autofill:hover,
+  .cba-auth-card input.form-control:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--field-text) !important;
+    caret-color: var(--field-text) !important;
+    box-shadow: 0 0 0 1000px var(--field-bg) inset !important;
+    -webkit-box-shadow: 0 0 0 1000px var(--field-bg) inset !important;
+    border-color: var(--border-color) !important;
+    transition: background-color 99999s ease-out 0s;
+  }
+
+  .username-suggestions--chip {
+    background-color: var(--bg-surface) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color);
+  }
+
+  .email-suggestion-alert-error .alert-link,
+  .email-suggestion-alert-warning {
+    color: #ff7b84 !important;
+  }
+}
