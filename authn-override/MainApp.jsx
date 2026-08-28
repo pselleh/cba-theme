@@ -35,11 +35,11 @@ const RECAPTCHA_SITE_KEY = '6LfBVV0tAAAAAI2M3K2FFcMz2tbLZ2EXgkAo81G_';
 
 const buildFaviconUrl = () => {
   const configured = getConfig().FAVICON_URL;
-  if (configured) {
+  if (configured && configured !== 'null' && !configured.includes('edx-cdn.org')) {
     return configured;
   }
-  const lmsBaseUrl = (getConfig().LMS_BASE_URL || '').replace(/\/$/, '');
-  return lmsBaseUrl ? `${lmsBaseUrl}/theming/asset/images/favicon.ico` : '/theming/asset/images/favicon.ico';
+
+  return '/favicon.ico';
 };
 
 const MainApp = () => (

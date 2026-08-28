@@ -5,20 +5,30 @@
 // Palette B — design tokens (single source). Use $cba-* in Sass, --* in CSS.
 // =============================================================================
 
-// Core
-$cba-slate: #1e293b;
+// Core — redesign v1 tokens (HTML prototype 26JUN)
+$cba-navy: #122a4d;
+$cba-navy-dark: #0b1d38;
+$cba-red: #c31f2e;
+$cba-red-hover: #a11824;
+$cba-gold: #d9a441;
+$cba-ice: #eef3f9;
+$cba-gray: #5b6470;
+$cba-line: #e3e8ef;
+
+// Legacy / supporting
+$cba-slate: $cba-navy;
 $cba-slate-light: #334155;
-$cba-slate-900: #0f172a;
+$cba-slate-900: $cba-navy-dark;
 $cba-slate-300: #cbd5e1;
 $cba-teal: #0d9488;
 $cba-teal-dark: #0f766e;
-$cba-amber: #d97706;
-$cba-amber-hover: #b45309;
-$cba-surface: #f1f5f9;
+$cba-amber: $cba-gold;
+$cba-amber-hover: #b88a35;
+$cba-surface: $cba-ice;
 
 // Surfaces & borders (light)
 $cba-paper: #f8fafc;
-$cba-border: #e2e8f0;
+$cba-border: $cba-line;
 $cba-amber-tint: #fef3c7;
 
 // Nav bar
@@ -36,13 +46,12 @@ $cba-on-teal-ui: #0f1419;
 $cba-danger: #dc3545;
 $cba-badge-tint: #ecfeff;
 
-// Legacy aliases
-$cba-primary: $cba-slate;
+// Legacy aliases (accent → red for redesign round 1)
+$cba-primary: $cba-navy;
 $cba-secondary: $cba-teal;
-$cba-accent: $cba-amber;
+$cba-accent: $cba-red;
 $cba-dark: $cba-slate;
 $cba-light: $cba-surface;
-$cba-gray: #64748b;
 $cba-white: #ffffff;
 
 // Muted text (light) — align with Tailwind slate-400
@@ -100,8 +109,16 @@ $cba-nav-border-subtle: $cba-white-a07;
 $cba-nav-row-border: $cba-white-a12;
 $cba-nav-shadow: 0 4px 24px $cba-slate-a15;
 
-// Hero (home)
-$cba-hero-overlay-light: linear-gradient(125deg, $cba-slate-a78 0%, $cba-teal-a42 100%);
+// Hero (home) — left-weighted navy gradient per prototype
+$cba-navy-dark-a96: rgba($cba-navy-dark, 0.96);
+$cba-navy-dark-a55: rgba($cba-navy-dark, 0.55);
+$cba-navy-dark-a25: rgba($cba-navy-dark, 0.25);
+$cba-hero-overlay-light: linear-gradient(
+  90deg,
+  $cba-navy-dark-a96 30%,
+  $cba-navy-dark-a55 70%,
+  $cba-navy-dark-a25 100%
+);
 
 // Static marketing heroes (Privacy / Terms)
 $cba-static-hero-bg: linear-gradient(
@@ -187,6 +204,14 @@ $shadow-home: 0 8px 32px rgba($cba-slate, 0.1);
   --cba-teal-dark: #{$cba-teal-dark};
   --cba-amber: #{$cba-amber};
   --cba-amber-hover: #{$cba-amber-hover};
+  --cba-red: #{$cba-red};
+  --cba-red-hover: #{$cba-red-hover};
+  --cba-navy: #{$cba-navy};
+  --cba-navy-dark: #{$cba-navy-dark};
+  --cba-gold: #{$cba-gold};
+  --cba-ice: #{$cba-ice};
+  --cba-gray: #{$cba-gray};
+  --cba-line: #{$cba-line};
   --cba-surface: #{$cba-surface};
 
   --cba-primary: #{$cba-primary};
@@ -194,7 +219,6 @@ $shadow-home: 0 8px 32px rgba($cba-slate, 0.1);
   --cba-accent: #{$cba-accent};
   --cba-dark: #{$cba-dark};
   --cba-light: #{$cba-light};
-  --cba-gray: #{$cba-gray};
   --cba-white: #{$cba-white};
 
   --cba-teal-bright: #{$cba-teal-bright};
@@ -215,8 +239,9 @@ $shadow-home: 0 8px 32px rgba($cba-slate, 0.1);
   --divider-color: #{$cba-border};
 
   --card-bg: #{$cba-white};
-  --navbar-bg: #{$cba-slate};
-  --footer-bg: #{$cba-slate};
+  --navbar-bg: #{$cba-white};
+  --navbar-text: #{$cba-navy};
+  --footer-bg: #{$cba-navy-dark};
 
   --shadow-sm: #{$shadow-sm};
   --shadow-base: #{$shadow-base};

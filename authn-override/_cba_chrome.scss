@@ -1,0 +1,606 @@
+// CBA Auth chrome (nav + footer) — aligned with CBAUI navbar/footer
+
+body {
+  padding-top: 4.5rem;
+  font-family: var(--cba-font);
+}
+
+.cba-nav-wrap {
+  background: var(--navbar-bg, var(--cba-white));
+  border-bottom: 1px solid var(--cba-line);
+  box-shadow: 0 2px 12px rgba(18, 42, 77, 0.08);
+}
+
+.cba-nav-wrap.fixed-top {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.cba-navbar {
+  background: transparent !important;
+  padding: 0.65rem 0;
+}
+
+.cba-nav__inner {
+  max-width: 1240px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cba-nav__header-controls {
+  gap: 0.65rem;
+  flex-shrink: 0;
+  // Mobile: sit to the right of the logo (do NOT use Bootstrap .ml-auto —
+  // it is !important and zeros the desktop Enroll↔toggle gap in AuthN/Paragon).
+  margin-left: auto;
+
+  @media (min-width: 992px) {
+    order: 3;
+    margin-left: 0.75rem !important;
+  }
+}
+
+.cba-nav__theme-label {
+  @media (min-width: 992px) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+.cba-nav__brand {
+  flex-shrink: 0;
+  padding: 0.2rem 0;
+  margin-right: 0; // beat Bootstrap .navbar-brand { margin-right: 1rem }
+  border-radius: 8px;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(195, 31, 46, 0.45);
+    outline-offset: 3px;
+  }
+}
+
+.cba-nav__brand img,
+.cba-nav__logo {
+  height: 44px;
+  width: auto;
+  max-width: min(280px, 85vw);
+}
+
+.cba-nav__logo--light {
+  display: block;
+}
+
+.cba-nav__logo--dark {
+  display: none;
+}
+
+.cba-nav__toggler {
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--cba-line);
+  border-radius: 8px;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(195, 31, 46, 0.2);
+  }
+}
+
+.cba-nav__collapse {
+  padding: 0.75rem 0 1rem;
+
+  @media (min-width: 992px) {
+    padding: 0;
+    order: 2;
+    flex: 1 1 auto;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.cba-nav__row {
+  gap: 0.75rem 1rem;
+  width: 100%;
+
+  @media (min-width: 992px) {
+    width: 100%;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center;
+  }
+}
+
+.cba-nav__main {
+  flex-wrap: wrap;
+  gap: 0.15rem 0;
+
+  @media (min-width: 992px) {
+    justify-content: center;
+    flex: 1 1 auto;
+  }
+
+  .nav-link {
+    color: var(--navbar-text, var(--cba-navy)) !important;
+    font-family: var(--cba-font);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.5rem 0.85rem;
+    border-radius: 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      color: var(--cba-red) !important;
+      border-bottom-color: rgba(195, 31, 46, 0.35);
+      background-color: transparent;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba(195, 31, 46, 0.35);
+      outline-offset: 2px;
+    }
+  }
+}
+
+.cba-nav__actions {
+  padding-top: 0.75rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--cba-line);
+  gap: 0.65rem;
+
+  @media (min-width: 992px) {
+    padding-top: 0;
+    margin-top: 0;
+    border-top: none;
+    margin-left: auto;
+    flex-shrink: 0;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+
+  .cba-nav__login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--cba-navy);
+    color: var(--cba-navy) !important;
+    background: transparent;
+    padding: 0.55rem 1.15rem;
+    border-radius: 4px;
+    font-family: var(--cba-font);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    white-space: nowrap;
+
+    &:hover {
+      background: var(--cba-navy);
+      border-color: var(--cba-navy);
+      color: var(--cba-white) !important;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba(18, 42, 77, 0.35);
+      outline-offset: 2px;
+    }
+  }
+
+  .cba-nav__enroll {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cba-red);
+    color: var(--cba-white) !important;
+    padding: 0.6rem 1.25rem;
+    border-radius: 4px;
+    font-family: var(--cba-font);
+    font-weight: 700;
+    font-size: 0.8125rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+
+    &:hover {
+      background: var(--cba-red-hover);
+      color: var(--cba-white) !important;
+      text-decoration: none !important;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba(195, 31, 46, 0.45);
+      outline-offset: 2px;
+    }
+  }
+}
+
+.cba-nav-wrap .custom-switch {
+  margin-left: 0;
+  margin-top: 0;
+  padding-left: 3rem;
+  padding-right: 0;
+
+  .custom-control-label {
+    color: var(--cba-gray);
+
+    &::before {
+      left: -3rem;
+      width: 52px;
+      height: 32px;
+      border-radius: 999px;
+      background-color: var(--cba-line);
+      border-color: var(--cba-line);
+      transition: background-color 0.15s ease, border-color 0.15s ease;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      left: calc(-3rem + 4px);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: var(--cba-white);
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    &::before {
+      background-color: var(--cba-brand-navy, #122a4d);
+      border-color: var(--cba-brand-navy, #122a4d);
+    }
+
+    &::after {
+      background-color: var(--cba-white);
+      transform: translate(20px, -50%);
+    }
+  }
+
+  .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 3px rgba(18, 42, 77, 0.15);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .cba-navbar {
+    padding: 0.5rem 0;
+  }
+
+  .cba-nav__inner.container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .cba-nav__collapse {
+    margin-top: 0.5rem;
+    padding: 1rem 0 1.25rem;
+    border-top: 1px solid var(--cba-line);
+  }
+
+  .cba-nav__row {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 0;
+    width: 100%;
+  }
+
+  .cba-nav__main {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch !important;
+    width: 100%;
+    gap: 0.15rem;
+
+    .nav-item {
+      width: 100%;
+    }
+
+    .nav-link {
+      display: block;
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+      border-bottom: none;
+      box-sizing: border-box;
+    }
+  }
+
+  .cba-nav__actions {
+    width: 100%;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    flex-direction: column;
+    align-items: stretch !important;
+
+    .cba-nav__login,
+    .cba-nav__enroll {
+      display: flex;
+      width: 100%;
+      padding: 0.75rem 1.25rem;
+      font-size: 0.9rem;
+      box-sizing: border-box;
+      text-align: center;
+    }
+  }
+
+  .cba-nav__theme-switch {
+    padding-left: 3rem;
+    min-height: 2.25rem;
+    margin: 0;
+    flex-shrink: 0;
+
+    .custom-control-label {
+      font-size: 0;
+      padding: 0;
+    }
+
+    .cba-nav__theme-label {
+      font-size: 0;
+    }
+  }
+
+  .cba-nav__toggler {
+    margin-left: 0.85rem;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .cba-nav__actions {
+    gap: 0.75rem;
+  }
+
+  .cba-nav__theme-switch {
+    margin: 0 !important;
+    padding-left: 3rem;
+    width: auto;
+    overflow: visible;
+
+    .custom-control-label {
+      width: auto;
+    }
+  }
+}
+
+// Footer
+.footer {
+  background-color: var(--footer-bg, var(--cba-navy-dark));
+  padding: 3rem 0;
+  color: #a9b7ca;
+  font-family: var(--cba-font);
+
+  .section-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  img {
+    height: 40px;
+    width: auto;
+  }
+
+  a {
+    color: #a9b7ca;
+    text-decoration: none;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: var(--cba-white);
+    }
+  }
+
+  .footer-top {
+    margin-bottom: 0;
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .footer-main-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 2rem;
+
+    li a {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  }
+
+  .footer-legal-links {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    a {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    &--mobile {
+      display: none;
+    }
+
+    &--desktop {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .footer-divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    margin: 2rem 0;
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .footer-copyright {
+    color: #a9b7ca;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .footer {
+    padding: 2.5rem 0;
+
+    .footer-top {
+      text-align: center;
+    }
+
+    .footer-brand {
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .footer-nav {
+      justify-content: center;
+    }
+
+    .footer-main-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .footer-legal-links--mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      margin-top: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .footer-legal-links--desktop {
+      display: none;
+    }
+
+    .footer-divider {
+      margin: 1.75rem 0;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+}
+
+// Dark mode chrome
+html[data-theme='dark'] {
+  .cba-nav-wrap {
+    background: var(--navbar-bg) !important;
+    border-bottom-color: var(--border-color) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35) !important;
+  }
+
+  .cba-nav__brand {
+    .cba-nav__logo--light {
+      display: none !important;
+    }
+
+    .cba-nav__logo--dark {
+      display: block !important;
+    }
+  }
+
+  .cba-nav__toggler {
+    border-color: var(--border-color) !important;
+
+    .navbar-toggler-icon {
+      filter: invert(1) brightness(1.4);
+    }
+  }
+
+  .cba-nav__main .nav-link {
+    color: var(--text-primary) !important;
+
+    &:hover,
+    &:focus {
+      color: var(--cba-red) !important;
+      border-bottom-color: rgba(195, 31, 46, 0.45) !important;
+    }
+  }
+
+  .cba-nav__actions {
+    border-top-color: var(--border-color);
+
+    .cba-nav__login {
+      border-color: rgba(148, 163, 184, 0.55) !important;
+      color: var(--text-primary) !important;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.08) !important;
+        border-color: var(--cba-red) !important;
+        color: var(--cba-white) !important;
+      }
+    }
+
+    .cba-nav__enroll {
+      background: var(--cba-red) !important;
+      color: var(--cba-white) !important;
+
+      &:hover {
+        background: var(--cba-red-hover) !important;
+      }
+    }
+  }
+
+  .cba-nav-wrap .custom-switch .custom-control-label::before {
+    background-color: rgba(255, 255, 255, 0.28);
+    border-color: rgba(255, 255, 255, 0.28);
+  }
+
+  // CBAUI keeps true brand navy on the checked toggle in dark mode
+  .cba-nav-wrap .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: var(--cba-brand-navy, #122a4d) !important;
+    border-color: var(--cba-brand-navy, #122a4d) !important;
+  }
+}
